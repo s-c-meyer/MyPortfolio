@@ -1,6 +1,7 @@
 {
   "name": "myportfolio",
   "version": "1.0.0",
+  "homepage": "https://s-c-meyer.github.io/MyPortfolio",
   "description": "Portfolio Made using React Bootstrap and Parcel",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

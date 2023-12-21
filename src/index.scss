@@ -1,0 +1,34 @@
+//make any global styling changes here, above the import statement 
+
+.sticky-footer {
+  margin-top: -200px;
+}
+
+.footer-image {
+  height: 3rem;
+  margin-right: .5rem;
+}
+
+.main-container {
+  margin-bottom: 7rem;
+}
+
+.contact-email {
+  text-decoration: none;
+  font-size: 50pt;
+}
+
+.portfolio-main-font {
+  font-size: large;
+}
+
+.progress-bar-icon {
+  font-size: 50pt;
+}
+
+.about-picture {
+  max-width: 100%;
+}
+
+@import './scss/custom.scss';
+

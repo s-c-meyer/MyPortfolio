@@ -67,14 +67,19 @@ export const PortfolioView = () => {
               </Card.Text>
               <Container>
               <Row className='d-flex justify-content-center my-3'>
-                <Col xs={12} md={6} className='d-flex justify-content-end'>
+                <Col xs={12} md={4} className='d-flex justify-content-end'>
                   <a class="btn btn-primary" href="https://github.com/s-c-meyer/myFlix-client" role="button" target='_blank'>
                     Review the code on Github
                   </a>
                 </Col>
-                <Col xs={12} md={6} className='d-flex justify-content-start'>
+                <Col xs={12} md={4} className='d-flex justify-content-center'>
                   <a class="btn btn-primary" href="https://meyersmovies.netlify.app/" role="button" target='_blank'>
                     View the live demo
+                  </a>
+                </Col>
+                <Col xs={12} md={4} className='d-flex justify-content-start'>
+                  <a class="btn btn-primary" href="/casestudy" role="button" target='_blank'>
+                    Meyer's Movies Case Study
                   </a>
                 </Col>
               </Row>

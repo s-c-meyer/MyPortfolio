@@ -7,6 +7,7 @@ import { ContactView } from "../contact-view/contact-view";
 import { IntroView } from "../intro-view/intro-view";
 import { PortfolioView } from "../portfolio-view/portfolio-view";
 import { StickyFooter } from "../sticky-footer/sticky-footer";
+import { CaseStudyView } from "../case-study-view/case-study-view";
 
 export const MainView = () => {
   return (
@@ -18,6 +19,7 @@ export const MainView = () => {
           <Route path="/about" element={<AboutView />} />
           <Route path="/contact" element={<ContactView />} />
           <Route path="/portfolio" element={<PortfolioView />} />
+          <Route path="/casestudy" element={<CaseStudyView />} />
         </Routes>
       </Row>
       {/* <StickyFooter /> */}

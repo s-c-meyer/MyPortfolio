@@ -25,6 +25,9 @@ export const NavigationBar = () => {
               <Nav.Link className="d-flex align-items-center" as={Link} to="/portfolio">
                 My Work
               </Nav.Link>   
+              <Nav.Link className="d-flex align-items-center" as={Link} to="/casestudy">
+                Case Study
+              </Nav.Link>
             </Nav>
             <Nav>
             <Nav.Link as='a'>

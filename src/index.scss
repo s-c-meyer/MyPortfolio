@@ -30,5 +30,16 @@
   max-width: 100%;
 }
 
+.carousel {
+  height: 500px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-label {
+  position: relative;
+  height: 0;
+}
+
 @import './scss/custom.scss';
 

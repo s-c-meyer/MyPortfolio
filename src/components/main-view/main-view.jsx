@@ -22,7 +22,7 @@ export const MainView = () => {
           <Route path="/casestudy" element={<CaseStudyView />} />
         </Routes>
       </Row>
-      {/* <StickyFooter /> */}
+      <StickyFooter />
     </BrowserRouter>
   )
 }

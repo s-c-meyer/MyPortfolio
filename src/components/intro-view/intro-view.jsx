@@ -6,14 +6,14 @@ import Image from 'react-bootstrap/Image';
 export const IntroView = () => {
   return (
     <>
-    <Container className=''>
-      <Row className='mt-5'>
-        <Col xs={12} lg={4} className='mb-5 mb-lg-0'>
+    <Container className='d-flex'>
+      <Row className='justify-content-center mt-5'>
+        <Col xs={8} lg={4} className='mb-5 mb-lg-0'>
           <Image alt="A portrait of me, Sam Meyer" src={require('../../img/sam-meyer-portrait.jpg')} roundedCircle fluid />
         </Col>
         <Col xs={12} lg={8} className='d-flex flex-column justify-content-center ps-5'>
           <h1>Well, Hello</h1>
-          <h3>My name is Sam Meyer. I am an Industrial Engineer turned Web Developer from Missouri. </h3>
+          <h3>My name is Sam Meyer. I am a Full-Stack Web Developer who was once an Industrial Engineer from Missouri. </h3>
         </Col>
       </Row>
     </Container>

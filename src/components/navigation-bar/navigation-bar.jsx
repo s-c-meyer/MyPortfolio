@@ -29,7 +29,7 @@ export const NavigationBar = () => {
                 Case Study
               </Nav.Link>
             </Nav>
-            <Nav>
+            {/* <Nav>
             <Nav.Link as='a'>
                 <a href="https://github.com/s-c-meyer?tab=projects" target="_blank"><img className="footer-image" src={require("../../img/github_icon.svg")} alt="Github icon" /></a>
               </Nav.Link>
@@ -39,7 +39,7 @@ export const NavigationBar = () => {
               <Nav.Link as='a'>
                 <a href="https://www.linkedin.com/in/samuel-christopher-meyer/" target="_blank"><img className="footer-image" src={require("../../img/linkedin_icon.svg")} alt="LinkedIn icon" /></a>
               </Nav.Link>
-            </Nav>
+            </Nav> */}
           </Navbar.Collapse>
         </Container>
       </Navbar>

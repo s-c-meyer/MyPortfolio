@@ -1,11 +1,12 @@
 import { Button, Row, Col, Container } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 
 export const PortfolioView = () => {
   return (
     <Container className='mb-5'>
       <Row className='d-flex justify-content-center'>
-        <Col className='mb-5' md={10} xs={12}>
+        <Col className='mb-5' xs={12} lg={10}>
           <Card>
             <Card.Img variant='top' src={require("../../img/MeetApp2Screens.png")} />
             <Card.Body>
@@ -34,7 +35,7 @@ export const PortfolioView = () => {
             </Card.Footer>
           </Card>
         </Col>
-        <Col className='my-5' md={10} xs={12}>
+        <Col className='my-5' xs={12} lg={10}>
           <Card>
             <Card.Img variant='top' src={require("../../img/chatAppThreePhones.png")} />
             <Card.Body>
@@ -57,7 +58,7 @@ export const PortfolioView = () => {
             </Card.Footer>
           </Card>
         </Col>
-        <Col className='my-5' md={10} xs={12}>
+        <Col className='my-5' xs={12} lg={10}>
           <Card>
             <Card.Img variant='top' src={require("../../img/MeyersMoviesReact.png")} />
             <Card.Body>
@@ -90,7 +91,7 @@ export const PortfolioView = () => {
             </Card.Footer>
           </Card>
         </Col>
-        <Col className='my-5' md={10} xs={12}>
+        <Col className='my-5' xs={12} lg={10}>
           <Card>
             <Card.Img variant='top' src={require("../../img/MeyersMoviesAngular.png")} />
             <Card.Body>
@@ -113,7 +114,7 @@ export const PortfolioView = () => {
             </Card.Footer>
           </Card>
         </Col>
-        <Col className='my-5' md={10} xs={12}>
+        <Col className='my-5' xs={12} lg={10}>
           <Card>
             <Card.Img variant='top' src={require("../../img/PokedexApp.png")} />
             <Card.Body>

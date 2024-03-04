@@ -6,7 +6,8 @@
 
 .footer-image {
   height: 3rem;
-  margin-right: .5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .main-container {
@@ -32,13 +33,14 @@
 
 .carousel {
   height: 500px;
-  overflow: hidden;
+  overflow: visible;
   width: 100%;
 }
 
 .carousel-label {
   position: relative;
-  height: 0;
+  top: 150px;
+  overflow: visible;
 }
 
 @import './scss/custom.scss';

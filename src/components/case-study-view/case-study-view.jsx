@@ -6,7 +6,7 @@ export const CaseStudyView = () => {
       <Container>
         <Row>
           <Col className="d-flex flex-column align-items-center"  xs={12}>
-            <h1 className="mb-5">Meyer's Movies Case Study</h1>
+            <h1 className="mb-5" style={{ fontWeight: "bold" }}>Meyer's Movies Case Study</h1>
           </Col>
           <Col className="d-flex flex-column justify-content-center mb-5 mb-lg-0" xs={12} lg={5}>
             <h2>Overview and Purpose</h2>
@@ -28,7 +28,7 @@ export const CaseStudyView = () => {
           </Col>
         </Row>
         <Row className="pt-5">
-          <h1 className="mb-5 justify-content-center">My Approach</h1>
+          <h1 className="mb-5 justify-content-center" style={{ fontWeight: "bold" }}>My Approach</h1>
           <Col className="d-flex flex-column justify-content-center" xs={12} lg={6}>
             <h2>Learning React Components</h2>
             <p>Since I had the REST API already built, I simply needed to build the frontend. I determined React would be a good choice because I would need to implement multiple interface views, and using the React Framework would make it easier to scale this project up in the future. I started out by using Parcel to build a very basic version of the application while I was learning how React Components worked together. </p>
@@ -75,18 +75,18 @@ export const CaseStudyView = () => {
         </Row>
         <Row className="justify-content-center pt-5">
           <Col className="d-flex flex-column justify-content-center align-items-center" xs={12} md={10}>
-            <h1>Challenges and Looking Forward</h1>
+            <h1 style={{ fontWeight: "bold" }}>Challenges and Looking Forward</h1>
             <p>Some of the biggest obstacles from this project came when I had to take my working application and refactor it to utilize a different React library. For example, when implementing React Bootstrap and React Router it took me a while to understand how to add these to my existing application.</p>
             <p>After my final submission for this project I went back though and updated the look of the individual movie view to build even further on the minimum requirements for this project. In future iterations I would like to add a “Similar Movies” section to each individual movie view. I would also like to add the ability to add a movie to the database from the application itself. These movies would be visible to every user, not just the user who uploaded them.</p>
           </Col>
         </Row>
         <Row className='d-flex justify-content-center my-3'>
-                <Col xs={12} md={6} className='d-flex justify-content-end'>
+                <Col xs={12} md={6} className='d-flex justify-content-center justify-content-lg-end mb-md-0 mb-4'>
                   <a class="btn btn-primary" href="https://github.com/s-c-meyer/myFlix-client" role="button" target='_blank'>
                     Review the code on Github
                   </a>
                 </Col>
-                <Col xs={12} md={6} className='d-flex justify-content-start'>
+                <Col xs={12} md={6} className='d-flex justify-content-center justify-content-lg-start'>
                   <a class="btn btn-primary" href="https://meyersmovies.netlify.app/" role="button" target='_blank'>
                     View the live demo
                   </a>

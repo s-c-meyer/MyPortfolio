@@ -11,8 +11,8 @@ export const IntroView = () => {
         <Col xs={8} lg={4} className='mb-5 mb-lg-0'>
           <Image alt="A portrait of me, Sam Meyer" src={require('../../img/sam-meyer-portrait.jpg')} roundedCircle fluid />
         </Col>
-        <Col xs={12} lg={8} className='d-flex flex-column justify-content-center ps-5'>
-          <h1>Well, Hello</h1>
+        <Col xs={12} lg={8} className='d-flex flex-column justify-content-center align-items-center align-items-lg-start ps-md-5'>
+          <p className='sizetest'>Well, Hello</p>
           <h3>My name is Sam Meyer. I am a Full-Stack Web Developer who was once an Industrial Engineer from Missouri. </h3>
         </Col>
       </Row>

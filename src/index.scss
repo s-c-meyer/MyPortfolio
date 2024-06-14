@@ -43,5 +43,14 @@
   overflow: visible;
 }
 
-@import './scss/custom.scss';
+.sizetest {
+  font-size: 80px;
+}
 
+@media screen and (max-width: 768px) {
+  .sizetest {
+    font-size: 40px;
+  };
+}
+
+@import './scss/custom.scss';

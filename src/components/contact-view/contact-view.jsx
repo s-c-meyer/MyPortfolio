@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Col, Container, FloatingLabel, Form, Row, Button, Alert } from "react-bootstrap";
 import emailjs from '@emailjs/browser';
 
@@ -28,28 +28,14 @@ export const ContactView = () => {
       );
   }
 
-  //add the script from LinkedIn to display a LinkedIn Profile Badge. 
-  useEffect(() => {
-    const script = document.createElement("script");
-
-    script.src = 'https://platform.linkedin.com/badges/js/profile.js';
-    script.async = true;
-    script.defer = true;
-    script.type = "text/javascript"
-
-    document.body.appendChild(script)
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
-
   return (
     
     <Container>              
       <Row className="d-flex justify-content-center mt-5">
-        <Col xs={12} lg={6}>
+        <Col md={8} className="d-flex justify-content-center mb-5">
+          <h2>Let's get in touch!</h2>
+        </Col>
+        <Col md={8}>
           <Form ref={form} onSubmit={sendEmail} className="mb-5">
           <FloatingLabel
               controlId="floatingInput"
@@ -97,20 +83,6 @@ export const ContactView = () => {
               </Button>
             </div>
           </Form>
-        </Col>
-        <Col xs={12} lg={6} className="d-flex flex-column justify-content-around align-items-center pb-5">
-          <h2>Let's get in touch!</h2>
-          <div 
-            class="badge-base LI-profile-badge" 
-            data-locale="en_US" 
-            data-size="large" 
-            data-theme="light" 
-            data-type="HORIZONTAL" 
-            data-vanity="meyersamuelc" 
-            data-version="v1"
-          >
-            {/* <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/meyersamuelc?trk=profile-badge">Samuel Meyer</a> */}
-          </div>
         </Col>
       </Row>
 

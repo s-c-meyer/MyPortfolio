@@ -42002,26 +42002,28 @@ const ContactView = ()=>{
             setFailShow(true);
         });
     };
-    //add the script from LinkedIn to display a LinkedIn Profile Badge. 
-    (0, _react.useEffect)(()=>{
-        const script = document.createElement("script");
-        script.src = "https://platform.linkedin.com/badges/js/profile.js";
-        script.async = true;
-        script.defer = true;
-        script.type = "text/javascript";
-        document.body.appendChild(script);
-        return ()=>{
-            document.body.removeChild(script);
-        };
-    }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
                 className: "d-flex justify-content-center mt-5",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                        xs: 12,
-                        lg: 6,
+                        md: 8,
+                        className: "d-flex justify-content-center mb-5",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                            children: "Let's get in touch!"
+                        }, void 0, false, {
+                            fileName: "src/components/contact-view/contact-view.jsx",
+                            lineNumber: 36,
+                            columnNumber: 11
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/components/contact-view/contact-view.jsx",
+                        lineNumber: 35,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                        md: 8,
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form), {
                             ref: form,
                             onSubmit: sendEmail,
@@ -42037,12 +42039,12 @@ const ContactView = ()=>{
                                         required: true
                                     }, void 0, false, {
                                         fileName: "src/components/contact-view/contact-view.jsx",
-                                        lineNumber: 59,
+                                        lineNumber: 45,
                                         columnNumber: 15
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/components/contact-view/contact-view.jsx",
-                                    lineNumber: 54,
+                                    lineNumber: 40,
                                     columnNumber: 11
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.FloatingLabel), {
@@ -42057,12 +42059,12 @@ const ContactView = ()=>{
                                         required: true
                                     }, void 0, false, {
                                         fileName: "src/components/contact-view/contact-view.jsx",
-                                        lineNumber: 66,
+                                        lineNumber: 52,
                                         columnNumber: 15
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/components/contact-view/contact-view.jsx",
-                                    lineNumber: 61,
+                                    lineNumber: 47,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.FloatingLabel), {
@@ -42075,12 +42077,12 @@ const ContactView = ()=>{
                                         required: true
                                     }, void 0, false, {
                                         fileName: "src/components/contact-view/contact-view.jsx",
-                                        lineNumber: 79,
+                                        lineNumber: 65,
                                         columnNumber: 15
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/components/contact-view/contact-view.jsx",
-                                    lineNumber: 74,
+                                    lineNumber: 60,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.FloatingLabel), {
@@ -42097,12 +42099,12 @@ const ContactView = ()=>{
                                         required: true
                                     }, void 0, false, {
                                         fileName: "src/components/contact-view/contact-view.jsx",
-                                        lineNumber: 86,
+                                        lineNumber: 72,
                                         columnNumber: 15
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/components/contact-view/contact-view.jsx",
-                                    lineNumber: 81,
+                                    lineNumber: 67,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -42114,60 +42116,29 @@ const ContactView = ()=>{
                                         children: "Submit"
                                     }, void 0, false, {
                                         fileName: "src/components/contact-view/contact-view.jsx",
-                                        lineNumber: 95,
+                                        lineNumber: 81,
                                         columnNumber: 15
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/components/contact-view/contact-view.jsx",
-                                    lineNumber: 94,
+                                    lineNumber: 80,
                                     columnNumber: 13
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/contact-view/contact-view.jsx",
-                            lineNumber: 53,
+                            lineNumber: 39,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/contact-view/contact-view.jsx",
-                        lineNumber: 52,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                        xs: 12,
-                        lg: 6,
-                        className: "d-flex flex-column justify-content-around align-items-center pb-5",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                                children: "Let's get in touch!"
-                            }, void 0, false, {
-                                fileName: "src/components/contact-view/contact-view.jsx",
-                                lineNumber: 102,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                class: "badge-base LI-profile-badge",
-                                "data-locale": "en_US",
-                                "data-size": "large",
-                                "data-theme": "light",
-                                "data-type": "HORIZONTAL",
-                                "data-vanity": "meyersamuelc",
-                                "data-version": "v1"
-                            }, void 0, false, {
-                                fileName: "src/components/contact-view/contact-view.jsx",
-                                lineNumber: 103,
-                                columnNumber: 11
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/contact-view/contact-view.jsx",
-                        lineNumber: 101,
+                        lineNumber: 38,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/contact-view/contact-view.jsx",
-                lineNumber: 51,
+                lineNumber: 34,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Alert), {
@@ -42180,27 +42151,27 @@ const ContactView = ()=>{
                         children: "Something seems to have gone wrong!"
                     }, void 0, false, {
                         fileName: "src/components/contact-view/contact-view.jsx",
-                        lineNumber: 118,
+                        lineNumber: 90,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                         children: "Double check your email and make sure everything looks correct and try again."
                     }, void 0, false, {
                         fileName: "src/components/contact-view/contact-view.jsx",
-                        lineNumber: 119,
+                        lineNumber: 91,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                         children: "If the problem persists, please feel free to reach out via LinkedIn, and let me know that something has gone wrong here!"
                     }, void 0, false, {
                         fileName: "src/components/contact-view/contact-view.jsx",
-                        lineNumber: 120,
+                        lineNumber: 92,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/contact-view/contact-view.jsx",
-                lineNumber: 117,
+                lineNumber: 89,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Alert), {
@@ -42213,7 +42184,7 @@ const ContactView = ()=>{
                         children: "Email sent successfully!"
                     }, void 0, false, {
                         fileName: "src/components/contact-view/contact-view.jsx",
-                        lineNumber: 123,
+                        lineNumber: 95,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -42223,30 +42194,30 @@ const ContactView = ()=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/components/contact-view/contact-view.jsx",
-                        lineNumber: 124,
+                        lineNumber: 96,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                         children: "If something doesn't look correct, please resubmit!"
                     }, void 0, false, {
                         fileName: "src/components/contact-view/contact-view.jsx",
-                        lineNumber: 125,
+                        lineNumber: 97,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/contact-view/contact-view.jsx",
-                lineNumber: 122,
+                lineNumber: 94,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/contact-view/contact-view.jsx",
-        lineNumber: 50,
+        lineNumber: 33,
         columnNumber: 5
     }, undefined);
 };
-_s(ContactView, "J8VBXNe4X9UUFtmxLyxcdXF0WdA=");
+_s(ContactView, "46mxN+SiAqvAhEVczgt/aiGwij4=");
 _c = ContactView;
 var _c;
 $RefreshReg$(_c, "ContactView");
@@ -42602,9 +42573,10 @@ const IntroView = ()=>{
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
                         xs: 12,
                         lg: 8,
-                        className: "d-flex flex-column justify-content-center ps-5",
+                        className: "d-flex flex-column justify-content-center align-items-center align-items-lg-start ps-md-5",
                         children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                className: "sizetest",
                                 children: "Well, Hello"
                             }, void 0, false, {
                                 fileName: "src/components/intro-view/intro-view.jsx",
@@ -42687,7 +42659,7 @@ const PortfolioView = ()=>{
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Body, {
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Title, {
-                                        className: "d-flex justify-content-end me-4 mb-3",
+                                        className: "d-flex justify-content-center my-4",
                                         as: "h1",
                                         children: "Meyer's Meet App"
                                     }, void 0, false, {
@@ -42710,7 +42682,7 @@ const PortfolioView = ()=>{
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
                                                     xs: 12,
                                                     md: 6,
-                                                    className: "d-flex justify-content-end",
+                                                    className: "d-flex justify-content-center justify-content-md-end mb-md-0 mb-3",
                                                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
                                                         class: "btn btn-primary",
                                                         href: "https://github.com/s-c-meyer/meet",
@@ -42730,7 +42702,7 @@ const PortfolioView = ()=>{
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
                                                     xs: 12,
                                                     md: 6,
-                                                    className: "d-flex justify-content-start",
+                                                    className: "d-flex justify-content-center justify-content-md-start",
                                                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
                                                         class: "btn btn-primary",
                                                         href: "https://s-c-meyer.github.io/meet/",
@@ -42799,7 +42771,7 @@ const PortfolioView = ()=>{
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Body, {
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Title, {
-                                        className: "d-flex justify-content-end me-4 mb-3",
+                                        className: "d-flex justify-content-center my-4",
                                         as: "h1",
                                         children: "Meyer's Messages App"
                                     }, void 0, false, {
@@ -42889,7 +42861,7 @@ const PortfolioView = ()=>{
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Body, {
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Title, {
-                                        className: "d-flex justify-content-end me-4 mb-3",
+                                        className: "d-flex justify-content-center my-4",
                                         as: "h1",
                                         children: "Meyer's Movies (React)"
                                     }, void 0, false, {
@@ -42912,7 +42884,7 @@ const PortfolioView = ()=>{
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
                                                     xs: 12,
                                                     md: 4,
-                                                    className: "d-flex justify-content-end",
+                                                    className: "d-flex justify-content-center justify-content-md-end mb-md-0 mb-3",
                                                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
                                                         class: "btn btn-primary",
                                                         href: "https://github.com/s-c-meyer/myFlix-client",
@@ -42932,7 +42904,7 @@ const PortfolioView = ()=>{
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
                                                     xs: 12,
                                                     md: 4,
-                                                    className: "d-flex justify-content-center",
+                                                    className: "d-flex justify-content-center mb-md-0 mb-3",
                                                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
                                                         class: "btn btn-primary",
                                                         href: "https://meyersmovies.netlify.app/",
@@ -42952,7 +42924,7 @@ const PortfolioView = ()=>{
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
                                                     xs: 12,
                                                     md: 4,
-                                                    className: "d-flex justify-content-start",
+                                                    className: "d-flex justify-content-center justify-content-md-start mb-md-0 mb-3",
                                                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
                                                         class: "btn btn-primary",
                                                         href: "/casestudy",
@@ -43021,7 +42993,7 @@ const PortfolioView = ()=>{
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Body, {
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Title, {
-                                        className: "d-flex justify-content-end me-4 mb-3",
+                                        className: "d-flex justify-content-center my-4",
                                         as: "h1",
                                         children: "Meyer's Movies (Angular)"
                                     }, void 0, false, {
@@ -43111,7 +43083,7 @@ const PortfolioView = ()=>{
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Body, {
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Title, {
-                                        className: "d-flex justify-content-end me-4 mb-3",
+                                        className: "d-flex justify-content-center my-4",
                                         as: "h1",
                                         children: "Pokedex App"
                                     }, void 0, false, {
@@ -43134,7 +43106,7 @@ const PortfolioView = ()=>{
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
                                                     xs: 12,
                                                     md: 6,
-                                                    className: "d-flex justify-content-end",
+                                                    className: "d-flex justify-content-center justify-content-md-end mb-md-0 mb-3",
                                                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
                                                         class: "btn btn-primary",
                                                         href: "https://github.com/s-c-meyer/simple-js-app",
@@ -43154,7 +43126,7 @@ const PortfolioView = ()=>{
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
                                                     xs: 12,
                                                     md: 6,
-                                                    className: "d-flex justify-content-start",
+                                                    className: "d-flex justify-content-center justify-content-md-start",
                                                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
                                                         class: "btn btn-primary",
                                                         href: "https://s-c-meyer.github.io/simple-js-app/",
@@ -43266,6 +43238,7 @@ const StickyFooter = ()=>{
                 className: "d-flex flex-row justify-content-center align-items-center",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        xs: 12,
                         className: "mb-0 me-3",
                         children: "Find me at any of these links: "
                     }, void 0, false, {
@@ -43274,7 +43247,7 @@ const StickyFooter = ()=>{
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                        href: "https://github.com/s-c-meyer?tab=projects",
+                        href: "https://github.com/s-c-meyer",
                         target: "_blank",
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                             className: "footer-image",
@@ -43283,7 +43256,7 @@ const StickyFooter = ()=>{
                         }, void 0, false, {
                             fileName: "src/components/sticky-footer/sticky-footer.jsx",
                             lineNumber: 11,
-                            columnNumber: 79
+                            columnNumber: 66
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/sticky-footer/sticky-footer.jsx",
@@ -43378,6 +43351,9 @@ const CaseStudyView = ()=>{
                             xs: 12,
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                                 className: "mb-5",
+                                style: {
+                                    fontWeight: "bold"
+                                },
                                 children: "Meyer's Movies Case Study"
                             }, void 0, false, {
                                 fileName: "src/components/case-study-view/case-study-view.jsx",
@@ -43508,6 +43484,9 @@ const CaseStudyView = ()=>{
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                             className: "mb-5 justify-content-center",
+                            style: {
+                                fontWeight: "bold"
+                            },
                             children: "My Approach"
                         }, void 0, false, {
                             fileName: "src/components/case-study-view/case-study-view.jsx",
@@ -43765,6 +43744,9 @@ const CaseStudyView = ()=>{
                         md: 10,
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                style: {
+                                    fontWeight: "bold"
+                                },
                                 children: "Challenges and Looking Forward"
                             }, void 0, false, {
                                 fileName: "src/components/case-study-view/case-study-view.jsx",
@@ -43802,7 +43784,7 @@ const CaseStudyView = ()=>{
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
                             xs: 12,
                             md: 6,
-                            className: "d-flex justify-content-end",
+                            className: "d-flex justify-content-center justify-content-lg-end mb-md-0 mb-4",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
                                 class: "btn btn-primary",
                                 href: "https://github.com/s-c-meyer/myFlix-client",
@@ -43822,7 +43804,7 @@ const CaseStudyView = ()=>{
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
                             xs: 12,
                             md: 6,
-                            className: "d-flex justify-content-start",
+                            className: "d-flex justify-content-center justify-content-lg-start",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
                                 class: "btn btn-primary",
                                 href: "https://meyersmovies.netlify.app/",

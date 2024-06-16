@@ -64,7 +64,7 @@ export const PortfolioView = () => {
             <Card.Body>
               <Card.Title className='d-flex justify-content-center my-4' as='h1'>Meyer's Movies (React)</Card.Title>
               <Card.Text className='mb-3 portfolio-main-font'>
-                Meyer's Movies is a single page application that pulls data about movies from a database using a REST API that I built. User's can create a profile to save their favorite movies, and click to learn more about each movie in the database.
+                Meyer's Movies is a single page application that pulls data about movies from a database using a REST API that I built. User's can create a profile to save their favorite movies, and click to learn more about each movie in the database. The frontend was developed using the React framework.
               </Card.Text>
               <Container>
               <Row className='d-flex justify-content-center my-3'>
@@ -97,7 +97,7 @@ export const PortfolioView = () => {
             <Card.Body>
               <Card.Title className='d-flex justify-content-center my-4' as='h1'>Meyer's Movies (Angular)</Card.Title>
               <Card.Text className='mb-3 portfolio-main-font'>
-                Meyer's Messages is a chat app that was built using React Native and tested using an Android Emulator. The app provides users with a chat interface and options to share their location and/or images. Images may be shared either from the devices media library, or directly from the camera within the app.
+                Meyer's Movies is a single page application that pulls data about movies from a database using a REST API that I built. User's can create a profile to save their favorite movies, and can learn more through modals that show the movie's genre, director, or summary. The frontend was developed using the AngularJS framework.
               </Card.Text>
               <Container>
               <Row className='d-flex justify-content-center my-3'>

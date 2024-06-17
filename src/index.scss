@@ -1,7 +1,25 @@
 //make any global styling changes here, above the import statement 
 
-.sticky-footer {
-  margin-top: -200px;
+$navbar-color: #003c38;
+$background-color: #b4ddcf;
+$primary-color: #87b4a9;
+$secondary-color: #5a8b81;
+
+.root-container {
+  background-color: $background-color;
+}
+
+.navbar-container {
+  background-color: $navbar-color;
+  outline: 20px solid;
+  outline-color: $navbar-color;
+  margin-top: 15px
+}
+
+.footer-container {
+  background-color: lighten($color: $navbar-color, $amount: 8%);
+  outline: 20px solid;
+  outline-color: lighten($color: $navbar-color, $amount: 8%);
 }
 
 .footer-image {
@@ -10,8 +28,44 @@
   margin-right: 1rem;
 }
 
+.footer-text {
+  text-decoration: none;
+  color: $primary-color;
+
+  transition: text-shadow 0.3s ease-in-out !important;
+
+  &:hover {
+    text-shadow: $background-color 0 0 1.5rem;
+  }
+}
+
+.footer-text-title {
+  text-transform: uppercase;
+  color: $primary-color;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.footer-icon {
+  width: 3rem;
+}
+
+.to-top-button {
+  background: transparent;
+  color: $primary-color;
+  border-radius: 5rem;
+  border-color: $primary-color;
+  border-style: solid;
+  padding: .4rem
+}
+
 .main-container {
   margin-bottom: 7rem;
+}
+
+.intro-container {
+  background-color: $primary-color;
+  border-radius: 4rem;
 }
 
 .contact-email {
@@ -52,5 +106,23 @@
     font-size: 40px;
   };
 }
+
+.nav-link {
+  color: $primary-color !important;
+  transition: text-shadow 0.3s ease-in-out !important;
+
+  &:hover {
+    text-shadow: $background-color 0 0 1.5rem;
+  }
+
+  //&:active only applies when you actively have the mouse held down on the link
+}
+
+//this is the class that effects the activeKey from React Bootstrap's NavBar
+.active {
+  text-decoration: underline !important; //important is necessary to override the bootstrap styling 
+  text-decoration-color: black;
+}
+
 
 @import './scss/custom.scss';

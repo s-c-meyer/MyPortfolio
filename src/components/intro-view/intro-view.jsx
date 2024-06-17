@@ -8,10 +8,10 @@ export const IntroView = () => {
     <>
     <Container className='d-flex'>
       <Row className='justify-content-center mt-5'>
-        <Col xs={8} lg={4} className='mb-5 mb-lg-0'>
+        <Col xs={8} lg={3} className='mb-4 mb-lg-0 align-content-center'>
           <Image alt="A portrait of me, Sam Meyer" src={require('../../img/sam-meyer-portrait.jpg')} roundedCircle fluid />
         </Col>
-        <Col xs={12} lg={8} className='d-flex flex-column justify-content-center align-items-center align-items-lg-start ps-md-5'>
+        <Col xs={10} lg={7} className='intro-container d-flex flex-column justify-content-center align-items-center align-items-lg-start p-5 ms-0 ms-lg-3'>
           <p className='sizetest'>Well, Hello</p>
           <h3>My name is Sam Meyer. I am a Full-Stack Web Developer who was once an Industrial Engineer from Missouri. </h3>
         </Col>

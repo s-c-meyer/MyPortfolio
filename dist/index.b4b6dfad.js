@@ -2951,7 +2951,8 @@ var _indexScss = require("./index.scss");
 // Main component (will eventually use all the others)
 const MyFlixApplication = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
-        className: "min-vh-100",
+        fluid: true,
+        className: "fluid min-vh-100 root-container",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mainView.MainView), {}, void 0, false, {
             fileName: "src/index.jsx",
             lineNumber: 12,
@@ -34933,29 +34934,57 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "NavigationBar", ()=>NavigationBar);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
 var _reactRouterDom = require("react-router-dom");
 var _reactBootstrap = require("react-bootstrap");
+var _s = $RefreshSig$();
 const NavigationBar = ()=>{
+    _s();
+    const [currentNav, setCurrentNav] = (0, _react.useState)("");
+    const setActiveNav = (selectedNav)=>{
+        const allNavLinks = document.getElementsByClassName("nav-link"); //get all of the nav links
+        //use a for loop to remove the active class from all of the NavLinks
+        //this is necessary so that when you click the logo picture, it removes the styling
+        //from the previous active Nav.Link
+        for(let i = 0; i < allNavLinks.length; i++)allNavLinks[i].classList.remove("active");
+        setCurrentNav(selectedNav);
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Navbar), {
-            className: "navbar mb-5",
-            expand: "lg",
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
+            fluid: true,
+            className: "navbar-container",
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Navbar), {
+                variant: "dark",
+                activeKey: currentNav,
+                onSelect: setActiveNav,
+                collapseOnSelect: true,
+                className: "mb-5",
+                expand: "lg",
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Navbar).Brand, {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
+                        className: "me-3",
+                        eventKey: "Home",
                         as: (0, _reactRouterDom.Link),
                         to: "/",
-                        children: "Samuel Meyer"
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            eventKey: "Home",
+                            src: require("2e859bfd630cd0c6"),
+                            alt: "Navigation Bar Header Logo"
+                        }, void 0, false, {
+                            fileName: "src/components/navigation-bar/navigation-bar.jsx",
+                            lineNumber: 34,
+                            columnNumber: 13
+                        }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                        lineNumber: 10,
+                        lineNumber: 33,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Navbar).Toggle, {
                         "aria-controls": "basic-navbar-nav"
                     }, void 0, false, {
                         fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                        lineNumber: 13,
+                        lineNumber: 36,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Navbar).Collapse, {
@@ -34964,79 +34993,74 @@ const NavigationBar = ()=>{
                             className: "me-auto",
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
-                                    className: "d-flex align-items-center",
-                                    as: (0, _reactRouterDom.Link),
-                                    to: "/",
-                                    children: "Home"
-                                }, void 0, false, {
-                                    fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                    lineNumber: 16,
-                                    columnNumber: 15
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
+                                    eventKey: "About",
                                     className: "d-flex align-items-center",
                                     as: (0, _reactRouterDom.Link),
                                     to: "/about",
                                     children: "About"
                                 }, void 0, false, {
                                     fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                    lineNumber: 19,
+                                    lineNumber: 42,
                                     columnNumber: 15
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
+                                    eventKey: "Contact",
                                     className: "d-flex align-items-center",
                                     as: (0, _reactRouterDom.Link),
                                     to: "/contact",
                                     children: "Contact"
                                 }, void 0, false, {
                                     fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                    lineNumber: 22,
+                                    lineNumber: 45,
                                     columnNumber: 15
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
+                                    eventKey: "MyWork",
                                     className: "d-flex align-items-center",
                                     as: (0, _reactRouterDom.Link),
                                     to: "/portfolio",
                                     children: "My Work"
                                 }, void 0, false, {
                                     fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                    lineNumber: 25,
+                                    lineNumber: 48,
                                     columnNumber: 15
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
+                                    eventKey: "CaseStudy",
                                     className: "d-flex align-items-center",
                                     as: (0, _reactRouterDom.Link),
                                     to: "/casestudy",
                                     children: "Case Study"
                                 }, void 0, false, {
                                     fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                    lineNumber: 28,
+                                    lineNumber: 51,
                                     columnNumber: 15
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                            lineNumber: 15,
+                            lineNumber: 38,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                        lineNumber: 14,
+                        lineNumber: 37,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                lineNumber: 9,
-                columnNumber: 9
+                lineNumber: 23,
+                columnNumber: 7
             }, undefined)
         }, void 0, false, {
             fileName: "src/components/navigation-bar/navigation-bar.jsx",
-            lineNumber: 8,
-            columnNumber: 7
+            lineNumber: 22,
+            columnNumber: 5
         }, undefined)
     }, void 0, false);
 };
+_s(NavigationBar, "SAV1J0KUKTd4eDWnfOy+jgI9Z50=");
 _c = NavigationBar;
 var _c;
 $RefreshReg$(_c, "NavigationBar");
@@ -35046,7 +35070,7 @@ $RefreshReg$(_c, "NavigationBar");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","react-bootstrap":"3AD9A","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3AD9A":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","react-bootstrap":"3AD9A","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","2e859bfd630cd0c6":"9Mq1g"}],"3AD9A":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Accordion", ()=>(0, _accordionDefault.default));
@@ -35381,7 +35405,7 @@ var _toggleButtonGroupDefault = parcelHelpers.interopDefault(_toggleButtonGroup)
 var _tooltip = require("./Tooltip");
 var _tooltipDefault = parcelHelpers.interopDefault(_tooltip);
 
-},{"./Accordion":false,"./AccordionContext":false,"./AccordionCollapse":false,"./AccordionButton":false,"./AccordionHeader":false,"./AccordionItem":false,"./Alert":"e3Xec","./AlertHeading":false,"./AlertLink":false,"./Anchor":false,"./Badge":false,"./Breadcrumb":false,"./BreadcrumbItem":false,"./Button":"aPzUt","./ButtonGroup":false,"./ButtonToolbar":false,"./Card":false,"./CardBody":false,"./CardFooter":false,"./CardGroup":false,"./CardHeader":false,"./CardImg":false,"./CardImgOverlay":false,"./CardLink":false,"./CardSubtitle":false,"./CardText":false,"./CardTitle":false,"./Carousel":"bsGhm","./CarouselCaption":false,"./CarouselItem":false,"./CloseButton":false,"./Col":"2L2I6","./Collapse":false,"./Container":"hEdsw","./Dropdown":false,"./DropdownButton":false,"./DropdownDivider":false,"./DropdownHeader":false,"./DropdownItem":false,"./DropdownItemText":false,"./DropdownMenu":false,"./DropdownToggle":false,"./Fade":false,"./Figure":false,"./FigureCaption":false,"./FigureImage":false,"./Form":"iBZ80","./FormControl":false,"./FormCheck":false,"./FormFloating":false,"./FloatingLabel":"coYzo","./FormGroup":false,"./FormLabel":false,"./FormText":false,"./FormSelect":false,"./Image":"cyVPa","./InputGroup":false,"./ListGroup":false,"./ListGroupItem":false,"./Modal":false,"./ModalBody":false,"./ModalDialog":false,"./ModalFooter":false,"./ModalHeader":false,"./ModalTitle":false,"./Nav":"cXyL2","./Navbar":"1mHjo","./NavbarBrand":false,"./NavbarCollapse":false,"./NavbarOffcanvas":false,"./NavbarText":false,"./NavbarToggle":false,"./NavDropdown":false,"./NavItem":false,"./NavLink":false,"./Offcanvas":false,"./OffcanvasBody":false,"./OffcanvasHeader":false,"./OffcanvasTitle":false,"./OffcanvasToggling":false,"./Overlay":false,"./OverlayTrigger":false,"./PageItem":false,"./Pagination":false,"./Placeholder":false,"./PlaceholderButton":false,"./Popover":false,"./PopoverBody":false,"./PopoverHeader":false,"./ProgressBar":false,"./Ratio":false,"./Row":"cMC39","./Spinner":false,"./SplitButton":false,"./SSRProvider":false,"./Stack":false,"./Tab":false,"./TabContainer":false,"./TabContent":false,"./Table":false,"./TabPane":false,"./Tabs":false,"./ThemeProvider":false,"./Toast":false,"./ToastBody":false,"./ToastContainer":false,"./ToastHeader":false,"./ToggleButton":false,"./ToggleButtonGroup":false,"./Tooltip":false,"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"e3Xec":[function(require,module,exports) {
+},{"./Accordion":false,"./AccordionContext":false,"./AccordionCollapse":false,"./AccordionButton":false,"./AccordionHeader":false,"./AccordionItem":false,"./Alert":"e3Xec","./AlertHeading":false,"./AlertLink":false,"./Anchor":false,"./Badge":false,"./Breadcrumb":false,"./BreadcrumbItem":false,"./Button":"aPzUt","./ButtonGroup":false,"./ButtonToolbar":false,"./Card":false,"./CardBody":false,"./CardFooter":false,"./CardGroup":false,"./CardHeader":false,"./CardImg":false,"./CardImgOverlay":false,"./CardLink":false,"./CardSubtitle":false,"./CardText":false,"./CardTitle":false,"./Carousel":"bsGhm","./CarouselCaption":false,"./CarouselItem":false,"./CloseButton":false,"./Col":"2L2I6","./Collapse":false,"./Container":"hEdsw","./Dropdown":false,"./DropdownButton":false,"./DropdownDivider":false,"./DropdownHeader":false,"./DropdownItem":false,"./DropdownItemText":false,"./DropdownMenu":false,"./DropdownToggle":false,"./Fade":false,"./Figure":false,"./FigureCaption":false,"./FigureImage":false,"./Form":"iBZ80","./FormControl":false,"./FormCheck":false,"./FormFloating":false,"./FloatingLabel":"coYzo","./FormGroup":false,"./FormLabel":false,"./FormText":false,"./FormSelect":false,"./Image":"cyVPa","./InputGroup":false,"./ListGroup":false,"./ListGroupItem":false,"./Modal":false,"./ModalBody":false,"./ModalDialog":false,"./ModalFooter":false,"./ModalHeader":false,"./ModalTitle":false,"./Nav":"cXyL2","./Navbar":"1mHjo","./NavbarBrand":false,"./NavbarCollapse":false,"./NavbarOffcanvas":false,"./NavbarText":false,"./NavbarToggle":false,"./NavDropdown":false,"./NavItem":false,"./NavLink":false,"./Offcanvas":false,"./OffcanvasBody":false,"./OffcanvasHeader":false,"./OffcanvasTitle":false,"./OffcanvasToggling":false,"./Overlay":false,"./OverlayTrigger":false,"./PageItem":false,"./Pagination":false,"./Placeholder":false,"./PlaceholderButton":false,"./Popover":false,"./PopoverBody":false,"./PopoverHeader":false,"./ProgressBar":false,"./Ratio":false,"./Row":"cMC39","./Spinner":false,"./SplitButton":false,"./SSRProvider":false,"./Stack":"eZkZ1","./Tab":false,"./TabContainer":false,"./TabContent":false,"./Table":false,"./TabPane":false,"./Tabs":false,"./ThemeProvider":false,"./Toast":false,"./ToastBody":false,"./ToastContainer":false,"./ToastHeader":false,"./ToggleButton":false,"./ToggleButtonGroup":false,"./Tooltip":false,"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"e3Xec":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -41626,7 +41650,109 @@ const NavbarText = /*#__PURE__*/ _react.forwardRef(({ className, bsPrefix, as: C
 NavbarText.displayName = "NavbarText";
 exports.default = NavbarText;
 
-},{"react":"21dqq","classnames":"jocGM","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gjkeG":[function(require,module,exports) {
+},{"react":"21dqq","classnames":"jocGM","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eZkZ1":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _react = require("react");
+var _themeProvider = require("./ThemeProvider");
+var _createUtilityClasses = require("./createUtilityClasses");
+var _createUtilityClassesDefault = parcelHelpers.interopDefault(_createUtilityClasses);
+var _jsxRuntime = require("react/jsx-runtime");
+"use client";
+const Stack = /*#__PURE__*/ _react.forwardRef(({ as: Component = "div", bsPrefix, className, direction, gap, ...props }, ref)=>{
+    bsPrefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, direction === "horizontal" ? "hstack" : "vstack");
+    const breakpoints = (0, _themeProvider.useBootstrapBreakpoints)();
+    const minBreakpoint = (0, _themeProvider.useBootstrapMinBreakpoint)();
+    return /*#__PURE__*/ (0, _jsxRuntime.jsx)(Component, {
+        ...props,
+        ref: ref,
+        className: (0, _classnamesDefault.default)(className, bsPrefix, ...(0, _createUtilityClassesDefault.default)({
+            gap
+        }, breakpoints, minBreakpoint))
+    });
+});
+Stack.displayName = "Stack";
+exports.default = Stack;
+
+},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","./createUtilityClasses":"kKxSO","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kKxSO":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "responsivePropType", ()=>responsivePropType);
+parcelHelpers.export(exports, "default", ()=>createUtilityClassName);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _themeProvider = require("./ThemeProvider");
+function responsivePropType(propType) {
+    return (0, _propTypesDefault.default).oneOfType([
+        propType,
+        (0, _propTypesDefault.default).shape({
+            xs: propType,
+            sm: propType,
+            md: propType,
+            lg: propType,
+            xl: propType,
+            xxl: propType
+        })
+    ]);
+}
+function createUtilityClassName(utilityValues, breakpoints = (0, _themeProvider.DEFAULT_BREAKPOINTS), minBreakpoint = (0, _themeProvider.DEFAULT_MIN_BREAKPOINT)) {
+    const classes = [];
+    Object.entries(utilityValues).forEach(([utilName, utilValue])=>{
+        if (utilValue != null) {
+            if (typeof utilValue === "object") breakpoints.forEach((brkPoint)=>{
+                const bpValue = utilValue[brkPoint];
+                if (bpValue != null) {
+                    const infix = brkPoint !== minBreakpoint ? `-${brkPoint}` : "";
+                    classes.push(`${utilName}${infix}-${bpValue}`);
+                }
+            });
+            else classes.push(`${utilName}-${utilValue}`);
+        }
+    });
+    return classes;
+}
+
+},{"prop-types":"7wKI2","./ThemeProvider":"dVixI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9Mq1g":[function(require,module,exports) {
+module.exports = require("4e630794b59d5322").getBundleURL("byUka") + "NavLogo.16ead4ba.png" + "?" + Date.now();
+
+},{"4e630794b59d5322":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return "/";
+}
+function getBaseURL(url) {
+    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
+}
+// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error("Origin not found");
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}],"gjkeG":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$ac88 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -41932,42 +42058,7 @@ $RefreshReg$(_c, "AboutView");
 },{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-bootstrap":"3AD9A","8e464922b7cf85c7":"b2BSc"}],"b2BSc":[function(require,module,exports) {
 module.exports = require("e0a706ebd38b19d").getBundleURL("byUka") + "Acadia Picture.ca0dcc6a.jpg" + "?" + Date.now();
 
-},{"e0a706ebd38b19d":"lgJ39"}],"lgJ39":[function(require,module,exports) {
-"use strict";
-var bundleURL = {};
-function getBundleURLCached(id) {
-    var value = bundleURL[id];
-    if (!value) {
-        value = getBundleURL();
-        bundleURL[id] = value;
-    }
-    return value;
-}
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
-        if (matches) // The first two stack frames will be this function and getBundleURLCached.
-        // Use the 3rd one, which will be a runtime in the original bundle.
-        return getBaseURL(matches[2]);
-    }
-    return "/";
-}
-function getBaseURL(url) {
-    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
-}
-// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
-    if (!matches) throw new Error("Origin not found");
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
-
-},{}],"9mG3M":[function(require,module,exports) {
+},{"e0a706ebd38b19d":"lgJ39"}],"9mG3M":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$1d99 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -42553,8 +42644,8 @@ const IntroView = ()=>{
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
                         xs: 8,
-                        lg: 4,
-                        className: "mb-5 mb-lg-0",
+                        lg: 3,
+                        className: "mb-4 mb-lg-0 align-content-center",
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _imageDefault.default), {
                             alt: "A portrait of me, Sam Meyer",
                             src: require("376ce15efb8f6d70"),
@@ -42571,9 +42662,9 @@ const IntroView = ()=>{
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
-                        xs: 12,
-                        lg: 8,
-                        className: "d-flex flex-column justify-content-center align-items-center align-items-lg-start ps-md-5",
+                        xs: 10,
+                        lg: 7,
+                        className: "intro-container d-flex flex-column justify-content-center align-items-center align-items-lg-start p-5 ms-0 ms-lg-3",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                 className: "sizetest",
@@ -42871,7 +42962,7 @@ const PortfolioView = ()=>{
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Text, {
                                         className: "mb-3 portfolio-main-font",
-                                        children: "Meyer's Movies is a single page application that pulls data about movies from a database using a REST API that I built. User's can create a profile to save their favorite movies, and click to learn more about each movie in the database."
+                                        children: "Meyer's Movies is a single page application that pulls data about movies from a database using a REST API that I built. User's can create a profile to save their favorite movies, and click to learn more about each movie in the database. The frontend was developed using the React framework."
                                     }, void 0, false, {
                                         fileName: "src/components/portfolio-view/portfolio-view.jsx",
                                         lineNumber: 66,
@@ -43003,7 +43094,7 @@ const PortfolioView = ()=>{
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Text, {
                                         className: "mb-3 portfolio-main-font",
-                                        children: "Meyer's Messages is a chat app that was built using React Native and tested using an Android Emulator. The app provides users with a chat interface and options to share their location and/or images. Images may be shared either from the devices media library, or directly from the camera within the app."
+                                        children: "Meyer's Movies is a single page application that pulls data about movies from a database using a REST API that I built. User's can create a profile to save their favorite movies, and can learn more through modals that show the movie's genre, director, or summary. The frontend was developed using the AngularJS framework."
                                     }, void 0, false, {
                                         fileName: "src/components/portfolio-view/portfolio-view.jsx",
                                         lineNumber: 99,
@@ -43228,84 +43319,393 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _reactRouterDom = require("react-router-dom");
 var _reactBootstrap = require("react-bootstrap");
 const StickyFooter = ()=>{
+    function scrollToTop() {
+        document.body.scrollTop = 0; //for Safari
+        document.documentElement.scrollTop = 0; //for all other browsers
+    }
+    const d = new Date();
+    const currentYear = d.getFullYear();
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Navbar), {
-            className: "sticky-footer",
-            fixed: "bottom",
-            bg: "light",
-            variant: "light",
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
-                className: "d-flex flex-row justify-content-center align-items-center",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        xs: 12,
-                        className: "mb-0 me-3",
-                        children: "Find me at any of these links: "
-                    }, void 0, false, {
-                        fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                        lineNumber: 10,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                        href: "https://github.com/s-c-meyer",
-                        target: "_blank",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            className: "footer-image",
-                            src: require("c777a79b0619b754"),
-                            alt: "Github icon"
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
+            fluid: true,
+            className: "footer-container",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
+                    className: "d-flex justify-content-center",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                            xs: 12,
+                            lg: 3,
+                            className: "mb-5 mb-lg-0 mt-5 px-5",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Stack), {
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            className: "footer-text-title",
+                                            children: "Current Projects"
+                                        }, void 0, false, {
+                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                            lineNumber: 21,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {
+                                            className: "footer-text"
+                                        }, void 0, false, {
+                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                            lineNumber: 22,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                    lineNumber: 20,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Stack), {
+                                    gap: 2,
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                            className: "footer-text",
+                                            href: "/portfolio",
+                                            children: "Cathafire Volunteer Website"
+                                        }, void 0, false, {
+                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                            lineNumber: 25,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                            className: "footer-text",
+                                            children: "Meyer's Matchups"
+                                        }, void 0, false, {
+                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                            lineNumber: 26,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                    lineNumber: 24,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                            lineNumber: 19,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                            xs: 12,
+                            lg: 3,
+                            className: "mb-5 mb-lg-0 mt-5 mx-0 mx-lg-4 px-5",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Stack), {
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            className: "footer-text-title",
+                                            children: "Navigate to"
+                                        }, void 0, false, {
+                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                            lineNumber: 31,
+                                            columnNumber: 13
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {
+                                            className: "footer-text"
+                                        }, void 0, false, {
+                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                            lineNumber: 32,
+                                            columnNumber: 13
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                    lineNumber: 30,
+                                    columnNumber: 11
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Stack), {
+                                    gap: 2,
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                            className: "footer-text",
+                                            href: "/",
+                                            children: "\u2302 Home"
+                                        }, void 0, false, {
+                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                            lineNumber: 35,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                            className: "footer-text",
+                                            href: "/about",
+                                            children: "\uD83D\uDEC8 About"
+                                        }, void 0, false, {
+                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                            lineNumber: 36,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                            className: "footer-text",
+                                            href: "/contact",
+                                            children: "\uD83D\uDD85 Contact"
+                                        }, void 0, false, {
+                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                            lineNumber: 37,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                            className: "footer-text",
+                                            href: "/portfolio",
+                                            children: "\u270E My Work"
+                                        }, void 0, false, {
+                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                            lineNumber: 38,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                            className: "footer-text",
+                                            href: "/casestudy",
+                                            children: "\uD83D\uDDB3 Case Study"
+                                        }, void 0, false, {
+                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                            lineNumber: 39,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                    lineNumber: 34,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                            lineNumber: 29,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                            xs: 12,
+                            lg: 3,
+                            className: "mb-5 mb-lg-0 mt-5 px-5",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Stack), {
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            className: "footer-text-title",
+                                            children: "Find me here!"
+                                        }, void 0, false, {
+                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                            lineNumber: 44,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {
+                                            className: "footer-text"
+                                        }, void 0, false, {
+                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                            lineNumber: 45,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                    lineNumber: 43,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Stack), {
+                                    gap: 3,
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                            className: "footer-text",
+                                            href: "https://www.linkedin.com/in/meyersamuelc",
+                                            target: "_blank",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                                    className: "footer-icon",
+                                                    viewBox: "0 0 56.693 56.693",
+                                                    xmlSpace: "preserve",
+                                                    xmlns: "http://www.w3.org/2000/svg",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                            d: "M30.071 27.101v-.077a2.031 2.031 0 0 1-.05.077h.05z",
+                                                            fill: "#87b4a9",
+                                                            className: "fill-000000"
+                                                        }, void 0, false, {
+                                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                                            lineNumber: 49,
+                                                            columnNumber: 218
+                                                        }, undefined),
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                            d: "M49.265 4.667H7.145c-2.016 0-3.651 1.596-3.651 3.563v42.613c0 1.966 1.635 3.562 3.651 3.562h42.12c2.019 0 3.654-1.597 3.654-3.562V8.23c0-1.968-1.636-3.563-3.654-3.563zm-30.79 41.637H11.01V23.845h7.465v22.459zm-3.732-25.527h-.05c-2.504 0-4.124-1.725-4.124-3.88 0-2.203 1.67-3.88 4.223-3.88 2.554 0 4.125 1.677 4.175 3.88 0 2.155-1.622 3.88-4.224 3.88zm30.651 25.527h-7.465V34.286c0-3.018-1.08-5.078-3.781-5.078-2.062 0-3.29 1.389-3.831 2.731-.197.479-.245 1.149-.245 1.821v12.543h-7.465s.098-20.354 0-22.459h7.465v3.179c.992-1.53 2.766-3.709 6.729-3.709 4.911 0 8.594 3.211 8.594 10.11v12.88z",
+                                                            fill: "#87b4a9",
+                                                            className: "fill-000000"
+                                                        }, void 0, false, {
+                                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                                            lineNumber: 49,
+                                                            columnNumber: 326
+                                                        }, undefined)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                                    lineNumber: 49,
+                                                    columnNumber: 106
+                                                }, undefined),
+                                                " LinkedIn"
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                            lineNumber: 49,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                            className: "footer-text",
+                                            href: "https://github.com/s-c-meyer",
+                                            target: "_blank",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                                    className: "footer-icon",
+                                                    viewBox: "-1163 1657.697 56.693 56.693",
+                                                    xmlSpace: "preserve",
+                                                    xmlns: "http://www.w3.org/2000/svg",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                            "clip-rule": "evenodd",
+                                                            d: "M-1134.66 1662.916c-13.6 0-24.63 11.027-24.63 24.63 0 10.882 7.057 20.115 16.844 23.371 1.23.228 1.683-.534 1.683-1.184 0-.587-.023-2.528-.034-4.586-6.852 1.49-8.298-2.906-8.298-2.906-1.12-2.847-2.734-3.604-2.734-3.604-2.235-1.529.168-1.497.168-1.497 2.473.173 3.776 2.538 3.776 2.538 2.196 3.765 5.761 2.677 7.167 2.047.221-1.591.86-2.678 1.564-3.293-5.47-.623-11.222-2.735-11.222-12.172 0-2.69.962-4.886 2.538-6.611-.256-.62-1.099-3.126.239-6.519 0 0 2.068-.661 6.774 2.525 1.965-.545 4.072-.82 6.165-.829 2.093.01 4.202.284 6.17.83 4.701-3.187 6.767-2.526 6.767-2.526 1.34 3.393.497 5.898.241 6.519 1.58 1.725 2.535 3.922 2.535 6.61 0 9.46-5.762 11.544-11.246 12.153.883.765 1.67 2.264 1.67 4.561 0 3.296-.028 5.948-.028 6.76 0 .655.443 1.423 1.691 1.181 9.782-3.26 16.83-12.49 16.83-23.368 0-13.603-11.027-24.63-24.63-24.63z",
+                                                            "fill-rule": "evenodd",
+                                                            fill: "#87b4a9",
+                                                            className: "fill-000000"
+                                                        }, void 0, false, {
+                                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                                            lineNumber: 50,
+                                                            columnNumber: 217
+                                                        }, undefined),
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                            d: "M-1149.961 1698.28c-.054.122-.247.159-.422.075-.18-.08-.28-.248-.221-.37.053-.126.245-.161.424-.077.179.08.28.249.219.371zM-1148.963 1699.392c-.118.109-.348.058-.504-.114-.16-.172-.19-.401-.071-.512.12-.108.343-.057.505.114.16.174.192.402.07.512zM-1147.992 1700.81c-.151.106-.398.007-.55-.212-.152-.219-.152-.482.003-.587.152-.105.396-.01.55.207.15.223.15.485-.003.592zM-1146.662 1702.181c-.135.15-.423.109-.633-.094-.215-.199-.275-.48-.14-.63.137-.149.426-.107.638.095.214.198.279.482.135.63zM-1144.826 1702.977c-.06.193-.337.28-.616.198-.279-.084-.46-.31-.405-.505.058-.194.337-.285.617-.198.279.084.461.309.404.505zM-1142.81 1703.124c.006.203-.23.372-.523.375-.295.007-.533-.157-.536-.357 0-.205.23-.372.525-.377.293-.006.533.158.533.36zM-1140.935 1702.805c.035.198-.169.402-.46.456-.285.053-.55-.07-.586-.267-.036-.203.171-.406.457-.459.291-.05.552.069.589.27zm0 0",
+                                                            fill: "#87b4a9",
+                                                            className: "fill-000000"
+                                                        }, void 0, false, {
+                                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                                            lineNumber: 50,
+                                                            columnNumber: 1142
+                                                        }, undefined)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                                    lineNumber: 50,
+                                                    columnNumber: 94
+                                                }, undefined),
+                                                " Github"
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                            lineNumber: 50,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                            className: "footer-text",
+                                            href: "https://www.facebook.com/sam.c.meyer/",
+                                            target: "_blank",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                                    className: "footer-icon",
+                                                    viewBox: "0 0 56.693 56.693",
+                                                    xmlSpace: "preserve",
+                                                    xmlns: "http://www.w3.org/2000/svg",
+                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                        d: "M28.347 5.157c-13.6 0-24.625 11.027-24.625 24.625 0 13.6 11.025 24.623 24.625 24.623s24.625-11.023 24.625-24.623c0-13.598-11.026-24.625-24.625-24.625zm6.517 24.522H30.6v15.207h-6.32V29.679h-3.006V24.31h3.006v-3.479c0-2.49 1.182-6.377 6.379-6.377l4.68.018v5.215h-3.398c-.555 0-1.34.277-1.34 1.461v3.163h4.818l-.555 5.368z",
+                                                        fill: "#87b4a9",
+                                                        className: "fill-000000"
+                                                    }, void 0, false, {
+                                                        fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                                        lineNumber: 51,
+                                                        columnNumber: 215
+                                                    }, undefined)
+                                                }, void 0, false, {
+                                                    fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                                    lineNumber: 51,
+                                                    columnNumber: 103
+                                                }, undefined),
+                                                " Facebook"
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                            lineNumber: 51,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                    lineNumber: 47,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                            lineNumber: 42,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                    lineNumber: 18,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                            xs: 12,
+                            lg: 4,
+                            className: "d-flex justify-content-center mb-4 mt-2",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                onClick: scrollToTop,
+                                className: "to-top-button",
+                                children: "Jump to the top \u21A5"
+                            }, void 0, false, {
+                                fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                lineNumber: 57,
+                                columnNumber: 13
+                            }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                            lineNumber: 11,
-                            columnNumber: 66
-                        }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                        lineNumber: 11,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                        href: "https://www.facebook.com/sam.c.meyer/",
-                        target: "_blank",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            className: "footer-image",
-                            src: require("c56ab9b7f51b3a3d"),
-                            alt: "Facebook icon"
+                            lineNumber: 56,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                            xs: 12,
+                            lg: 4
                         }, void 0, false, {
                             fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                            lineNumber: 12,
-                            columnNumber: 75
-                        }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                        lineNumber: 12,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                        href: "https://www.linkedin.com/in/samuel-christopher-meyer/",
-                        target: "_blank",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            className: "footer-image",
-                            src: require("e6964c123e9207bd"),
-                            alt: "LinkedIn icon"
+                            lineNumber: 59,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                            xs: 12,
+                            lg: 4,
+                            className: "d-flex justify-content-center align-items-end mb-4",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                className: "footer-text",
+                                children: [
+                                    "\xa9 ",
+                                    currentYear,
+                                    " samuelmeyer.dev"
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                lineNumber: 61,
+                                columnNumber: 13
+                            }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                            lineNumber: 13,
-                            columnNumber: 91
+                            lineNumber: 60,
+                            columnNumber: 11
                         }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                        lineNumber: 13,
-                        columnNumber: 11
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                lineNumber: 9,
-                columnNumber: 9
-            }, undefined)
-        }, void 0, false, {
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                    lineNumber: 55,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
             fileName: "src/components/sticky-footer/sticky-footer.jsx",
-            lineNumber: 8,
+            lineNumber: 17,
             columnNumber: 7
         }, undefined)
     }, void 0, false);
@@ -43319,16 +43719,7 @@ $RefreshReg$(_c, "StickyFooter");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-bootstrap":"3AD9A","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe","c777a79b0619b754":"83hpS","c56ab9b7f51b3a3d":"85T1X","e6964c123e9207bd":"czT1L"}],"83hpS":[function(require,module,exports) {
-module.exports = require("1e6b1201b5cc5df2").getBundleURL("byUka") + "github_icon.24d9e1ba.svg" + "?" + Date.now();
-
-},{"1e6b1201b5cc5df2":"lgJ39"}],"85T1X":[function(require,module,exports) {
-module.exports = require("69d6229000a13cc0").getBundleURL("byUka") + "fb_icon.5a8a1fd0.svg" + "?" + Date.now();
-
-},{"69d6229000a13cc0":"lgJ39"}],"czT1L":[function(require,module,exports) {
-module.exports = require("82882a3d06439afc").getBundleURL("byUka") + "linkedin_icon.809f6d26.svg" + "?" + Date.now();
-
-},{"82882a3d06439afc":"lgJ39"}],"cJaiP":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-bootstrap":"3AD9A","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}],"cJaiP":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$8337 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

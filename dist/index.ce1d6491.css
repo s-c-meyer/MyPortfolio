@@ -29,6 +29,11 @@
   text-shadow: 0 0 1.5rem #b4ddcf;
 }
 
+.footer-text--no-shadow {
+  color: #87b4a9;
+  text-decoration: none;
+}
+
 .footer-text-title {
   text-transform: uppercase;
   color: #87b4a9;
@@ -76,8 +81,9 @@
 }
 
 .carousel {
+  background-color: #87b4a9;
   width: 100%;
-  height: 500px;
+  height: 30rem;
   overflow: visible;
 }
 

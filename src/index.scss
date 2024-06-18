@@ -39,6 +39,11 @@ $secondary-color: #5a8b81;
   }
 }
 
+.footer-text--no-shadow {
+  text-decoration: none;
+  color: $primary-color;
+}
+
 .footer-text-title {
   text-transform: uppercase;
   color: $primary-color;
@@ -86,9 +91,10 @@ $secondary-color: #5a8b81;
 }
 
 .carousel {
-  height: 500px;
+  height: 30rem;
   overflow: visible;
   width: 100%;
+  background-color: $primary-color;
 }
 
 .carousel-label {

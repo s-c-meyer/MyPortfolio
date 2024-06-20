@@ -52,6 +52,12 @@
   border-color: #87b4a9;
   border-radius: 5rem;
   padding: .4rem;
+  transition: all .3s ease-in-out !important;
+}
+
+.to-top-button:hover {
+  color: #00655e;
+  background-color: #87b4a9;
 }
 
 .main-container {
@@ -68,8 +74,63 @@
   text-decoration: none;
 }
 
+.badge-inprogress {
+  text-wrap: nowrap;
+  background-color: #e7e76a;
+  border-radius: 3rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem;
+  font-weight: bold;
+  position: relative;
+  top: 1.5rem;
+  left: 1rem;
+}
+
 .portfolio-main-font {
   font-size: large;
+}
+
+.portfolio-container {
+  background: #87b4a9;
+  border-radius: 5rem;
+}
+
+.portfolio-img {
+  width: 100%;
+}
+
+.portfolio-text--main {
+  background-color: #b4ddcf;
+  border-radius: 2rem;
+}
+
+.portfolio-skill {
+  color: #87b4a9;
+  background-color: #003c38;
+}
+
+.portfolio-btn {
+  color: #414141;
+  text-align: center;
+  background: #96e9ff;
+  border-style: solid;
+  border-color: #414141;
+  border-radius: .5rem;
+  margin-top: 1rem;
+  padding: .4rem;
+  text-decoration: none;
+  transition: all .3s ease-in-out !important;
+}
+
+.portfolio-btn:hover {
+  color: #96e9ff;
+  background-color: #414141;
+}
+
+.portfolio-btn-text--hidden {
+  color: #96e9ff;
+  font-weight: bold;
 }
 
 .progress-bar-icon {

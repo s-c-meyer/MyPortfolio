@@ -31,7 +31,7 @@ export const NavigationBar = () => {
             Samuel Meyer
           </Navbar.Brand> */}
           <Nav.Link className="me-3" eventKey="Home" as={Link} to="/">
-            <img eventKey="Home" src={require("../../img/NavLogo.png")} alt="Navigation Bar Header Logo" />
+            <img eventKey="Home" src={require("../../img/NavLogo.svg")} alt="Navigation Bar Header Logo" />
           </Nav.Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

@@ -4,6 +4,8 @@ $navbar-color: #003c38;
 $background-color: #b4ddcf;
 $primary-color: #87b4a9;
 $secondary-color: #5a8b81;
+$blue-color: #96e9ff;
+$dark-grey-color: rgb(65, 65, 65);
 
 .root-container {
   background-color: $background-color;
@@ -61,7 +63,13 @@ $secondary-color: #5a8b81;
   border-radius: 5rem;
   border-color: $primary-color;
   border-style: solid;
-  padding: .4rem
+  padding: .4rem;
+  transition: all 0.3s ease-in-out !important;
+
+  &:hover {
+    background-color: $primary-color;
+    color: lighten($color: $navbar-color, $amount: 8%);
+  }
 }
 
 .main-container {
@@ -78,8 +86,62 @@ $secondary-color: #5a8b81;
   font-size: 50pt;
 }
 
+.badge-inprogress {
+  background-color: rgb(231, 231, 106);
+  border-radius: 3rem;
+  position: relative;
+  font-weight: bold;
+  width: fit-content;
+  top: 1.5rem;
+  left: 1rem;
+  padding: 1rem;
+  text-wrap: nowrap;
+}
+
 .portfolio-main-font {
   font-size: large;
+}
+
+.portfolio-container {
+  background: $primary-color;
+  border-radius: 5rem;
+}
+
+.portfolio-img {
+  width: 100%;
+}
+
+.portfolio-text--main {
+  background-color: $background-color;
+  border-radius: 2rem;
+}
+
+.portfolio-skill {
+  background-color: $navbar-color;
+  color: $primary-color;
+}
+
+.portfolio-btn {
+  background: $blue-color;
+  text-decoration: none;
+  color: $dark-grey-color;
+  border-radius: 0.5rem;
+  border-color: $dark-grey-color;
+  border-style: solid;
+  padding: .4rem;
+  transition: all 0.3s ease-in-out !important;
+  text-align: center;
+  margin-top: 1rem;
+
+  &:hover {
+    background-color: $dark-grey-color;
+    color: $blue-color;
+  }
+}
+
+.portfolio-btn-text--hidden {
+  color: $blue-color;
+  font-weight: bold;
 }
 
 .progress-bar-icon {

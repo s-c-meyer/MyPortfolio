@@ -1,11 +1,17 @@
 import { Button, Row, Col, Container } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
+import { PortfolioPiece } from '../portfolio-piece/portfolio-piece';
 
 export const PortfolioView = () => {
   return (
     <Container className='mb-5'>
       <Row className='d-flex justify-content-center'>
+        <Col xs={11}>
+          <PortfolioPiece />
+          <PortfolioPiece />
+          <PortfolioPiece />
+        </Col>
         <Col className='mb-5' xs={12} lg={10}>
           <Card>
             <Card.Img variant='top' src={require("../../img/MeetApp2Screens.png")} />

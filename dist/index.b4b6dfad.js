@@ -42197,61 +42197,77 @@ const IntroView = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
             className: "d-flex",
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
-                className: "justify-content-center mt-5",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
-                        xs: 8,
-                        lg: 3,
-                        className: "mb-4 mb-lg-0 align-content-center",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _imageDefault.default), {
-                            alt: "A portrait of me, Sam Meyer",
-                            src: require("376ce15efb8f6d70"),
-                            roundedCircle: true,
-                            fluid: true
-                        }, void 0, false, {
-                            fileName: "src/components/intro-view/intro-view.jsx",
-                            lineNumber: 12,
-                            columnNumber: 11
-                        }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/components/intro-view/intro-view.jsx",
-                        lineNumber: 11,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
-                        xs: 10,
-                        lg: 7,
-                        className: "intro-container d-flex flex-column justify-content-center align-items-center align-items-lg-start p-5 ms-0 ms-lg-3",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "sizetest",
-                                children: "Well, Hello"
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
+                    className: "justify-content-center mt-5",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
+                            xs: 8,
+                            lg: 3,
+                            className: "mb-4 mb-lg-0 align-content-center",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _imageDefault.default), {
+                                alt: "A portrait of me, Sam Meyer",
+                                src: require("376ce15efb8f6d70"),
+                                roundedCircle: true,
+                                fluid: true
                             }, void 0, false, {
                                 fileName: "src/components/intro-view/intro-view.jsx",
-                                lineNumber: 15,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                children: "My name is Sam Meyer. I am a Full-Stack Web Developer who was once an Industrial Engineer from Missouri. "
-                            }, void 0, false, {
-                                fileName: "src/components/intro-view/intro-view.jsx",
-                                lineNumber: 16,
+                                lineNumber: 12,
                                 columnNumber: 11
                             }, undefined)
-                        ]
-                    }, void 0, true, {
+                        }, void 0, false, {
+                            fileName: "src/components/intro-view/intro-view.jsx",
+                            lineNumber: 11,
+                            columnNumber: 9
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
+                            xs: 10,
+                            lg: 7,
+                            className: "intro-container d-flex flex-column justify-content-center align-items-center align-items-lg-start p-5 ms-0 ms-lg-3",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                    className: "sizetest",
+                                    children: "Well, Hello"
+                                }, void 0, false, {
+                                    fileName: "src/components/intro-view/intro-view.jsx",
+                                    lineNumber: 15,
+                                    columnNumber: 11
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                    children: "My name is Sam Meyer. I am a Full-Stack Web Developer who was once an Industrial Engineer from Missouri. "
+                                }, void 0, false, {
+                                    fileName: "src/components/intro-view/intro-view.jsx",
+                                    lineNumber: 16,
+                                    columnNumber: 11
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/intro-view/intro-view.jsx",
+                            lineNumber: 14,
+                            columnNumber: 9
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/intro-view/intro-view.jsx",
+                    lineNumber: 10,
+                    columnNumber: 7
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
+                        className: "intro-container",
+                        children: "What do I do for fun?"
+                    }, void 0, false, {
                         fileName: "src/components/intro-view/intro-view.jsx",
-                        lineNumber: 14,
+                        lineNumber: 20,
                         columnNumber: 9
                     }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/intro-view/intro-view.jsx",
-                lineNumber: 10,
-                columnNumber: 7
-            }, undefined)
-        }, void 0, false, {
+                }, void 0, false, {
+                    fileName: "src/components/intro-view/intro-view.jsx",
+                    lineNumber: 19,
+                    columnNumber: 7
+                }, undefined)
+            ]
+        }, void 0, true, {
             fileName: "src/components/intro-view/intro-view.jsx",
             lineNumber: 9,
             columnNumber: 5
@@ -42295,19 +42311,78 @@ const PortfolioView = ()=>{
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
                     xs: 11,
                     children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioPiece.PortfolioPiece), {}, void 0, false, {
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioPiece.PortfolioPiece), {
+                            isCompleted: true,
+                            image: {
+                                src: require("bbc408b056daa087"),
+                                alt: "Computer and Phone Screen showcasing the Meyer's Meet App"
+                            },
+                            title: "Meyer's Meet App",
+                            body: "Meyer's Meet App is a serverless, progressive web application which was built using React with a Test-Driven Development (TDD) Technique. It uses the Google Calendar API to fetch upcoming events. Users can filter events by city, and view the data for their search update in real time.",
+                            githubLink: "https://github.com/s-c-meyer/meet",
+                            demoLink: "https://s-c-meyer.github.io/meet/"
+                        }, void 0, false, {
                             fileName: "src/components/portfolio-view/portfolio-view.jsx",
                             lineNumber: 11,
                             columnNumber: 11
                         }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioPiece.PortfolioPiece), {}, void 0, false, {
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioPiece.PortfolioPiece), {
+                            isCompleted: true,
+                            image: {
+                                src: require("cf7dfb7727d4d1be"),
+                                alt: "Three phones displaying the Chat App"
+                            },
+                            title: "Meyer's Messages App",
+                            body: "Meyer's Messages is a chat app that was built using React Native and tested using an Android Emulator. The app provides users with a chat interface and options to share their location and/or images. Images may be shared either from the devices media library, or directly from the camera within the app.",
+                            githubLink: "https://github.com/s-c-meyer/chatDemo"
+                        }, void 0, false, {
                             fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                            lineNumber: 12,
+                            lineNumber: 22,
                             columnNumber: 11
                         }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioPiece.PortfolioPiece), {}, void 0, false, {
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioPiece.PortfolioPiece), {
+                            isCompleted: true,
+                            image: {
+                                src: require("bdbf8a705f7e5a56"),
+                                alt: "Computer and Phone Screen showcasing the Meyer's Movies App built using React"
+                            },
+                            title: "Meyer's Movies (React)",
+                            body: "Meyer's Movies is a single page application that pulls data about movies from a database using a REST API that I built. User's can create a profile to save their favorite movies, and click to learn more about each movie in the database. The frontend was developed using the React framework.",
+                            githubLink: "https://github.com/s-c-meyer/myFlix-client",
+                            demoLink: "https://meyersmovies.netlify.app/",
+                            caseStudyLink: "/casestudy"
+                        }, void 0, false, {
                             fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                            lineNumber: 13,
+                            lineNumber: 32,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioPiece.PortfolioPiece), {
+                            isCompleted: true,
+                            image: {
+                                src: require("62cd09e8252fca3"),
+                                alt: "Computer and Phone Screen showcasing the Meyer's Movies App built using Angular"
+                            },
+                            title: "Meyer's Movies (Angular)",
+                            body: "Meyer's Movies is a single page application that pulls data about movies from a database using a REST API that I built. User's can create a profile to save their favorite movies, and can learn more through modals that show the movie's genre, director, or summary. The frontend was developed using the AngularJS framework.",
+                            githubLink: "https://github.com/s-c-meyer/myFlix-Angular-client"
+                        }, void 0, false, {
+                            fileName: "src/components/portfolio-view/portfolio-view.jsx",
+                            lineNumber: 44,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioPiece.PortfolioPiece), {
+                            isCompleted: true,
+                            image: {
+                                src: require("f866a8286eb00959"),
+                                alt: "Computer and Phone Screen showcasing the Pokedex App"
+                            },
+                            title: "Pokedex App",
+                            body: "This app uses the PokeAPI to pull information about pokemon and display them to the user. The user can click on a pokemon to see additional information.",
+                            githubLink: "https://github.com/s-c-meyer/simple-js-app",
+                            demoLink: "https://s-c-meyer.github.io/simple-js-app/"
+                        }, void 0, false, {
+                            fileName: "src/components/portfolio-view/portfolio-view.jsx",
+                            lineNumber: 54,
                             columnNumber: 11
                         }, undefined)
                     ]
@@ -42327,7 +42402,7 @@ const PortfolioView = ()=>{
                                 src: require("bbc408b056daa087")
                             }, void 0, false, {
                                 fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 17,
+                                lineNumber: 68,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Body, {
@@ -42338,7 +42413,7 @@ const PortfolioView = ()=>{
                                         children: "Meyer's Meet App"
                                     }, void 0, false, {
                                         fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 19,
+                                        lineNumber: 70,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Text, {
@@ -42346,7 +42421,7 @@ const PortfolioView = ()=>{
                                         children: "Meyer's Meet App is a serverless, progressive web application which was built using React with a Test-Driven Development (TDD) Technique. It uses the Google Calendar API to fetch upcoming events. Users can filter events by city, and view the data for their search update in real time."
                                     }, void 0, false, {
                                         fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 20,
+                                        lineNumber: 71,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
@@ -42365,12 +42440,12 @@ const PortfolioView = ()=>{
                                                         children: "Review the code on Github"
                                                     }, void 0, false, {
                                                         fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                        lineNumber: 27,
+                                                        lineNumber: 78,
                                                         columnNumber: 19
                                                     }, undefined)
                                                 }, void 0, false, {
                                                     fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                    lineNumber: 26,
+                                                    lineNumber: 77,
                                                     columnNumber: 17
                                                 }, undefined),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
@@ -42385,47 +42460,47 @@ const PortfolioView = ()=>{
                                                         children: "View the live demo"
                                                     }, void 0, false, {
                                                         fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                        lineNumber: 32,
+                                                        lineNumber: 83,
                                                         columnNumber: 19
                                                     }, undefined)
                                                 }, void 0, false, {
                                                     fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                    lineNumber: 31,
+                                                    lineNumber: 82,
                                                     columnNumber: 17
                                                 }, undefined)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                            lineNumber: 25,
+                                            lineNumber: 76,
                                             columnNumber: 15
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 24,
+                                        lineNumber: 75,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 18,
+                                lineNumber: 69,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Footer, {
                                 children: "Built using React with Recharts Library, Google Calendar API, and Test-Driven Development Techniques"
                             }, void 0, false, {
                                 fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 39,
+                                lineNumber: 90,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                        lineNumber: 16,
+                        lineNumber: 67,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                    lineNumber: 15,
+                    lineNumber: 66,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
@@ -42439,7 +42514,7 @@ const PortfolioView = ()=>{
                                 src: require("cf7dfb7727d4d1be")
                             }, void 0, false, {
                                 fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 46,
+                                lineNumber: 97,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Body, {
@@ -42450,15 +42525,14 @@ const PortfolioView = ()=>{
                                         children: "Meyer's Messages App"
                                     }, void 0, false, {
                                         fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 48,
+                                        lineNumber: 99,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Text, {
-                                        className: "mb-3 portfolio-main-font",
-                                        children: "Meyer's Messages is a chat app that was built using React Native and tested using an Android Emulator. The app provides users with a chat interface and options to share their location and/or images. Images may be shared either from the devices media library, or directly from the camera within the app."
+                                        className: "mb-3 portfolio-main-font"
                                     }, void 0, false, {
                                         fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 49,
+                                        lineNumber: 100,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
@@ -42476,46 +42550,46 @@ const PortfolioView = ()=>{
                                                     children: "Review the code on Github"
                                                 }, void 0, false, {
                                                     fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                    lineNumber: 55,
+                                                    lineNumber: 105,
                                                     columnNumber: 19
                                                 }, undefined)
                                             }, void 0, false, {
                                                 fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                lineNumber: 54,
+                                                lineNumber: 104,
                                                 columnNumber: 17
                                             }, undefined)
                                         }, void 0, false, {
                                             fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                            lineNumber: 53,
+                                            lineNumber: 103,
                                             columnNumber: 15
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 52,
+                                        lineNumber: 102,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 47,
+                                lineNumber: 98,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Footer, {
                                 children: "Built using Google Firestore Database with Firebase Authentication, Expo, React Native with Gifted Chat Library"
                             }, void 0, false, {
                                 fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 62,
+                                lineNumber: 112,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                        lineNumber: 45,
+                        lineNumber: 96,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                    lineNumber: 44,
+                    lineNumber: 95,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
@@ -42529,7 +42603,7 @@ const PortfolioView = ()=>{
                                 src: require("bdbf8a705f7e5a56")
                             }, void 0, false, {
                                 fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 69,
+                                lineNumber: 119,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Body, {
@@ -42540,7 +42614,7 @@ const PortfolioView = ()=>{
                                         children: "Meyer's Movies (React)"
                                     }, void 0, false, {
                                         fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 71,
+                                        lineNumber: 121,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Text, {
@@ -42548,7 +42622,7 @@ const PortfolioView = ()=>{
                                         children: "Meyer's Movies is a single page application that pulls data about movies from a database using a REST API that I built. User's can create a profile to save their favorite movies, and click to learn more about each movie in the database. The frontend was developed using the React framework."
                                     }, void 0, false, {
                                         fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 72,
+                                        lineNumber: 122,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
@@ -42567,12 +42641,12 @@ const PortfolioView = ()=>{
                                                         children: "Review the code on Github"
                                                     }, void 0, false, {
                                                         fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                        lineNumber: 78,
+                                                        lineNumber: 128,
                                                         columnNumber: 19
                                                     }, undefined)
                                                 }, void 0, false, {
                                                     fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                    lineNumber: 77,
+                                                    lineNumber: 127,
                                                     columnNumber: 17
                                                 }, undefined),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
@@ -42587,12 +42661,12 @@ const PortfolioView = ()=>{
                                                         children: "View the live demo"
                                                     }, void 0, false, {
                                                         fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                        lineNumber: 83,
+                                                        lineNumber: 133,
                                                         columnNumber: 19
                                                     }, undefined)
                                                 }, void 0, false, {
                                                     fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                    lineNumber: 82,
+                                                    lineNumber: 132,
                                                     columnNumber: 17
                                                 }, undefined),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
@@ -42607,47 +42681,47 @@ const PortfolioView = ()=>{
                                                         children: "Meyer's Movies Case Study"
                                                     }, void 0, false, {
                                                         fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                        lineNumber: 88,
+                                                        lineNumber: 138,
                                                         columnNumber: 19
                                                     }, undefined)
                                                 }, void 0, false, {
                                                     fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                    lineNumber: 87,
+                                                    lineNumber: 137,
                                                     columnNumber: 17
                                                 }, undefined)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                            lineNumber: 76,
+                                            lineNumber: 126,
                                             columnNumber: 15
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 75,
+                                        lineNumber: 125,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 70,
+                                lineNumber: 120,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Footer, {
                                 children: "Built using the MERN stack (MongoDB, Express, React, Node.js), along with Parcel as the build tool"
                             }, void 0, false, {
                                 fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 95,
+                                lineNumber: 145,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                        lineNumber: 68,
+                        lineNumber: 118,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                    lineNumber: 67,
+                    lineNumber: 117,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
@@ -42661,7 +42735,7 @@ const PortfolioView = ()=>{
                                 src: require("62cd09e8252fca3")
                             }, void 0, false, {
                                 fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 102,
+                                lineNumber: 152,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Body, {
@@ -42672,7 +42746,7 @@ const PortfolioView = ()=>{
                                         children: "Meyer's Movies (Angular)"
                                     }, void 0, false, {
                                         fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 104,
+                                        lineNumber: 154,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Text, {
@@ -42680,7 +42754,7 @@ const PortfolioView = ()=>{
                                         children: "Meyer's Movies is a single page application that pulls data about movies from a database using a REST API that I built. User's can create a profile to save their favorite movies, and can learn more through modals that show the movie's genre, director, or summary. The frontend was developed using the AngularJS framework."
                                     }, void 0, false, {
                                         fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 105,
+                                        lineNumber: 155,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
@@ -42698,46 +42772,46 @@ const PortfolioView = ()=>{
                                                     children: "Review the code on Github"
                                                 }, void 0, false, {
                                                     fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                    lineNumber: 111,
+                                                    lineNumber: 161,
                                                     columnNumber: 19
                                                 }, undefined)
                                             }, void 0, false, {
                                                 fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                lineNumber: 110,
+                                                lineNumber: 160,
                                                 columnNumber: 17
                                             }, undefined)
                                         }, void 0, false, {
                                             fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                            lineNumber: 109,
+                                            lineNumber: 159,
                                             columnNumber: 15
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 108,
+                                        lineNumber: 158,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 103,
+                                lineNumber: 153,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Footer, {
                                 children: "Built using the MEAN stack (MongoDB, Express, Angular, Node.js)"
                             }, void 0, false, {
                                 fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 118,
+                                lineNumber: 168,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                        lineNumber: 101,
+                        lineNumber: 151,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                    lineNumber: 100,
+                    lineNumber: 150,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
@@ -42751,7 +42825,7 @@ const PortfolioView = ()=>{
                                 src: require("f866a8286eb00959")
                             }, void 0, false, {
                                 fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 125,
+                                lineNumber: 175,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Body, {
@@ -42762,7 +42836,7 @@ const PortfolioView = ()=>{
                                         children: "Pokedex App"
                                     }, void 0, false, {
                                         fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 127,
+                                        lineNumber: 177,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Text, {
@@ -42770,7 +42844,7 @@ const PortfolioView = ()=>{
                                         children: "This app uses the PokeAPI to pull information about pokemon and display them to the user. The user can click on a pokemon to see additional information."
                                     }, void 0, false, {
                                         fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 128,
+                                        lineNumber: 178,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
@@ -42789,12 +42863,12 @@ const PortfolioView = ()=>{
                                                         children: "Review the code on Github"
                                                     }, void 0, false, {
                                                         fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                        lineNumber: 134,
+                                                        lineNumber: 184,
                                                         columnNumber: 19
                                                     }, undefined)
                                                 }, void 0, false, {
                                                     fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                    lineNumber: 133,
+                                                    lineNumber: 183,
                                                     columnNumber: 17
                                                 }, undefined),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
@@ -42809,47 +42883,47 @@ const PortfolioView = ()=>{
                                                         children: "View the live demo"
                                                     }, void 0, false, {
                                                         fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                        lineNumber: 139,
+                                                        lineNumber: 189,
                                                         columnNumber: 19
                                                     }, undefined)
                                                 }, void 0, false, {
                                                     fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                    lineNumber: 138,
+                                                    lineNumber: 188,
                                                     columnNumber: 17
                                                 }, undefined)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                            lineNumber: 132,
+                                            lineNumber: 182,
                                             columnNumber: 15
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 131,
+                                        lineNumber: 181,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 126,
+                                lineNumber: 176,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Footer, {
                                 children: "Built using HTML, CSS, Javascript, Bootstrap, and external API's (PokeAPI)"
                             }, void 0, false, {
                                 fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 146,
+                                lineNumber: 196,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                        lineNumber: 124,
+                        lineNumber: 174,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                    lineNumber: 123,
+                    lineNumber: 173,
                     columnNumber: 9
                 }, undefined)
             ]
@@ -42900,18 +42974,19 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "PortfolioPiece", ()=>PortfolioPiece);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _reactBootstrap = require("react-bootstrap");
-const PortfolioPiece = ()=>{
+var _react = require("react");
+const PortfolioPiece = ({ isCompleted, image, title, body, githubLink, demoLink, caseStudyLink, tools })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
             className: "mb-5",
             fluid: true,
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "badge-inprogress",
-                    children: "IN PROGRESS"
+                    className: isCompleted ? "badge-completed" : "badge-inprogress",
+                    children: isCompleted ? "COMPLETED" : "IN PROGRESS"
                 }, void 0, false, {
                     fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
-                    lineNumber: 17,
+                    lineNumber: 18,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
@@ -42923,16 +42998,16 @@ const PortfolioPiece = ()=>{
                             xl: 8,
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                                 className: "portfolio-img",
-                                src: require("81a5f10c5dcb7187"),
-                                alt: "Computer and Phone Screen showcasing the Meyer's Meet App"
+                                src: image.src,
+                                alt: image.alt
                             }, void 0, false, {
                                 fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
-                                lineNumber: 22,
+                                lineNumber: 23,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
-                            lineNumber: 21,
+                            lineNumber: 22,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
@@ -42942,10 +43017,10 @@ const PortfolioPiece = ()=>{
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                                         className: "d-flex justify-content-center mt-4 mt-xl-0",
-                                        children: "Meyer's Meet App"
+                                        children: title
                                     }, void 0, false, {
                                         fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
-                                        lineNumber: 26,
+                                        lineNumber: 27,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Stack), {
@@ -42953,20 +43028,20 @@ const PortfolioPiece = ()=>{
                                         children: [
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {}, void 0, false, {
                                                 fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
-                                                lineNumber: 28,
+                                                lineNumber: 29,
                                                 columnNumber: 17
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                                 className: "portfolio-text--main p-4",
-                                                children: "Meyer's Meet App is a serverless, progressive web application which was built using React with a Test-Driven Development (TDD) Technique. It uses the Google Calendar API to fetch upcoming events. Users can filter events by city, and view the data for their search update in real time."
+                                                children: body
                                             }, void 0, false, {
                                                 fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
-                                                lineNumber: 29,
+                                                lineNumber: 30,
                                                 columnNumber: 17
                                             }, undefined),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                            githubLink && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
                                                 class: "portfolio-btn",
-                                                href: "https://github.com/s-c-meyer/meet",
+                                                href: githubLink,
                                                 role: "button",
                                                 target: "_blank",
                                                 children: [
@@ -42975,8 +43050,8 @@ const PortfolioPiece = ()=>{
                                                         children: "<> "
                                                     }, void 0, false, {
                                                         fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
-                                                        lineNumber: 33,
-                                                        columnNumber: 19
+                                                        lineNumber: 31,
+                                                        columnNumber: 105
                                                     }, undefined),
                                                     "Review the code on GitHub",
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -42984,53 +43059,81 @@ const PortfolioPiece = ()=>{
                                                         children: " </>"
                                                     }, void 0, false, {
                                                         fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
-                                                        lineNumber: 33,
-                                                        columnNumber: 105
+                                                        lineNumber: 31,
+                                                        columnNumber: 191
                                                     }, undefined)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
-                                                lineNumber: 32,
-                                                columnNumber: 17
+                                                lineNumber: 31,
+                                                columnNumber: 32
                                             }, undefined),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                            demoLink && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
                                                 class: "portfolio-btn",
-                                                href: "https://s-c-meyer.github.io/meet/",
+                                                href: demoLink,
                                                 role: "button",
                                                 target: "_blank",
                                                 children: "View the live demo"
                                             }, void 0, false, {
                                                 fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
-                                                lineNumber: 35,
-                                                columnNumber: 17
+                                                lineNumber: 32,
+                                                columnNumber: 30
+                                            }, undefined),
+                                            caseStudyLink && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                                class: "portfolio-btn",
+                                                href: caseStudyLink,
+                                                role: "button",
+                                                target: "_blank",
+                                                children: "View the Case Study"
+                                            }, void 0, false, {
+                                                fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
+                                                lineNumber: 33,
+                                                columnNumber: 35
                                             }, undefined)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
-                                        lineNumber: 27,
+                                        lineNumber: 28,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
-                                lineNumber: 25,
+                                lineNumber: 26,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
-                            lineNumber: 24,
+                            lineNumber: 25,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
-                    lineNumber: 20,
+                    lineNumber: 21,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
+                    className: "d-flex justify-content-center",
+                    xs: 12,
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                        className: "portfolio-container-bottom d-flex justify-content-center",
+                        xs: 12,
+                        xl: 7
+                    }, void 0, false, {
+                        fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
+                        lineNumber: 39,
+                        columnNumber: 11
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
+                    lineNumber: 38,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
-            lineNumber: 16,
+            lineNumber: 17,
             columnNumber: 7
         }, undefined)
     }, void 0, false);
@@ -43044,7 +43147,7 @@ $RefreshReg$(_c, "PortfolioPiece");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-bootstrap":"3AD9A","81a5f10c5dcb7187":"dlUuF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"66Mev":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-bootstrap":"3AD9A","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq"}],"66Mev":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$6d0c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

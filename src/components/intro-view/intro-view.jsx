@@ -17,27 +17,6 @@ export const IntroView = () => {
         </Col>
       </Row>
     </Container>
-    {/* <Navbar sticky='bottom'>
-      <Container>
-        <Navbar.Brand as={Link} to="/">
-          Samuel Meyer
-        </Navbar.Brand>
-      </Container>
-    </Navbar> */}
-    {/* <Container>
-      <Row className='d-flex justify-content-center'><h3 className='d-flex justify-content-center'>Find me on:</h3></Row>
-      <Row className='d-flex justify-content-center'>
-        <Col xs={1}>
-          <a href="https://github.com/s-c-meyer?tab=projects" target="_blank"><img id="gh_logo" className="social-media--icon" src={require("../../img/github_icon.svg")} alt="Github icon" /></a>
-         </Col>  
-        <Col xs={1}>
-          <a href="https://www.facebook.com/sam.c.meyer/" target="_blank"><img id="fb_logo" className="social-media--icon" src={require("../../img/fb_icon.svg")} alt="Facebook icon" /></a>
-        </Col>
-        <Col xs={1}>
-          <a href="https://www.linkedin.com/in/samuel-christopher-meyer/" target="_blank"><img id="li_logo" className="social-media--icon" src={require("../../img/linkedin_icon.svg")} alt="LinkedIn icon" /></a>
-        </Col> 
-      </Row>
-    </Container> */}
     </>
   );
 };

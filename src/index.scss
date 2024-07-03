@@ -5,10 +5,11 @@ $background-color: #b4ddcf;
 $primary-color: #87b4a9;
 $secondary-color: #5a8b81;
 $blue-color: #96e9ff;
-$dark-grey-color: rgb(65, 65, 65);
+$dark-grey-color: rgb(50, 50, 50);
 
 .root-container {
   background-color: $background-color;
+  color: $dark-grey-color;
 }
 
 .navbar-container {
@@ -86,8 +87,7 @@ $dark-grey-color: rgb(65, 65, 65);
   font-size: 50pt;
 }
 
-.badge-inprogress {
-  background-color: rgb(231, 231, 106);
+.portfolio-badge {
   border-radius: 3rem;
   position: relative;
   font-weight: bold;
@@ -98,6 +98,16 @@ $dark-grey-color: rgb(65, 65, 65);
   text-wrap: nowrap;
 }
 
+.badge-inprogress {
+  @extend .portfolio-badge;
+  background-color: rgb(231, 231, 106);
+}
+
+.badge-completed {
+  @extend .portfolio-badge;
+  background-color: greenyellow;
+}
+
 .portfolio-main-font {
   font-size: large;
 }
@@ -105,6 +115,18 @@ $dark-grey-color: rgb(65, 65, 65);
 .portfolio-container {
   background: $primary-color;
   border-radius: 5rem;
+}
+
+.portfolio-container-bottom {
+  background: $primary-color;
+  border-radius: 0 0 5rem 5rem;
+}
+
+.portfolio-text--framework {
+  background-color: $background-color;
+  border-radius: 3rem;
+  max-width: fit-content !important;
+  margin: 1rem;
 }
 
 .portfolio-img {
@@ -175,12 +197,22 @@ $dark-grey-color: rgb(65, 65, 65);
   };
 }
 
+@media screen and (max-width: 1200px) {
+  .portfolio-container {
+    border-radius: 3rem 3rem 0 0;
+  }
+
+  .portfolio-container-bottom {
+    border-radius: 0 0 3rem 3rem;
+  }
+}
+
 .nav-link {
   color: $primary-color !important;
   transition: text-shadow 0.3s ease-in-out !important;
 
   &:hover {
-    text-shadow: $background-color 0 0 1.5rem;
+    text-shadow: $blue-color 0 0 1.5rem;
   }
 
   //&:active only applies when you actively have the mouse held down on the link

@@ -8,9 +8,60 @@ export const PortfolioView = () => {
     <Container className='mb-5'>
       <Row className='d-flex justify-content-center'>
         <Col xs={11}>
-          <PortfolioPiece />
-          <PortfolioPiece />
-          <PortfolioPiece />
+          <PortfolioPiece
+            isCompleted = {true}
+            image = {{ 
+              src: require("../../img/MeetApp2Screens.png"),
+              alt: 'Computer and Phone Screen showcasing the Meyer\'s Meet App' 
+            }}
+            title = "Meyer's Meet App"
+            body = "Meyer's Meet App is a serverless, progressive web application which was built using React with a Test-Driven Development (TDD) Technique. It uses the Google Calendar API to fetch upcoming events. Users can filter events by city, and view the data for their search update in real time."
+            githubLink = 'https://github.com/s-c-meyer/meet'
+            demoLink = 'https://s-c-meyer.github.io/meet/'
+          />
+          <PortfolioPiece 
+            isCompleted={true}
+            image ={{
+              src: require("../../img/chatAppThreePhones.png"),
+              alt: "Three phones displaying the Chat App"
+            }}
+            title="Meyer's Messages App"
+            body="Meyer's Messages is a chat app that was built using React Native and tested using an Android Emulator. The app provides users with a chat interface and options to share their location and/or images. Images may be shared either from the devices media library, or directly from the camera within the app."
+            githubLink="https://github.com/s-c-meyer/chatDemo"
+          />
+          <PortfolioPiece 
+            isCompleted={true}
+            image ={{
+              src: require("../../img/MeyersMoviesReact.png"),
+              alt: "Computer and Phone Screen showcasing the Meyer\'s Movies App built using React"
+            }}
+            title="Meyer's Movies (React)"
+            body="Meyer's Movies is a single page application that pulls data about movies from a database using a REST API that I built. User's can create a profile to save their favorite movies, and click to learn more about each movie in the database. The frontend was developed using the React framework."
+            githubLink="https://github.com/s-c-meyer/myFlix-client"
+            demoLink="https://meyersmovies.netlify.app/"
+            caseStudyLink="/casestudy"
+          />
+          <PortfolioPiece 
+            isCompleted={true}
+            image ={{
+              src: require("../../img/MeyersMoviesAngular.png"),
+              alt: "Computer and Phone Screen showcasing the Meyer\'s Movies App built using Angular"
+            }}
+            title="Meyer's Movies (Angular)"
+            body="Meyer's Movies is a single page application that pulls data about movies from a database using a REST API that I built. User's can create a profile to save their favorite movies, and can learn more through modals that show the movie's genre, director, or summary. The frontend was developed using the AngularJS framework."
+            githubLink="https://github.com/s-c-meyer/myFlix-Angular-client"
+          />
+          <PortfolioPiece 
+            isCompleted={true}
+            image ={{
+              src: require("../../img/PokedexApp.png"),
+              alt: "Computer and Phone Screen showcasing the Pokedex App"
+            }}
+            title="Pokedex App"
+            body="This app uses the PokeAPI to pull information about pokemon and display them to the user. The user can click on a pokemon to see additional information."
+            githubLink="https://github.com/s-c-meyer/simple-js-app"
+            demoLink="https://s-c-meyer.github.io/simple-js-app/"
+          />
         </Col>
         <Col className='mb-5' xs={12} lg={10}>
           <Card>
@@ -47,7 +98,6 @@ export const PortfolioView = () => {
             <Card.Body>
               <Card.Title className='d-flex justify-content-center my-4' as='h1'>Meyer's Messages App</Card.Title>
               <Card.Text className='mb-3 portfolio-main-font'>
-                Meyer's Messages is a chat app that was built using React Native and tested using an Android Emulator. The app provides users with a chat interface and options to share their location and/or images. Images may be shared either from the devices media library, or directly from the camera within the app.
               </Card.Text>
               <Container>
               <Row className='d-flex justify-content-center my-3'>

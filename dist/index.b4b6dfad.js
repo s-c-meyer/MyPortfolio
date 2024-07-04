@@ -42193,12 +42193,13 @@ var _col = require("react-bootstrap/Col");
 var _colDefault = parcelHelpers.interopDefault(_col);
 var _image = require("react-bootstrap/Image");
 var _imageDefault = parcelHelpers.interopDefault(_image);
+var _reactRouterDom = require("react-router-dom");
 const IntroView = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
-            className: "d-flex",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
+                className: "d-flex mb-4 mt-lg-3",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
                     className: "justify-content-center mt-5",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
@@ -42212,12 +42213,12 @@ const IntroView = ()=>{
                                 fluid: true
                             }, void 0, false, {
                                 fileName: "src/components/intro-view/intro-view.jsx",
-                                lineNumber: 12,
+                                lineNumber: 13,
                                 columnNumber: 11
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/intro-view/intro-view.jsx",
-                            lineNumber: 11,
+                            lineNumber: 12,
                             columnNumber: 9
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
@@ -42230,49 +42231,109 @@ const IntroView = ()=>{
                                     children: "Well, Hello"
                                 }, void 0, false, {
                                     fileName: "src/components/intro-view/intro-view.jsx",
-                                    lineNumber: 15,
+                                    lineNumber: 16,
                                     columnNumber: 11
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                                     children: "My name is Sam Meyer. I am a Full-Stack Web Developer who was once an Industrial Engineer from Missouri. "
                                 }, void 0, false, {
                                     fileName: "src/components/intro-view/intro-view.jsx",
-                                    lineNumber: 16,
+                                    lineNumber: 17,
                                     columnNumber: 11
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/intro-view/intro-view.jsx",
-                            lineNumber: 14,
+                            lineNumber: 15,
                             columnNumber: 9
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/intro-view/intro-view.jsx",
-                    lineNumber: 10,
-                    columnNumber: 7
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
-                        className: "intro-container",
-                        children: "What do I do for fun?"
-                    }, void 0, false, {
-                        fileName: "src/components/intro-view/intro-view.jsx",
-                        lineNumber: 20,
-                        columnNumber: 9
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/intro-view/intro-view.jsx",
-                    lineNumber: 19,
+                    lineNumber: 11,
                     columnNumber: 7
                 }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/components/intro-view/intro-view.jsx",
-            lineNumber: 9,
-            columnNumber: 5
-        }, undefined)
-    }, void 0, false);
+            }, void 0, false, {
+                fileName: "src/components/intro-view/intro-view.jsx",
+                lineNumber: 10,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
+                className: "mt-5",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
+                    className: "d-flex justify-content-around mt-5",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
+                            as: (0, _reactBootstrap.Nav).Link,
+                            href: "/portfolio",
+                            xs: 10,
+                            lg: 5,
+                            className: "d-flex intro-button align-items-center justify-content-around p-4 mb-5 mb-lg-0",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                    className: "mb-0 intro-button--link",
+                                    children: "See what I do for work"
+                                }, void 0, false, {
+                                    fileName: "src/components/intro-view/intro-view.jsx",
+                                    lineNumber: 25,
+                                    columnNumber: 11
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _imageDefault.default), {
+                                    className: "intro-icon ms-3",
+                                    src: require("2b4c3c1d926505e3")
+                                }, void 0, false, {
+                                    fileName: "src/components/intro-view/intro-view.jsx",
+                                    lineNumber: 26,
+                                    columnNumber: 11
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/intro-view/intro-view.jsx",
+                            lineNumber: 24,
+                            columnNumber: 9
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
+                            as: (0, _reactBootstrap.Nav).Link,
+                            href: "/about",
+                            xs: 10,
+                            lg: 5,
+                            className: "d-flex intro-button align-items-center justify-content-around p-4",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                    className: "mb-0 intro-button--link",
+                                    children: "See what I do for fun"
+                                }, void 0, false, {
+                                    fileName: "src/components/intro-view/intro-view.jsx",
+                                    lineNumber: 30,
+                                    columnNumber: 11
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _imageDefault.default), {
+                                    className: "intro-icon ms-3",
+                                    src: require("92fadf98d790d29d")
+                                }, void 0, false, {
+                                    fileName: "src/components/intro-view/intro-view.jsx",
+                                    lineNumber: 31,
+                                    columnNumber: 11
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/intro-view/intro-view.jsx",
+                            lineNumber: 29,
+                            columnNumber: 9
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/intro-view/intro-view.jsx",
+                    lineNumber: 23,
+                    columnNumber: 7
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/intro-view/intro-view.jsx",
+                lineNumber: 22,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true);
 };
 _c = IntroView;
 var _c;
@@ -42283,10 +42344,16 @@ $RefreshReg$(_c, "IntroView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-bootstrap/Row":"cMC39","react-bootstrap/Col":"2L2I6","react-bootstrap/Image":"cyVPa","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","376ce15efb8f6d70":"11jvf","react-bootstrap":"3AD9A"}],"11jvf":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-bootstrap/Row":"cMC39","react-bootstrap/Col":"2L2I6","react-bootstrap/Image":"cyVPa","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","376ce15efb8f6d70":"11jvf","react-bootstrap":"3AD9A","2b4c3c1d926505e3":"aDeG2","92fadf98d790d29d":"eKSor","react-router-dom":"9xmpe"}],"11jvf":[function(require,module,exports) {
 module.exports = require("bbe977c3eaf1e04b").getBundleURL("byUka") + "sam-meyer-portrait.9bdfb3d0.jpg" + "?" + Date.now();
 
-},{"bbe977c3eaf1e04b":"lgJ39"}],"4Mh8i":[function(require,module,exports) {
+},{"bbe977c3eaf1e04b":"lgJ39"}],"aDeG2":[function(require,module,exports) {
+module.exports = require("d9ceb8f501e7e259").getBundleURL("byUka") + "keyboard-icon.d402982a.svg" + "?" + Date.now();
+
+},{"d9ceb8f501e7e259":"lgJ39"}],"eKSor":[function(require,module,exports) {
+module.exports = require("1e88c30c59f3b328").getBundleURL("byUka") + "hike-icon.3f457a21.svg" + "?" + Date.now();
+
+},{"1e88c30c59f3b328":"lgJ39"}],"4Mh8i":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$11cf = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

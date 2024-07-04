@@ -65,9 +65,22 @@
   margin-bottom: 7rem;
 }
 
-.intro-container {
-  background-color: #87b4a9;
-  border-radius: 4rem;
+.intro-container, .intro-button {
+  background-color: #87b4a9 !important;
+  border-radius: 4rem !important;
+}
+
+.intro-button--link {
+  text-shadow: none;
+  color: #323232 !important;
+}
+
+.intro-button--link:hover {
+  text-shadow: none;
+}
+
+.intro-icon {
+  max-height: 4rem;
 }
 
 .contact-email {
@@ -207,6 +220,14 @@
 .active {
   text-decoration-color: #000;
   text-decoration: underline !important;
+}
+
+.intro-button {
+  transition: box-shadow .3s ease-in-out !important;
+}
+
+.intro-button:hover {
+  box-shadow: 0 0 10px 10px #5a8b81 !important;
 }
 
 :root, [data-bs-theme="light"] {

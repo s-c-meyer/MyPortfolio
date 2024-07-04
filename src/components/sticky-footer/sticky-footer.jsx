@@ -23,7 +23,6 @@ export const StickyFooter = () => {
             </Stack>
             <Stack gap={2}>
               <a className="footer-text" href="/portfolio">Cathafire Volunteer Website</a>
-              <a className="footer-text" >Meyer's Matchups</a>
             </Stack>
           </Col>
           <Col xs={12} lg={3} className="mb-5 mb-lg-0 mt-5 mx-0 mx-lg-4 px-5">

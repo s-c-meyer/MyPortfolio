@@ -42374,627 +42374,131 @@ const PortfolioView = ()=>{
         className: "mb-5",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
             className: "d-flex justify-content-center",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                    xs: 11,
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioPiece.PortfolioPiece), {
-                            isCompleted: true,
-                            image: {
-                                src: require("bbc408b056daa087"),
-                                alt: "Computer and Phone Screen showcasing the Meyer's Meet App"
-                            },
-                            title: "Meyer's Meet App",
-                            body: "Meyer's Meet App is a serverless, progressive web application which was built using React with a Test-Driven Development (TDD) Technique. It uses the Google Calendar API to fetch upcoming events. Users can filter events by city, and view the data for their search update in real time.",
-                            githubLink: "https://github.com/s-c-meyer/meet",
-                            demoLink: "https://s-c-meyer.github.io/meet/"
-                        }, void 0, false, {
-                            fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                            lineNumber: 11,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioPiece.PortfolioPiece), {
-                            isCompleted: true,
-                            image: {
-                                src: require("cf7dfb7727d4d1be"),
-                                alt: "Three phones displaying the Chat App"
-                            },
-                            title: "Meyer's Messages App",
-                            body: "Meyer's Messages is a chat app that was built using React Native and tested using an Android Emulator. The app provides users with a chat interface and options to share their location and/or images. Images may be shared either from the devices media library, or directly from the camera within the app.",
-                            githubLink: "https://github.com/s-c-meyer/chatDemo"
-                        }, void 0, false, {
-                            fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                            lineNumber: 22,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioPiece.PortfolioPiece), {
-                            isCompleted: true,
-                            image: {
-                                src: require("bdbf8a705f7e5a56"),
-                                alt: "Computer and Phone Screen showcasing the Meyer's Movies App built using React"
-                            },
-                            title: "Meyer's Movies (React)",
-                            body: "Meyer's Movies is a single page application that pulls data about movies from a database using a REST API that I built. User's can create a profile to save their favorite movies, and click to learn more about each movie in the database. The frontend was developed using the React framework.",
-                            githubLink: "https://github.com/s-c-meyer/myFlix-client",
-                            demoLink: "https://meyersmovies.netlify.app/",
-                            caseStudyLink: "/casestudy"
-                        }, void 0, false, {
-                            fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                            lineNumber: 32,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioPiece.PortfolioPiece), {
-                            isCompleted: true,
-                            image: {
-                                src: require("62cd09e8252fca3"),
-                                alt: "Computer and Phone Screen showcasing the Meyer's Movies App built using Angular"
-                            },
-                            title: "Meyer's Movies (Angular)",
-                            body: "Meyer's Movies is a single page application that pulls data about movies from a database using a REST API that I built. User's can create a profile to save their favorite movies, and can learn more through modals that show the movie's genre, director, or summary. The frontend was developed using the AngularJS framework.",
-                            githubLink: "https://github.com/s-c-meyer/myFlix-Angular-client"
-                        }, void 0, false, {
-                            fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                            lineNumber: 44,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioPiece.PortfolioPiece), {
-                            isCompleted: true,
-                            image: {
-                                src: require("f866a8286eb00959"),
-                                alt: "Computer and Phone Screen showcasing the Pokedex App"
-                            },
-                            title: "Pokedex App",
-                            body: "This app uses the PokeAPI to pull information about pokemon and display them to the user. The user can click on a pokemon to see additional information.",
-                            githubLink: "https://github.com/s-c-meyer/simple-js-app",
-                            demoLink: "https://s-c-meyer.github.io/simple-js-app/"
-                        }, void 0, false, {
-                            fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                            lineNumber: 54,
-                            columnNumber: 11
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                    lineNumber: 10,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                    className: "mb-5",
-                    xs: 12,
-                    lg: 10,
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Img, {
-                                variant: "top",
-                                src: require("bbc408b056daa087")
-                            }, void 0, false, {
-                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 68,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Body, {
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Title, {
-                                        className: "d-flex justify-content-center my-4",
-                                        as: "h1",
-                                        children: "Meyer's Meet App"
-                                    }, void 0, false, {
-                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 70,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Text, {
-                                        className: "mb-3 portfolio-main-font",
-                                        children: "Meyer's Meet App is a serverless, progressive web application which was built using React with a Test-Driven Development (TDD) Technique. It uses the Google Calendar API to fetch upcoming events. Users can filter events by city, and view the data for their search update in real time."
-                                    }, void 0, false, {
-                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 71,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
-                                            className: "d-flex justify-content-center my-3",
-                                            children: [
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                                                    xs: 12,
-                                                    md: 6,
-                                                    className: "d-flex justify-content-center justify-content-md-end mb-md-0 mb-3",
-                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                                        class: "btn btn-primary",
-                                                        href: "https://github.com/s-c-meyer/meet",
-                                                        role: "button",
-                                                        target: "_blank",
-                                                        children: "Review the code on Github"
-                                                    }, void 0, false, {
-                                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                        lineNumber: 78,
-                                                        columnNumber: 19
-                                                    }, undefined)
-                                                }, void 0, false, {
-                                                    fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                    lineNumber: 77,
-                                                    columnNumber: 17
-                                                }, undefined),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                                                    xs: 12,
-                                                    md: 6,
-                                                    className: "d-flex justify-content-center justify-content-md-start",
-                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                                        class: "btn btn-primary",
-                                                        href: "https://s-c-meyer.github.io/meet/",
-                                                        role: "button",
-                                                        target: "_blank",
-                                                        children: "View the live demo"
-                                                    }, void 0, false, {
-                                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                        lineNumber: 83,
-                                                        columnNumber: 19
-                                                    }, undefined)
-                                                }, void 0, false, {
-                                                    fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                    lineNumber: 82,
-                                                    columnNumber: 17
-                                                }, undefined)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                            lineNumber: 76,
-                                            columnNumber: 15
-                                        }, undefined)
-                                    }, void 0, false, {
-                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 75,
-                                        columnNumber: 15
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 69,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Footer, {
-                                children: "Built using React with Recharts Library, Google Calendar API, and Test-Driven Development Techniques"
-                            }, void 0, false, {
-                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 90,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                xs: 11,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioPiece.PortfolioPiece), {
+                        isCompleted: false,
+                        image: {
+                            src: require("7b79c3211e658700"),
+                            alt: "Computer and Phone screen showcasing the Manna Shelter Website"
+                        },
+                        title: "Manna Shelter Website",
+                        body: "Manna Shelter is a local homeless shelter that I found through Catchafire, a website designed to make skill-based connections between professional volunteers and non-profits. I am designing and developing a website for Manna Shelter using React with Vite. It will serve to increase awareness and visibility while also facilitating donations and recruiting volunteers."
+                    }, void 0, false, {
                         fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                        lineNumber: 67,
+                        lineNumber: 11,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioPiece.PortfolioPiece), {
+                        isCompleted: false,
+                        image: {
+                            src: require("cfe5c291a8eb9c9c"),
+                            alt: "A screenshot from Discord showing the working bot"
+                        },
+                        title: "Wordle Discord Bot",
+                        body: "A Discord Bot that takes user messages that contain the score from any of the NYT Games and creates a leaderboard from a database of those recorded scores. Built using MongoDB for the database and JavaScript. Currently works with Connections, but I intend to add other games.",
+                        githubLink: "https://github.com/s-c-meyer/DiscordBot"
+                    }, void 0, false, {
+                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
+                        lineNumber: 20,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioPiece.PortfolioPiece), {
+                        isCompleted: false,
+                        image: {
+                            src: require("51d8ce71045b2af6"),
+                            alt: "Computer Screen showcasing a Figma Mockup"
+                        },
+                        title: "Meyer's Matchups",
+                        body: "I love board games and card games. I don't love always needing a pen and paper on hand to keep score of said games. This app would make it easy to score both, and keep a database of the score of past games. I'm using this as a way to teach myself Figma as seen in the image.",
+                        githubLink: "https://github.com/s-c-meyer/meyers-matchup"
+                    }, void 0, false, {
+                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
+                        lineNumber: 30,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioPiece.PortfolioPiece), {
+                        isCompleted: true,
+                        image: {
+                            src: require("bbc408b056daa087"),
+                            alt: "Computer and Phone Screen showcasing the Meyer's Meet App"
+                        },
+                        title: "Meyer's Meet App",
+                        body: "Meyer's Meet App is a serverless, progressive web application which was built using React with a Test-Driven Development (TDD) Technique. It uses the Google Calendar API to fetch upcoming events. Users can filter events by city, and view the data for their search update in real time.",
+                        githubLink: "https://github.com/s-c-meyer/meet",
+                        demoLink: "https://s-c-meyer.github.io/meet/"
+                    }, void 0, false, {
+                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
+                        lineNumber: 40,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioPiece.PortfolioPiece), {
+                        isCompleted: true,
+                        image: {
+                            src: require("cf7dfb7727d4d1be"),
+                            alt: "Three phones displaying the Chat App"
+                        },
+                        title: "Meyer's Messages App",
+                        body: "Meyer's Messages is a chat app that was built using React Native and tested using an Android Emulator. The app provides users with a chat interface and options to share their location and/or images. Images may be shared either from the devices media library, or directly from the camera within the app.",
+                        githubLink: "https://github.com/s-c-meyer/chatDemo"
+                    }, void 0, false, {
+                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
+                        lineNumber: 51,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioPiece.PortfolioPiece), {
+                        isCompleted: true,
+                        image: {
+                            src: require("bdbf8a705f7e5a56"),
+                            alt: "Computer and Phone Screen showcasing the Meyer's Movies App built using React"
+                        },
+                        title: "Meyer's Movies (React)",
+                        body: "Meyer's Movies is a single page application that pulls data about movies from a database using a REST API that I built. User's can create a profile to save their favorite movies, and click to learn more about each movie in the database. The frontend was developed using the React framework.",
+                        githubLink: "https://github.com/s-c-meyer/myFlix-client",
+                        demoLink: "https://meyersmovies.netlify.app/",
+                        caseStudyLink: "/casestudy"
+                    }, void 0, false, {
+                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
+                        lineNumber: 61,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioPiece.PortfolioPiece), {
+                        isCompleted: true,
+                        image: {
+                            src: require("62cd09e8252fca3"),
+                            alt: "Computer and Phone Screen showcasing the Meyer's Movies App built using Angular"
+                        },
+                        title: "Meyer's Movies (Angular)",
+                        body: "Meyer's Movies is a single page application that pulls data about movies from a database using a REST API that I built. User's can create a profile to save their favorite movies, and can learn more through modals that show the movie's genre, director, or summary. The frontend was developed using the AngularJS framework.",
+                        githubLink: "https://github.com/s-c-meyer/myFlix-Angular-client"
+                    }, void 0, false, {
+                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
+                        lineNumber: 73,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioPiece.PortfolioPiece), {
+                        isCompleted: true,
+                        image: {
+                            src: require("f866a8286eb00959"),
+                            alt: "Computer and Phone Screen showcasing the Pokedex App"
+                        },
+                        title: "Pokedex App",
+                        body: "This app uses the PokeAPI to pull information about pokemon and display them to the user. The user can click on a pokemon to see additional information.",
+                        githubLink: "https://github.com/s-c-meyer/simple-js-app",
+                        demoLink: "https://s-c-meyer.github.io/simple-js-app/"
+                    }, void 0, false, {
+                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
+                        lineNumber: 83,
                         columnNumber: 11
                     }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                    lineNumber: 66,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                    className: "my-5",
-                    xs: 12,
-                    lg: 10,
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Img, {
-                                variant: "top",
-                                src: require("cf7dfb7727d4d1be")
-                            }, void 0, false, {
-                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 97,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Body, {
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Title, {
-                                        className: "d-flex justify-content-center my-4",
-                                        as: "h1",
-                                        children: "Meyer's Messages App"
-                                    }, void 0, false, {
-                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 99,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Text, {
-                                        className: "mb-3 portfolio-main-font"
-                                    }, void 0, false, {
-                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 100,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
-                                            className: "d-flex justify-content-center my-3",
-                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                                                xs: 12,
-                                                md: 6,
-                                                className: "d-flex justify-content-center",
-                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                                    class: "btn btn-primary",
-                                                    href: "https://github.com/s-c-meyer/chatDemo",
-                                                    role: "button",
-                                                    target: "_blank",
-                                                    children: "Review the code on Github"
-                                                }, void 0, false, {
-                                                    fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                    lineNumber: 105,
-                                                    columnNumber: 19
-                                                }, undefined)
-                                            }, void 0, false, {
-                                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                lineNumber: 104,
-                                                columnNumber: 17
-                                            }, undefined)
-                                        }, void 0, false, {
-                                            fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                            lineNumber: 103,
-                                            columnNumber: 15
-                                        }, undefined)
-                                    }, void 0, false, {
-                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 102,
-                                        columnNumber: 15
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 98,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Footer, {
-                                children: "Built using Google Firestore Database with Firebase Authentication, Expo, React Native with Gifted Chat Library"
-                            }, void 0, false, {
-                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 112,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                        lineNumber: 96,
-                        columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                    lineNumber: 95,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                    className: "my-5",
-                    xs: 12,
-                    lg: 10,
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Img, {
-                                variant: "top",
-                                src: require("bdbf8a705f7e5a56")
-                            }, void 0, false, {
-                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 119,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Body, {
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Title, {
-                                        className: "d-flex justify-content-center my-4",
-                                        as: "h1",
-                                        children: "Meyer's Movies (React)"
-                                    }, void 0, false, {
-                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 121,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Text, {
-                                        className: "mb-3 portfolio-main-font",
-                                        children: "Meyer's Movies is a single page application that pulls data about movies from a database using a REST API that I built. User's can create a profile to save their favorite movies, and click to learn more about each movie in the database. The frontend was developed using the React framework."
-                                    }, void 0, false, {
-                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 122,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
-                                            className: "d-flex justify-content-center my-3",
-                                            children: [
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                                                    xs: 12,
-                                                    md: 4,
-                                                    className: "d-flex justify-content-center justify-content-md-end mb-md-0 mb-3",
-                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                                        class: "btn btn-primary",
-                                                        href: "https://github.com/s-c-meyer/myFlix-client",
-                                                        role: "button",
-                                                        target: "_blank",
-                                                        children: "Review the code on Github"
-                                                    }, void 0, false, {
-                                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                        lineNumber: 128,
-                                                        columnNumber: 19
-                                                    }, undefined)
-                                                }, void 0, false, {
-                                                    fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                    lineNumber: 127,
-                                                    columnNumber: 17
-                                                }, undefined),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                                                    xs: 12,
-                                                    md: 4,
-                                                    className: "d-flex justify-content-center mb-md-0 mb-3",
-                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                                        class: "btn btn-primary",
-                                                        href: "https://meyersmovies.netlify.app/",
-                                                        role: "button",
-                                                        target: "_blank",
-                                                        children: "View the live demo"
-                                                    }, void 0, false, {
-                                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                        lineNumber: 133,
-                                                        columnNumber: 19
-                                                    }, undefined)
-                                                }, void 0, false, {
-                                                    fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                    lineNumber: 132,
-                                                    columnNumber: 17
-                                                }, undefined),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                                                    xs: 12,
-                                                    md: 4,
-                                                    className: "d-flex justify-content-center justify-content-md-start mb-md-0 mb-3",
-                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                                        class: "btn btn-primary",
-                                                        href: "/casestudy",
-                                                        role: "button",
-                                                        target: "_blank",
-                                                        children: "Meyer's Movies Case Study"
-                                                    }, void 0, false, {
-                                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                        lineNumber: 138,
-                                                        columnNumber: 19
-                                                    }, undefined)
-                                                }, void 0, false, {
-                                                    fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                    lineNumber: 137,
-                                                    columnNumber: 17
-                                                }, undefined)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                            lineNumber: 126,
-                                            columnNumber: 15
-                                        }, undefined)
-                                    }, void 0, false, {
-                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 125,
-                                        columnNumber: 15
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 120,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Footer, {
-                                children: "Built using the MERN stack (MongoDB, Express, React, Node.js), along with Parcel as the build tool"
-                            }, void 0, false, {
-                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 145,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                        lineNumber: 118,
-                        columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                    lineNumber: 117,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                    className: "my-5",
-                    xs: 12,
-                    lg: 10,
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Img, {
-                                variant: "top",
-                                src: require("62cd09e8252fca3")
-                            }, void 0, false, {
-                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 152,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Body, {
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Title, {
-                                        className: "d-flex justify-content-center my-4",
-                                        as: "h1",
-                                        children: "Meyer's Movies (Angular)"
-                                    }, void 0, false, {
-                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 154,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Text, {
-                                        className: "mb-3 portfolio-main-font",
-                                        children: "Meyer's Movies is a single page application that pulls data about movies from a database using a REST API that I built. User's can create a profile to save their favorite movies, and can learn more through modals that show the movie's genre, director, or summary. The frontend was developed using the AngularJS framework."
-                                    }, void 0, false, {
-                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 155,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
-                                            className: "d-flex justify-content-center my-3",
-                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                                                xs: 12,
-                                                md: 6,
-                                                className: "d-flex justify-content-center",
-                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                                    class: "btn btn-primary",
-                                                    href: "https://github.com/s-c-meyer/myFlix-Angular-client",
-                                                    role: "button",
-                                                    target: "_blank",
-                                                    children: "Review the code on Github"
-                                                }, void 0, false, {
-                                                    fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                    lineNumber: 161,
-                                                    columnNumber: 19
-                                                }, undefined)
-                                            }, void 0, false, {
-                                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                lineNumber: 160,
-                                                columnNumber: 17
-                                            }, undefined)
-                                        }, void 0, false, {
-                                            fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                            lineNumber: 159,
-                                            columnNumber: 15
-                                        }, undefined)
-                                    }, void 0, false, {
-                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 158,
-                                        columnNumber: 15
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 153,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Footer, {
-                                children: "Built using the MEAN stack (MongoDB, Express, Angular, Node.js)"
-                            }, void 0, false, {
-                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 168,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                        lineNumber: 151,
-                        columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                    lineNumber: 150,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                    className: "my-5",
-                    xs: 12,
-                    lg: 10,
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Img, {
-                                variant: "top",
-                                src: require("f866a8286eb00959")
-                            }, void 0, false, {
-                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 175,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Body, {
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Title, {
-                                        className: "d-flex justify-content-center my-4",
-                                        as: "h1",
-                                        children: "Pokedex App"
-                                    }, void 0, false, {
-                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 177,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Text, {
-                                        className: "mb-3 portfolio-main-font",
-                                        children: "This app uses the PokeAPI to pull information about pokemon and display them to the user. The user can click on a pokemon to see additional information."
-                                    }, void 0, false, {
-                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 178,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
-                                            className: "d-flex justify-content-center my-3",
-                                            children: [
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                                                    xs: 12,
-                                                    md: 6,
-                                                    className: "d-flex justify-content-center justify-content-md-end mb-md-0 mb-3",
-                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                                        class: "btn btn-primary",
-                                                        href: "https://github.com/s-c-meyer/simple-js-app",
-                                                        role: "button",
-                                                        target: "_blank",
-                                                        children: "Review the code on Github"
-                                                    }, void 0, false, {
-                                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                        lineNumber: 184,
-                                                        columnNumber: 19
-                                                    }, undefined)
-                                                }, void 0, false, {
-                                                    fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                    lineNumber: 183,
-                                                    columnNumber: 17
-                                                }, undefined),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                                                    xs: 12,
-                                                    md: 6,
-                                                    className: "d-flex justify-content-center justify-content-md-start",
-                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                                        class: "btn btn-primary",
-                                                        href: "https://s-c-meyer.github.io/simple-js-app/",
-                                                        role: "button",
-                                                        target: "_blank",
-                                                        children: "View the live demo"
-                                                    }, void 0, false, {
-                                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                        lineNumber: 189,
-                                                        columnNumber: 19
-                                                    }, undefined)
-                                                }, void 0, false, {
-                                                    fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                    lineNumber: 188,
-                                                    columnNumber: 17
-                                                }, undefined)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                            lineNumber: 182,
-                                            columnNumber: 15
-                                        }, undefined)
-                                    }, void 0, false, {
-                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 181,
-                                        columnNumber: 15
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 176,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Footer, {
-                                children: "Built using HTML, CSS, Javascript, Bootstrap, and external API's (PokeAPI)"
-                            }, void 0, false, {
-                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 196,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                        lineNumber: 174,
-                        columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                    lineNumber: 173,
-                    columnNumber: 9
-                }, undefined)
-            ]
-        }, void 0, true, {
+                ]
+            }, void 0, true, {
+                fileName: "src/components/portfolio-view/portfolio-view.jsx",
+                lineNumber: 10,
+                columnNumber: 9
+            }, undefined)
+        }, void 0, false, {
             fileName: "src/components/portfolio-view/portfolio-view.jsx",
             lineNumber: 9,
             columnNumber: 7
@@ -43014,7 +42518,7 @@ $RefreshReg$(_c, "PortfolioView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-bootstrap/Card":"lAynp","react-bootstrap":"3AD9A","cf7dfb7727d4d1be":"c4idO","bbc408b056daa087":"dlUuF","bdbf8a705f7e5a56":"6OvIM","f866a8286eb00959":"4H65A","62cd09e8252fca3":"4OSUt","react-router-dom":"9xmpe","../portfolio-piece/portfolio-piece":"6a7sj"}],"c4idO":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-bootstrap/Card":"lAynp","react-bootstrap":"3AD9A","cf7dfb7727d4d1be":"c4idO","bbc408b056daa087":"dlUuF","bdbf8a705f7e5a56":"6OvIM","f866a8286eb00959":"4H65A","62cd09e8252fca3":"4OSUt","react-router-dom":"9xmpe","../portfolio-piece/portfolio-piece":"6a7sj","51d8ce71045b2af6":"iSbdZ","7b79c3211e658700":"iYHgY","cfe5c291a8eb9c9c":"d7Ckx"}],"c4idO":[function(require,module,exports) {
 module.exports = require("6b8ecd64b819e68b").getBundleURL("byUka") + "chatAppThreePhones.94a24ba3.png" + "?" + Date.now();
 
 },{"6b8ecd64b819e68b":"lgJ39"}],"dlUuF":[function(require,module,exports) {
@@ -43214,7 +42718,16 @@ $RefreshReg$(_c, "PortfolioPiece");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-bootstrap":"3AD9A","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq"}],"66Mev":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-bootstrap":"3AD9A","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq"}],"iSbdZ":[function(require,module,exports) {
+module.exports = require("33c74c1f16b87f8a").getBundleURL("byUka") + "MeyersMatchupsPortfolioPiece.bfca54c9.svg" + "?" + Date.now();
+
+},{"33c74c1f16b87f8a":"lgJ39"}],"iYHgY":[function(require,module,exports) {
+module.exports = require("27904259f3a8d2cd").getBundleURL("byUka") + "MannaShelterPortfolioPiece.105348ac.svg" + "?" + Date.now();
+
+},{"27904259f3a8d2cd":"lgJ39"}],"d7Ckx":[function(require,module,exports) {
+module.exports = require("5a2cc3109c11c757").getBundleURL("byUka") + "WordleBotPortfolioPiece.c165d958.svg" + "?" + Date.now();
+
+},{"5a2cc3109c11c757":"lgJ39"}],"66Mev":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$6d0c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -43272,26 +42785,16 @@ const StickyFooter = ()=>{
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Stack), {
                                     gap: 2,
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                            className: "footer-text",
-                                            href: "/portfolio",
-                                            children: "Cathafire Volunteer Website"
-                                        }, void 0, false, {
-                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                                            lineNumber: 25,
-                                            columnNumber: 15
-                                        }, undefined),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                            className: "footer-text",
-                                            children: "Meyer's Matchups"
-                                        }, void 0, false, {
-                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                                            lineNumber: 26,
-                                            columnNumber: 15
-                                        }, undefined)
-                                    ]
-                                }, void 0, true, {
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                        className: "footer-text",
+                                        href: "/portfolio",
+                                        children: "Cathafire Volunteer Website"
+                                    }, void 0, false, {
+                                        fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                        lineNumber: 25,
+                                        columnNumber: 15
+                                    }, undefined)
+                                }, void 0, false, {
                                     fileName: "src/components/sticky-footer/sticky-footer.jsx",
                                     lineNumber: 24,
                                     columnNumber: 13
@@ -43314,20 +42817,20 @@ const StickyFooter = ()=>{
                                             children: "Navigate to"
                                         }, void 0, false, {
                                             fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                                            lineNumber: 31,
+                                            lineNumber: 30,
                                             columnNumber: 13
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {
                                             className: "footer-text"
                                         }, void 0, false, {
                                             fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                                            lineNumber: 32,
+                                            lineNumber: 31,
                                             columnNumber: 13
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                                    lineNumber: 30,
+                                    lineNumber: 29,
                                     columnNumber: 11
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Stack), {
@@ -43339,7 +42842,7 @@ const StickyFooter = ()=>{
                                             children: "\u2302 Home"
                                         }, void 0, false, {
                                             fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                                            lineNumber: 35,
+                                            lineNumber: 34,
                                             columnNumber: 15
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -43348,7 +42851,7 @@ const StickyFooter = ()=>{
                                             children: "\uD83D\uDEC8 About"
                                         }, void 0, false, {
                                             fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                                            lineNumber: 36,
+                                            lineNumber: 35,
                                             columnNumber: 15
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -43357,7 +42860,7 @@ const StickyFooter = ()=>{
                                             children: "\uD83D\uDD85 Contact"
                                         }, void 0, false, {
                                             fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                                            lineNumber: 37,
+                                            lineNumber: 36,
                                             columnNumber: 15
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -43366,7 +42869,7 @@ const StickyFooter = ()=>{
                                             children: "\u270E My Work"
                                         }, void 0, false, {
                                             fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                                            lineNumber: 38,
+                                            lineNumber: 37,
                                             columnNumber: 15
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -43375,19 +42878,19 @@ const StickyFooter = ()=>{
                                             children: "\uD83D\uDDB3 Case Study"
                                         }, void 0, false, {
                                             fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                                            lineNumber: 39,
+                                            lineNumber: 38,
                                             columnNumber: 15
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                                    lineNumber: 34,
+                                    lineNumber: 33,
                                     columnNumber: 13
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                            lineNumber: 29,
+                            lineNumber: 28,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
@@ -43402,20 +42905,20 @@ const StickyFooter = ()=>{
                                             children: "Find me here!"
                                         }, void 0, false, {
                                             fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                                            lineNumber: 44,
+                                            lineNumber: 43,
                                             columnNumber: 15
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {
                                             className: "footer-text"
                                         }, void 0, false, {
                                             fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                                            lineNumber: 45,
+                                            lineNumber: 44,
                                             columnNumber: 15
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                                    lineNumber: 43,
+                                    lineNumber: 42,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Stack), {
@@ -43438,7 +42941,7 @@ const StickyFooter = ()=>{
                                                             className: "fill-000000"
                                                         }, void 0, false, {
                                                             fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                                                            lineNumber: 49,
+                                                            lineNumber: 48,
                                                             columnNumber: 218
                                                         }, undefined),
                                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
@@ -43447,13 +42950,13 @@ const StickyFooter = ()=>{
                                                             className: "fill-000000"
                                                         }, void 0, false, {
                                                             fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                                                            lineNumber: 49,
+                                                            lineNumber: 48,
                                                             columnNumber: 326
                                                         }, undefined)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                                                    lineNumber: 49,
+                                                    lineNumber: 48,
                                                     columnNumber: 106
                                                 }, undefined),
                                                 " ",
@@ -43462,13 +42965,13 @@ const StickyFooter = ()=>{
                                                     children: "LinkedIn"
                                                 }, void 0, false, {
                                                     fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                                                    lineNumber: 49,
+                                                    lineNumber: 48,
                                                     columnNumber: 981
                                                 }, undefined)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                                            lineNumber: 49,
+                                            lineNumber: 48,
                                             columnNumber: 15
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -43490,7 +42993,7 @@ const StickyFooter = ()=>{
                                                             className: "fill-000000"
                                                         }, void 0, false, {
                                                             fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                                                            lineNumber: 50,
+                                                            lineNumber: 49,
                                                             columnNumber: 217
                                                         }, undefined),
                                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
@@ -43499,13 +43002,13 @@ const StickyFooter = ()=>{
                                                             className: "fill-000000"
                                                         }, void 0, false, {
                                                             fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                                                            lineNumber: 50,
+                                                            lineNumber: 49,
                                                             columnNumber: 1142
                                                         }, undefined)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                                                    lineNumber: 50,
+                                                    lineNumber: 49,
                                                     columnNumber: 94
                                                 }, undefined),
                                                 " ",
@@ -43514,13 +43017,13 @@ const StickyFooter = ()=>{
                                                     children: "GitHub"
                                                 }, void 0, false, {
                                                     fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                                                    lineNumber: 50,
+                                                    lineNumber: 49,
                                                     columnNumber: 2074
                                                 }, undefined)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                                            lineNumber: 50,
+                                            lineNumber: 49,
                                             columnNumber: 15
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -43539,12 +43042,12 @@ const StickyFooter = ()=>{
                                                         className: "fill-000000"
                                                     }, void 0, false, {
                                                         fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                                                        lineNumber: 51,
+                                                        lineNumber: 50,
                                                         columnNumber: 215
                                                     }, undefined)
                                                 }, void 0, false, {
                                                     fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                                                    lineNumber: 51,
+                                                    lineNumber: 50,
                                                     columnNumber: 103
                                                 }, undefined),
                                                 " ",
@@ -43553,25 +43056,25 @@ const StickyFooter = ()=>{
                                                     children: "Facebook"
                                                 }, void 0, false, {
                                                     fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                                                    lineNumber: 51,
+                                                    lineNumber: 50,
                                                     columnNumber: 599
                                                 }, undefined)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                                            lineNumber: 51,
+                                            lineNumber: 50,
                                             columnNumber: 15
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                                    lineNumber: 47,
+                                    lineNumber: 46,
                                     columnNumber: 13
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                            lineNumber: 42,
+                            lineNumber: 41,
                             columnNumber: 11
                         }, undefined)
                     ]
@@ -43592,12 +43095,12 @@ const StickyFooter = ()=>{
                                 children: "Jump to the top \u21A5"
                             }, void 0, false, {
                                 fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                                lineNumber: 57,
+                                lineNumber: 56,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                            lineNumber: 56,
+                            lineNumber: 55,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
@@ -43605,7 +43108,7 @@ const StickyFooter = ()=>{
                             lg: 4
                         }, void 0, false, {
                             fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                            lineNumber: 59,
+                            lineNumber: 58,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
@@ -43621,18 +43124,18 @@ const StickyFooter = ()=>{
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                                lineNumber: 61,
+                                lineNumber: 60,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                            lineNumber: 60,
+                            lineNumber: 59,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                    lineNumber: 55,
+                    lineNumber: 54,
                     columnNumber: 9
                 }, undefined)
             ]
@@ -43999,12 +43502,30 @@ const CaseStudyView = ()=>{
                             md: 6,
                             className: "d-flex justify-content-center justify-content-lg-end mb-md-0 mb-4",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                class: "btn btn-primary",
+                                class: "portfolio-btn px-4",
                                 href: "https://github.com/s-c-meyer/myFlix-client",
                                 role: "button",
                                 target: "_blank",
-                                children: "Review the code on Github"
-                            }, void 0, false, {
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        className: "portfolio-btn-text--hidden",
+                                        children: "<> "
+                                    }, void 0, false, {
+                                        fileName: "src/components/case-study-view/case-study-view.jsx",
+                                        lineNumber: 64,
+                                        columnNumber: 21
+                                    }, undefined),
+                                    "Review the code on GitHub",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        className: "portfolio-btn-text--hidden",
+                                        children: " </>"
+                                    }, void 0, false, {
+                                        fileName: "src/components/case-study-view/case-study-view.jsx",
+                                        lineNumber: 64,
+                                        columnNumber: 107
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
                                 fileName: "src/components/case-study-view/case-study-view.jsx",
                                 lineNumber: 63,
                                 columnNumber: 19
@@ -44019,7 +43540,7 @@ const CaseStudyView = ()=>{
                             md: 6,
                             className: "d-flex justify-content-center justify-content-lg-start",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                class: "btn btn-primary",
+                                class: "portfolio-btn px-5",
                                 href: "https://meyersmovies.netlify.app/",
                                 role: "button",
                                 target: "_blank",

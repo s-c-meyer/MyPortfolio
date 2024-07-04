@@ -8,6 +8,35 @@ export const PortfolioView = () => {
     <Container className='mb-5'>
       <Row className='d-flex justify-content-center'>
         <Col xs={11}>
+          <PortfolioPiece 
+            isCompleted = {false}
+            image = {{
+              src: require("../../img/MannaShelterPortfolioPiece.svg"),
+              alt: 'Computer and Phone screen showcasing the Manna Shelter Website'
+            }}
+            title = "Manna Shelter Website"
+            body = "Manna Shelter is a local homeless shelter that I found through Catchafire, a website designed to make skill-based connections between professional volunteers and non-profits. I am designing and developing a website for Manna Shelter using React with Vite. It will serve to increase awareness and visibility while also facilitating donations and recruiting volunteers."
+          />
+          <PortfolioPiece 
+            isCompleted={false}
+            image = {{
+              src: require("../../img/WordleBotPortfolioPiece.svg"),
+              alt: "A screenshot from Discord showing the working bot"
+            }}
+            title = "Wordle Discord Bot"
+            body = "A Discord Bot that takes user messages that contain the score from any of the NYT Games and creates a leaderboard from a database of those recorded scores. Built using MongoDB for the database and JavaScript. Currently works with Connections, but I intend to add other games."
+            githubLink = 'https://github.com/s-c-meyer/DiscordBot'
+          />
+          <PortfolioPiece 
+            isCompleted = {false}
+            image = {{
+              src: require("../../img/MeyersMatchupsPortfolioPiece.svg"),
+              alt: 'Computer Screen showcasing a Figma Mockup'  
+            }}
+            title = "Meyer's Matchups"
+            body = "I love board games and card games. I don't love always needing a pen and paper on hand to keep score of said games. This app would make it easy to score both, and keep a database of the score of past games. I'm using this as a way to teach myself Figma as seen in the image."
+            githubLink = 'https://github.com/s-c-meyer/meyers-matchup'
+          />
           <PortfolioPiece
             isCompleted = {true}
             image = {{ 
@@ -62,141 +91,6 @@ export const PortfolioView = () => {
             githubLink="https://github.com/s-c-meyer/simple-js-app"
             demoLink="https://s-c-meyer.github.io/simple-js-app/"
           />
-        </Col>
-        <Col className='mb-5' xs={12} lg={10}>
-          <Card>
-            <Card.Img variant='top' src={require("../../img/MeetApp2Screens.png")} />
-            <Card.Body>
-              <Card.Title className='d-flex justify-content-center my-4' as='h1'>Meyer's Meet App</Card.Title>
-              <Card.Text className='mb-3 portfolio-main-font'>
-              Meyer's Meet App is a serverless, progressive web application which was built using React with a Test-Driven Development (TDD) Technique. It uses the Google Calendar API to fetch upcoming events.
-              Users can filter events by city, and view the data for their search update in real time. 
-              </Card.Text>
-              <Container>
-              <Row className='d-flex justify-content-center my-3'>
-                <Col xs={12} md={6} className='d-flex justify-content-center justify-content-md-end mb-md-0 mb-3'>
-                  <a class="btn btn-primary" href="https://github.com/s-c-meyer/meet" role="button" target='_blank'>
-                    Review the code on Github
-                  </a>
-                </Col>
-                <Col xs={12} md={6} className='d-flex justify-content-center justify-content-md-start'>
-                  <a class="btn btn-primary" href="https://s-c-meyer.github.io/meet/" role="button" target='_blank'>
-                    View the live demo
-                  </a>
-                </Col>
-              </Row>
-              </Container>     
-            </Card.Body>  
-            <Card.Footer>
-              Built using React with Recharts Library, Google Calendar API, and Test-Driven Development Techniques
-            </Card.Footer>
-          </Card>
-        </Col>
-        <Col className='my-5' xs={12} lg={10}>
-          <Card>
-            <Card.Img variant='top' src={require("../../img/chatAppThreePhones.png")} />
-            <Card.Body>
-              <Card.Title className='d-flex justify-content-center my-4' as='h1'>Meyer's Messages App</Card.Title>
-              <Card.Text className='mb-3 portfolio-main-font'>
-              </Card.Text>
-              <Container>
-              <Row className='d-flex justify-content-center my-3'>
-                <Col xs={12} md={6} className='d-flex justify-content-center'>
-                  <a class="btn btn-primary" href="https://github.com/s-c-meyer/chatDemo" role="button" target='_blank'>
-                    Review the code on Github
-                  </a>
-                </Col>
-              </Row>
-              </Container>     
-            </Card.Body>  
-            <Card.Footer>
-              Built using Google Firestore Database with Firebase Authentication, Expo, React Native with Gifted Chat Library
-            </Card.Footer>
-          </Card>
-        </Col>
-        <Col className='my-5' xs={12} lg={10}>
-          <Card>
-            <Card.Img variant='top' src={require("../../img/MeyersMoviesReact.png")} />
-            <Card.Body>
-              <Card.Title className='d-flex justify-content-center my-4' as='h1'>Meyer's Movies (React)</Card.Title>
-              <Card.Text className='mb-3 portfolio-main-font'>
-                Meyer's Movies is a single page application that pulls data about movies from a database using a REST API that I built. User's can create a profile to save their favorite movies, and click to learn more about each movie in the database. The frontend was developed using the React framework.
-              </Card.Text>
-              <Container>
-              <Row className='d-flex justify-content-center my-3'>
-                <Col xs={12} md={4} className='d-flex justify-content-center justify-content-md-end mb-md-0 mb-3'>
-                  <a class="btn btn-primary" href="https://github.com/s-c-meyer/myFlix-client" role="button" target='_blank'>
-                    Review the code on Github
-                  </a>
-                </Col>
-                <Col xs={12} md={4} className='d-flex justify-content-center mb-md-0 mb-3'>
-                  <a class="btn btn-primary" href="https://meyersmovies.netlify.app/" role="button" target='_blank'>
-                    View the live demo
-                  </a>
-                </Col>
-                <Col xs={12} md={4} className='d-flex justify-content-center justify-content-md-start mb-md-0 mb-3'>
-                  <a class="btn btn-primary" href="/casestudy" role="button" target='_blank'>
-                    Meyer's Movies Case Study
-                  </a>
-                </Col>
-              </Row>
-              </Container>     
-            </Card.Body>  
-            <Card.Footer>
-              Built using the MERN stack (MongoDB, Express, React, Node.js), along with Parcel as the build tool
-            </Card.Footer>
-          </Card>
-        </Col>
-        <Col className='my-5' xs={12} lg={10}>
-          <Card>
-            <Card.Img variant='top' src={require("../../img/MeyersMoviesAngular.png")} />
-            <Card.Body>
-              <Card.Title className='d-flex justify-content-center my-4' as='h1'>Meyer's Movies (Angular)</Card.Title>
-              <Card.Text className='mb-3 portfolio-main-font'>
-                Meyer's Movies is a single page application that pulls data about movies from a database using a REST API that I built. User's can create a profile to save their favorite movies, and can learn more through modals that show the movie's genre, director, or summary. The frontend was developed using the AngularJS framework.
-              </Card.Text>
-              <Container>
-              <Row className='d-flex justify-content-center my-3'>
-                <Col xs={12} md={6} className='d-flex justify-content-center'>
-                  <a class="btn btn-primary" href="https://github.com/s-c-meyer/myFlix-Angular-client" role="button" target='_blank'>
-                    Review the code on Github
-                  </a>
-                </Col>
-              </Row>
-              </Container>     
-            </Card.Body>  
-            <Card.Footer>
-              Built using the MEAN stack (MongoDB, Express, Angular, Node.js)
-            </Card.Footer>
-          </Card>
-        </Col>
-        <Col className='my-5' xs={12} lg={10}>
-          <Card>
-            <Card.Img variant='top' src={require("../../img/PokedexApp.png")} />
-            <Card.Body>
-              <Card.Title className='d-flex justify-content-center my-4' as='h1'>Pokedex App</Card.Title>
-              <Card.Text className='mb-3 portfolio-main-font'>
-                This app uses the PokeAPI to pull information about pokemon and display them to the user. The user can click on a pokemon to see additional information.
-              </Card.Text>
-              <Container>
-              <Row className='d-flex justify-content-center my-3'>
-                <Col xs={12} md={6} className='d-flex justify-content-center justify-content-md-end mb-md-0 mb-3'>
-                  <a class="btn btn-primary" href="https://github.com/s-c-meyer/simple-js-app" role="button" target='_blank'>
-                    Review the code on Github
-                  </a>
-                </Col>
-                <Col xs={12} md={6} className='d-flex justify-content-center justify-content-md-start'>
-                  <a class="btn btn-primary" href="https://s-c-meyer.github.io/simple-js-app/" role="button" target='_blank'>
-                    View the live demo
-                  </a>
-                </Col>
-              </Row>
-              </Container>     
-            </Card.Body>  
-            <Card.Footer>
-              Built using HTML, CSS, Javascript, Bootstrap, and external API's (PokeAPI)
-            </Card.Footer>
-          </Card>
         </Col>
       </Row>
     </Container>

@@ -60,12 +60,12 @@ export const CaseStudyView = () => {
         </Row>
         <Row className='d-flex justify-content-center my-3'>
                 <Col xs={12} md={6} className='d-flex justify-content-center justify-content-lg-end mb-md-0 mb-4'>
-                  <a class="btn btn-primary" href="https://github.com/s-c-meyer/myFlix-client" role="button" target='_blank'>
-                    Review the code on Github
+                  <a class="portfolio-btn px-4" href="https://github.com/s-c-meyer/myFlix-client" role="button" target='_blank'>
+                    <span className="portfolio-btn-text--hidden">&lt;&gt; </span>Review the code on GitHub<span className="portfolio-btn-text--hidden"> &lt;/&gt;</span>
                   </a>
                 </Col>
                 <Col xs={12} md={6} className='d-flex justify-content-center justify-content-lg-start'>
-                  <a class="btn btn-primary" href="https://meyersmovies.netlify.app/" role="button" target='_blank'>
+                  <a class="portfolio-btn px-5" href="https://meyersmovies.netlify.app/" role="button" target='_blank'>
                     View the live demo
                   </a>
                 </Col>

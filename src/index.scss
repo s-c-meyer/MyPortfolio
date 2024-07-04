@@ -1,7 +1,28 @@
 //make any global styling changes here, above the import statement 
 
-.sticky-footer {
-  margin-top: -200px;
+$navbar-color: #003c38;
+$background-color: #b4ddcf;
+$primary-color: #87b4a9;
+$secondary-color: #5a8b81;
+$blue-color: #96e9ff;
+$dark-grey-color: rgb(50, 50, 50);
+
+.root-container {
+  background-color: $background-color;
+  color: $dark-grey-color;
+}
+
+.navbar-container {
+  background-color: $navbar-color;
+  outline: 20px solid;
+  outline-color: $navbar-color;
+  margin-top: 15px
+}
+
+.footer-container {
+  background-color: lighten($color: $navbar-color, $amount: 8%);
+  outline: 20px solid;
+  outline-color: lighten($color: $navbar-color, $amount: 8%);
 }
 
 .footer-image {
@@ -10,8 +31,72 @@
   margin-right: 1rem;
 }
 
+.footer-text {
+  text-decoration: none;
+  color: $primary-color;
+
+  transition: text-shadow 0.3s ease-in-out !important;
+
+  &:hover {
+    text-shadow: $background-color 0 0 1.5rem;
+  }
+}
+
+.footer-text--no-shadow {
+  text-decoration: none;
+  color: $primary-color;
+}
+
+.footer-text-title {
+  text-transform: uppercase;
+  color: $primary-color;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.footer-icon {
+  width: 3rem;
+}
+
+.to-top-button {
+  background: transparent;
+  color: $primary-color;
+  border-radius: 5rem;
+  border-color: $primary-color;
+  border-style: solid;
+  padding: .4rem;
+  transition: all 0.3s ease-in-out !important;
+
+  &:hover {
+    background-color: $primary-color;
+    color: lighten($color: $navbar-color, $amount: 8%);
+  }
+}
+
 .main-container {
   margin-bottom: 7rem;
+}
+
+.intro-container {
+  background-color: $primary-color !important;
+  border-radius: 4rem !important;
+}
+
+.intro-button--link {
+  color: $dark-grey-color !important;
+  text-shadow: none;
+
+  &:hover {
+    text-shadow: none;
+  }
+}
+
+.intro-button {
+  @extend .intro-container;
+}
+
+.intro-icon {
+  max-height: 4rem;
 }
 
 .contact-email {
@@ -19,8 +104,83 @@
   font-size: 50pt;
 }
 
+.portfolio-badge {
+  border-radius: 3rem;
+  position: relative;
+  font-weight: bold;
+  width: fit-content;
+  top: 1.5rem;
+  left: 1rem;
+  padding: 1rem;
+  text-wrap: nowrap;
+}
+
+.badge-inprogress {
+  @extend .portfolio-badge;
+  background-color: rgb(231, 231, 106);
+}
+
+.badge-completed {
+  @extend .portfolio-badge;
+  background-color: greenyellow;
+}
+
 .portfolio-main-font {
   font-size: large;
+}
+
+.portfolio-container {
+  background: $primary-color;
+  border-radius: 5rem;
+}
+
+.portfolio-container-bottom {
+  background: $primary-color;
+  border-radius: 0 0 5rem 5rem;
+}
+
+.portfolio-text--framework {
+  background-color: $background-color;
+  border-radius: 3rem;
+  max-width: fit-content !important;
+  margin: 1rem;
+}
+
+.portfolio-img {
+  width: 100%;
+}
+
+.portfolio-text--main {
+  background-color: $background-color;
+  border-radius: 2rem;
+}
+
+.portfolio-skill {
+  background-color: $navbar-color;
+  color: $primary-color;
+}
+
+.portfolio-btn {
+  background: $blue-color;
+  text-decoration: none;
+  color: $dark-grey-color;
+  border-radius: 0.5rem;
+  border-color: $dark-grey-color;
+  border-style: solid;
+  padding: .4rem;
+  transition: all 0.3s ease-in-out !important;
+  text-align: center;
+  margin-top: 1rem;
+
+  &:hover {
+    background-color: $dark-grey-color;
+    color: $blue-color;
+  }
+}
+
+.portfolio-btn-text--hidden {
+  color: $blue-color;
+  font-weight: bold;
 }
 
 .progress-bar-icon {
@@ -32,9 +192,10 @@
 }
 
 .carousel {
-  height: 500px;
+  height: 30rem;
   overflow: visible;
   width: 100%;
+  background-color: $primary-color;
 }
 
 .carousel-label {
@@ -52,5 +213,44 @@
     font-size: 40px;
   };
 }
+
+@media screen and (max-width: 1200px) {
+  .portfolio-container {
+    border-radius: 3rem 3rem 0 0;
+  }
+
+  .portfolio-container-bottom {
+    border-radius: 0 0 3rem 3rem;
+  }
+}
+
+.nav-link {
+  color: $primary-color !important;
+  transition: text-shadow 0.3s ease-in-out !important;
+
+  &:hover {
+    text-shadow: $blue-color 0 0 1.5rem;
+  }
+
+  //&:active only applies when you actively have the mouse held down on the link
+}
+
+//this is the class that effects the activeKey from React Bootstrap's NavBar
+.active {
+  text-decoration: underline !important; //important is necessary to override the bootstrap styling 
+  text-decoration-color: black;
+}
+
+//if this class is up near the other intro classes the transition does not work, so it must be down here
+.intro-button {
+  @extend .intro-container;
+  
+  transition: box-shadow 0.3s ease-in-out !important;
+
+  &:hover {
+    box-shadow: 0px 0px 10px 10px $secondary-color !important;
+  }
+}
+
 
 @import './scss/custom.scss';

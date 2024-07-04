@@ -2951,7 +2951,8 @@ var _indexScss = require("./index.scss");
 // Main component (will eventually use all the others)
 const MyFlixApplication = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
-        className: "min-vh-100",
+        fluid: true,
+        className: "fluid min-vh-100 root-container",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mainView.MainView), {}, void 0, false, {
             fileName: "src/index.jsx",
             lineNumber: 12,
@@ -34933,29 +34934,57 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "NavigationBar", ()=>NavigationBar);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
 var _reactRouterDom = require("react-router-dom");
 var _reactBootstrap = require("react-bootstrap");
+var _s = $RefreshSig$();
 const NavigationBar = ()=>{
+    _s();
+    const [currentNav, setCurrentNav] = (0, _react.useState)("");
+    const setActiveNav = (selectedNav)=>{
+        const allNavLinks = document.getElementsByClassName("nav-link"); //get all of the nav links
+        //use a for loop to remove the active class from all of the NavLinks
+        //this is necessary so that when you click the logo picture, it removes the styling
+        //from the previous active Nav.Link
+        for(let i = 0; i < allNavLinks.length; i++)allNavLinks[i].classList.remove("active");
+        setCurrentNav(selectedNav);
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Navbar), {
-            className: "navbar mb-5",
-            expand: "lg",
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
+            fluid: true,
+            className: "navbar-container",
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Navbar), {
+                variant: "dark",
+                activeKey: currentNav,
+                onSelect: setActiveNav,
+                collapseOnSelect: true,
+                className: "mb-5",
+                expand: "lg",
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Navbar).Brand, {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
+                        className: "me-3",
+                        eventKey: "Home",
                         as: (0, _reactRouterDom.Link),
                         to: "/",
-                        children: "Samuel Meyer"
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            eventKey: "Home",
+                            src: require("793d7989cc57d2cf"),
+                            alt: "Navigation Bar Header Logo"
+                        }, void 0, false, {
+                            fileName: "src/components/navigation-bar/navigation-bar.jsx",
+                            lineNumber: 34,
+                            columnNumber: 13
+                        }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                        lineNumber: 10,
+                        lineNumber: 33,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Navbar).Toggle, {
                         "aria-controls": "basic-navbar-nav"
                     }, void 0, false, {
                         fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                        lineNumber: 13,
+                        lineNumber: 36,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Navbar).Collapse, {
@@ -34964,79 +34993,74 @@ const NavigationBar = ()=>{
                             className: "me-auto",
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
-                                    className: "d-flex align-items-center",
-                                    as: (0, _reactRouterDom.Link),
-                                    to: "/",
-                                    children: "Home"
-                                }, void 0, false, {
-                                    fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                    lineNumber: 16,
-                                    columnNumber: 15
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
+                                    eventKey: "About",
                                     className: "d-flex align-items-center",
                                     as: (0, _reactRouterDom.Link),
                                     to: "/about",
                                     children: "About"
                                 }, void 0, false, {
                                     fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                    lineNumber: 19,
+                                    lineNumber: 42,
                                     columnNumber: 15
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
+                                    eventKey: "Contact",
                                     className: "d-flex align-items-center",
                                     as: (0, _reactRouterDom.Link),
                                     to: "/contact",
                                     children: "Contact"
                                 }, void 0, false, {
                                     fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                    lineNumber: 22,
+                                    lineNumber: 45,
                                     columnNumber: 15
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
+                                    eventKey: "MyWork",
                                     className: "d-flex align-items-center",
                                     as: (0, _reactRouterDom.Link),
                                     to: "/portfolio",
                                     children: "My Work"
                                 }, void 0, false, {
                                     fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                    lineNumber: 25,
+                                    lineNumber: 48,
                                     columnNumber: 15
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
+                                    eventKey: "CaseStudy",
                                     className: "d-flex align-items-center",
                                     as: (0, _reactRouterDom.Link),
                                     to: "/casestudy",
                                     children: "Case Study"
                                 }, void 0, false, {
                                     fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                    lineNumber: 28,
+                                    lineNumber: 51,
                                     columnNumber: 15
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                            lineNumber: 15,
+                            lineNumber: 38,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                        lineNumber: 14,
+                        lineNumber: 37,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                lineNumber: 9,
-                columnNumber: 9
+                lineNumber: 23,
+                columnNumber: 7
             }, undefined)
         }, void 0, false, {
             fileName: "src/components/navigation-bar/navigation-bar.jsx",
-            lineNumber: 8,
-            columnNumber: 7
+            lineNumber: 22,
+            columnNumber: 5
         }, undefined)
     }, void 0, false);
 };
+_s(NavigationBar, "SAV1J0KUKTd4eDWnfOy+jgI9Z50=");
 _c = NavigationBar;
 var _c;
 $RefreshReg$(_c, "NavigationBar");
@@ -35046,7 +35070,7 @@ $RefreshReg$(_c, "NavigationBar");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","react-bootstrap":"3AD9A","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3AD9A":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","react-bootstrap":"3AD9A","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","793d7989cc57d2cf":"xsVtF"}],"3AD9A":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Accordion", ()=>(0, _accordionDefault.default));
@@ -35381,7 +35405,7 @@ var _toggleButtonGroupDefault = parcelHelpers.interopDefault(_toggleButtonGroup)
 var _tooltip = require("./Tooltip");
 var _tooltipDefault = parcelHelpers.interopDefault(_tooltip);
 
-},{"./Accordion":false,"./AccordionContext":false,"./AccordionCollapse":false,"./AccordionButton":false,"./AccordionHeader":false,"./AccordionItem":false,"./Alert":"e3Xec","./AlertHeading":false,"./AlertLink":false,"./Anchor":false,"./Badge":false,"./Breadcrumb":false,"./BreadcrumbItem":false,"./Button":"aPzUt","./ButtonGroup":false,"./ButtonToolbar":false,"./Card":false,"./CardBody":false,"./CardFooter":false,"./CardGroup":false,"./CardHeader":false,"./CardImg":false,"./CardImgOverlay":false,"./CardLink":false,"./CardSubtitle":false,"./CardText":false,"./CardTitle":false,"./Carousel":"bsGhm","./CarouselCaption":false,"./CarouselItem":false,"./CloseButton":false,"./Col":"2L2I6","./Collapse":false,"./Container":"hEdsw","./Dropdown":false,"./DropdownButton":false,"./DropdownDivider":false,"./DropdownHeader":false,"./DropdownItem":false,"./DropdownItemText":false,"./DropdownMenu":false,"./DropdownToggle":false,"./Fade":false,"./Figure":false,"./FigureCaption":false,"./FigureImage":false,"./Form":"iBZ80","./FormControl":false,"./FormCheck":false,"./FormFloating":false,"./FloatingLabel":"coYzo","./FormGroup":false,"./FormLabel":false,"./FormText":false,"./FormSelect":false,"./Image":"cyVPa","./InputGroup":false,"./ListGroup":false,"./ListGroupItem":false,"./Modal":false,"./ModalBody":false,"./ModalDialog":false,"./ModalFooter":false,"./ModalHeader":false,"./ModalTitle":false,"./Nav":"cXyL2","./Navbar":"1mHjo","./NavbarBrand":false,"./NavbarCollapse":false,"./NavbarOffcanvas":false,"./NavbarText":false,"./NavbarToggle":false,"./NavDropdown":false,"./NavItem":false,"./NavLink":false,"./Offcanvas":false,"./OffcanvasBody":false,"./OffcanvasHeader":false,"./OffcanvasTitle":false,"./OffcanvasToggling":false,"./Overlay":false,"./OverlayTrigger":false,"./PageItem":false,"./Pagination":false,"./Placeholder":false,"./PlaceholderButton":false,"./Popover":false,"./PopoverBody":false,"./PopoverHeader":false,"./ProgressBar":false,"./Ratio":false,"./Row":"cMC39","./Spinner":false,"./SplitButton":false,"./SSRProvider":false,"./Stack":false,"./Tab":false,"./TabContainer":false,"./TabContent":false,"./Table":false,"./TabPane":false,"./Tabs":false,"./ThemeProvider":false,"./Toast":false,"./ToastBody":false,"./ToastContainer":false,"./ToastHeader":false,"./ToggleButton":false,"./ToggleButtonGroup":false,"./Tooltip":false,"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"e3Xec":[function(require,module,exports) {
+},{"./Accordion":false,"./AccordionContext":false,"./AccordionCollapse":false,"./AccordionButton":false,"./AccordionHeader":false,"./AccordionItem":false,"./Alert":"e3Xec","./AlertHeading":false,"./AlertLink":false,"./Anchor":false,"./Badge":false,"./Breadcrumb":false,"./BreadcrumbItem":false,"./Button":"aPzUt","./ButtonGroup":false,"./ButtonToolbar":false,"./Card":false,"./CardBody":false,"./CardFooter":false,"./CardGroup":false,"./CardHeader":false,"./CardImg":false,"./CardImgOverlay":false,"./CardLink":false,"./CardSubtitle":false,"./CardText":false,"./CardTitle":false,"./Carousel":false,"./CarouselCaption":false,"./CarouselItem":false,"./CloseButton":false,"./Col":"2L2I6","./Collapse":false,"./Container":"hEdsw","./Dropdown":false,"./DropdownButton":false,"./DropdownDivider":false,"./DropdownHeader":false,"./DropdownItem":false,"./DropdownItemText":false,"./DropdownMenu":false,"./DropdownToggle":false,"./Fade":false,"./Figure":false,"./FigureCaption":false,"./FigureImage":false,"./Form":"iBZ80","./FormControl":false,"./FormCheck":false,"./FormFloating":false,"./FloatingLabel":"coYzo","./FormGroup":false,"./FormLabel":false,"./FormText":false,"./FormSelect":false,"./Image":"cyVPa","./InputGroup":false,"./ListGroup":false,"./ListGroupItem":false,"./Modal":false,"./ModalBody":false,"./ModalDialog":false,"./ModalFooter":false,"./ModalHeader":false,"./ModalTitle":false,"./Nav":"cXyL2","./Navbar":"1mHjo","./NavbarBrand":false,"./NavbarCollapse":false,"./NavbarOffcanvas":false,"./NavbarText":false,"./NavbarToggle":false,"./NavDropdown":false,"./NavItem":false,"./NavLink":false,"./Offcanvas":false,"./OffcanvasBody":false,"./OffcanvasHeader":false,"./OffcanvasTitle":false,"./OffcanvasToggling":false,"./Overlay":false,"./OverlayTrigger":false,"./PageItem":false,"./Pagination":false,"./Placeholder":false,"./PlaceholderButton":false,"./Popover":false,"./PopoverBody":false,"./PopoverHeader":false,"./ProgressBar":false,"./Ratio":false,"./Row":"cMC39","./Spinner":false,"./SplitButton":false,"./SSRProvider":false,"./Stack":"eZkZ1","./Tab":false,"./TabContainer":false,"./TabContent":false,"./Table":false,"./TabPane":false,"./Tabs":false,"./ThemeProvider":false,"./Toast":false,"./ToastBody":false,"./ToastContainer":false,"./ToastHeader":false,"./ToggleButton":false,"./ToggleButtonGroup":false,"./Tooltip":false,"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"e3Xec":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -38580,514 +38604,7 @@ const CardTitle = /*#__PURE__*/ _react.forwardRef(({ className, bsPrefix, as: Co
 CardTitle.displayName = "CardTitle";
 exports.default = CardTitle;
 
-},{"react":"21dqq","classnames":"jocGM","./ThemeProvider":"dVixI","./divWithClassName":"eDg7t","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bsGhm":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _useEventCallback = require("@restart/hooks/useEventCallback");
-var _useEventCallbackDefault = parcelHelpers.interopDefault(_useEventCallback);
-var _useUpdateEffect = require("@restart/hooks/useUpdateEffect");
-var _useUpdateEffectDefault = parcelHelpers.interopDefault(_useUpdateEffect);
-var _useCommittedRef = require("@restart/hooks/useCommittedRef");
-var _useCommittedRefDefault = parcelHelpers.interopDefault(_useCommittedRef);
-var _useTimeout = require("@restart/hooks/useTimeout");
-var _useTimeoutDefault = parcelHelpers.interopDefault(_useTimeout);
-var _anchor = require("@restart/ui/Anchor");
-var _anchorDefault = parcelHelpers.interopDefault(_anchor);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _react = require("react");
-var _uncontrollable = require("uncontrollable");
-var _carouselCaption = require("./CarouselCaption");
-var _carouselCaptionDefault = parcelHelpers.interopDefault(_carouselCaption);
-var _carouselItem = require("./CarouselItem");
-var _carouselItemDefault = parcelHelpers.interopDefault(_carouselItem);
-var _elementChildren = require("./ElementChildren");
-var _themeProvider = require("./ThemeProvider");
-var _transitionEndListener = require("./transitionEndListener");
-var _transitionEndListenerDefault = parcelHelpers.interopDefault(_transitionEndListener);
-var _triggerBrowserReflow = require("./triggerBrowserReflow");
-var _triggerBrowserReflowDefault = parcelHelpers.interopDefault(_triggerBrowserReflow);
-var _transitionWrapper = require("./TransitionWrapper");
-var _transitionWrapperDefault = parcelHelpers.interopDefault(_transitionWrapper);
-var _jsxRuntime = require("react/jsx-runtime");
-"use client";
-const SWIPE_THRESHOLD = 40;
-function isVisible(element) {
-    if (!element || !element.style || !element.parentNode || !element.parentNode.style) return false;
-    const elementStyle = getComputedStyle(element);
-    return elementStyle.display !== "none" && elementStyle.visibility !== "hidden" && getComputedStyle(element.parentNode).display !== "none";
-}
-const Carousel = /*#__PURE__*/ _react.forwardRef(({ defaultActiveIndex = 0, ...uncontrolledProps }, ref)=>{
-    const { // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-    as: Component = "div", bsPrefix, slide = true, fade = false, controls = true, indicators = true, indicatorLabels = [], activeIndex, onSelect, onSlide, onSlid, interval = 5000, keyboard = true, onKeyDown, pause = "hover", onMouseOver, onMouseOut, wrap = true, touch = true, onTouchStart, onTouchMove, onTouchEnd, prevIcon = /*#__PURE__*/ (0, _jsxRuntime.jsx)("span", {
-        "aria-hidden": "true",
-        className: "carousel-control-prev-icon"
-    }), prevLabel = "Previous", nextIcon = /*#__PURE__*/ (0, _jsxRuntime.jsx)("span", {
-        "aria-hidden": "true",
-        className: "carousel-control-next-icon"
-    }), nextLabel = "Next", variant, className, children, ...props } = (0, _uncontrollable.useUncontrolled)({
-        defaultActiveIndex,
-        ...uncontrolledProps
-    }, {
-        activeIndex: "onSelect"
-    });
-    const prefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, "carousel");
-    const isRTL = (0, _themeProvider.useIsRTL)();
-    const nextDirectionRef = (0, _react.useRef)(null);
-    const [direction, setDirection] = (0, _react.useState)("next");
-    const [paused, setPaused] = (0, _react.useState)(false);
-    const [isSliding, setIsSliding] = (0, _react.useState)(false);
-    const [renderedActiveIndex, setRenderedActiveIndex] = (0, _react.useState)(activeIndex || 0);
-    (0, _react.useEffect)(()=>{
-        if (!isSliding && activeIndex !== renderedActiveIndex) {
-            if (nextDirectionRef.current) setDirection(nextDirectionRef.current);
-            else setDirection((activeIndex || 0) > renderedActiveIndex ? "next" : "prev");
-            if (slide) setIsSliding(true);
-            setRenderedActiveIndex(activeIndex || 0);
-        }
-    }, [
-        activeIndex,
-        isSliding,
-        renderedActiveIndex,
-        slide
-    ]);
-    (0, _react.useEffect)(()=>{
-        if (nextDirectionRef.current) nextDirectionRef.current = null;
-    });
-    let numChildren = 0;
-    let activeChildInterval;
-    // Iterate to grab all of the children's interval values
-    // (and count them, too)
-    (0, _elementChildren.forEach)(children, (child, index)=>{
-        ++numChildren;
-        if (index === activeIndex) activeChildInterval = child.props.interval;
-    });
-    const activeChildIntervalRef = (0, _useCommittedRefDefault.default)(activeChildInterval);
-    const prev = (0, _react.useCallback)((event)=>{
-        if (isSliding) return;
-        let nextActiveIndex = renderedActiveIndex - 1;
-        if (nextActiveIndex < 0) {
-            if (!wrap) return;
-            nextActiveIndex = numChildren - 1;
-        }
-        nextDirectionRef.current = "prev";
-        onSelect == null || onSelect(nextActiveIndex, event);
-    }, [
-        isSliding,
-        renderedActiveIndex,
-        onSelect,
-        wrap,
-        numChildren
-    ]);
-    // This is used in the setInterval, so it should not invalidate.
-    const next = (0, _useEventCallbackDefault.default)((event)=>{
-        if (isSliding) return;
-        let nextActiveIndex = renderedActiveIndex + 1;
-        if (nextActiveIndex >= numChildren) {
-            if (!wrap) return;
-            nextActiveIndex = 0;
-        }
-        nextDirectionRef.current = "next";
-        onSelect == null || onSelect(nextActiveIndex, event);
-    });
-    const elementRef = (0, _react.useRef)();
-    (0, _react.useImperativeHandle)(ref, ()=>({
-            element: elementRef.current,
-            prev,
-            next
-        }));
-    // This is used in the setInterval, so it should not invalidate.
-    const nextWhenVisible = (0, _useEventCallbackDefault.default)(()=>{
-        if (!document.hidden && isVisible(elementRef.current)) {
-            if (isRTL) prev();
-            else next();
-        }
-    });
-    const slideDirection = direction === "next" ? "start" : "end";
-    (0, _useUpdateEffectDefault.default)(()=>{
-        if (slide) // These callbacks will be handled by the <Transition> callbacks.
-        return;
-        onSlide == null || onSlide(renderedActiveIndex, slideDirection);
-        onSlid == null || onSlid(renderedActiveIndex, slideDirection);
-    }, [
-        renderedActiveIndex
-    ]);
-    const orderClassName = `${prefix}-item-${direction}`;
-    const directionalClassName = `${prefix}-item-${slideDirection}`;
-    const handleEnter = (0, _react.useCallback)((node)=>{
-        (0, _triggerBrowserReflowDefault.default)(node);
-        onSlide == null || onSlide(renderedActiveIndex, slideDirection);
-    }, [
-        onSlide,
-        renderedActiveIndex,
-        slideDirection
-    ]);
-    const handleEntered = (0, _react.useCallback)(()=>{
-        setIsSliding(false);
-        onSlid == null || onSlid(renderedActiveIndex, slideDirection);
-    }, [
-        onSlid,
-        renderedActiveIndex,
-        slideDirection
-    ]);
-    const handleKeyDown = (0, _react.useCallback)((event)=>{
-        if (keyboard && !/input|textarea/i.test(event.target.tagName)) switch(event.key){
-            case "ArrowLeft":
-                event.preventDefault();
-                if (isRTL) next(event);
-                else prev(event);
-                return;
-            case "ArrowRight":
-                event.preventDefault();
-                if (isRTL) prev(event);
-                else next(event);
-                return;
-            default:
-        }
-        onKeyDown == null || onKeyDown(event);
-    }, [
-        keyboard,
-        onKeyDown,
-        prev,
-        next,
-        isRTL
-    ]);
-    const handleMouseOver = (0, _react.useCallback)((event)=>{
-        if (pause === "hover") setPaused(true);
-        onMouseOver == null || onMouseOver(event);
-    }, [
-        pause,
-        onMouseOver
-    ]);
-    const handleMouseOut = (0, _react.useCallback)((event)=>{
-        setPaused(false);
-        onMouseOut == null || onMouseOut(event);
-    }, [
-        onMouseOut
-    ]);
-    const touchStartXRef = (0, _react.useRef)(0);
-    const touchDeltaXRef = (0, _react.useRef)(0);
-    const touchUnpauseTimeout = (0, _useTimeoutDefault.default)();
-    const handleTouchStart = (0, _react.useCallback)((event)=>{
-        touchStartXRef.current = event.touches[0].clientX;
-        touchDeltaXRef.current = 0;
-        if (pause === "hover") setPaused(true);
-        onTouchStart == null || onTouchStart(event);
-    }, [
-        pause,
-        onTouchStart
-    ]);
-    const handleTouchMove = (0, _react.useCallback)((event)=>{
-        if (event.touches && event.touches.length > 1) touchDeltaXRef.current = 0;
-        else touchDeltaXRef.current = event.touches[0].clientX - touchStartXRef.current;
-        onTouchMove == null || onTouchMove(event);
-    }, [
-        onTouchMove
-    ]);
-    const handleTouchEnd = (0, _react.useCallback)((event)=>{
-        if (touch) {
-            const touchDeltaX = touchDeltaXRef.current;
-            if (Math.abs(touchDeltaX) > SWIPE_THRESHOLD) {
-                if (touchDeltaX > 0) prev(event);
-                else next(event);
-            }
-        }
-        if (pause === "hover") touchUnpauseTimeout.set(()=>{
-            setPaused(false);
-        }, interval || undefined);
-        onTouchEnd == null || onTouchEnd(event);
-    }, [
-        touch,
-        pause,
-        prev,
-        next,
-        touchUnpauseTimeout,
-        interval,
-        onTouchEnd
-    ]);
-    const shouldPlay = interval != null && !paused && !isSliding;
-    const intervalHandleRef = (0, _react.useRef)();
-    (0, _react.useEffect)(()=>{
-        var _ref, _activeChildIntervalR;
-        if (!shouldPlay) return undefined;
-        const nextFunc = isRTL ? prev : next;
-        intervalHandleRef.current = window.setInterval(document.visibilityState ? nextWhenVisible : nextFunc, (_ref = (_activeChildIntervalR = activeChildIntervalRef.current) != null ? _activeChildIntervalR : interval) != null ? _ref : undefined);
-        return ()=>{
-            if (intervalHandleRef.current !== null) clearInterval(intervalHandleRef.current);
-        };
-    }, [
-        shouldPlay,
-        prev,
-        next,
-        activeChildIntervalRef,
-        interval,
-        nextWhenVisible,
-        isRTL
-    ]);
-    const indicatorOnClicks = (0, _react.useMemo)(()=>indicators && Array.from({
-            length: numChildren
-        }, (_, index)=>(event)=>{
-                onSelect == null || onSelect(index, event);
-            }), [
-        indicators,
-        numChildren,
-        onSelect
-    ]);
-    return /*#__PURE__*/ (0, _jsxRuntime.jsxs)(Component, {
-        ref: elementRef,
-        ...props,
-        onKeyDown: handleKeyDown,
-        onMouseOver: handleMouseOver,
-        onMouseOut: handleMouseOut,
-        onTouchStart: handleTouchStart,
-        onTouchMove: handleTouchMove,
-        onTouchEnd: handleTouchEnd,
-        className: (0, _classnamesDefault.default)(className, prefix, slide && "slide", fade && `${prefix}-fade`, variant && `${prefix}-${variant}`),
-        children: [
-            indicators && /*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
-                className: `${prefix}-indicators`,
-                children: (0, _elementChildren.map)(children, (_, index)=>/*#__PURE__*/ (0, _jsxRuntime.jsx)("button", {
-                        type: "button",
-                        "data-bs-target": "" // Bootstrap requires this in their css.
-                        ,
-                        "aria-label": indicatorLabels != null && indicatorLabels.length ? indicatorLabels[index] : `Slide ${index + 1}`,
-                        className: index === renderedActiveIndex ? "active" : undefined,
-                        onClick: indicatorOnClicks ? indicatorOnClicks[index] : undefined,
-                        "aria-current": index === renderedActiveIndex
-                    }, index))
-            }),
-            /*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
-                className: `${prefix}-inner`,
-                children: (0, _elementChildren.map)(children, (child, index)=>{
-                    const isActive = index === renderedActiveIndex;
-                    return slide ? /*#__PURE__*/ (0, _jsxRuntime.jsx)((0, _transitionWrapperDefault.default), {
-                        in: isActive,
-                        onEnter: isActive ? handleEnter : undefined,
-                        onEntered: isActive ? handleEntered : undefined,
-                        addEndListener: (0, _transitionEndListenerDefault.default),
-                        children: (status, innerProps)=>/*#__PURE__*/ _react.cloneElement(child, {
-                                ...innerProps,
-                                className: (0, _classnamesDefault.default)(child.props.className, isActive && status !== "entered" && orderClassName, (status === "entered" || status === "exiting") && "active", (status === "entering" || status === "exiting") && directionalClassName)
-                            })
-                    }) : /*#__PURE__*/ _react.cloneElement(child, {
-                        className: (0, _classnamesDefault.default)(child.props.className, isActive && "active")
-                    });
-                })
-            }),
-            controls && /*#__PURE__*/ (0, _jsxRuntime.jsxs)((0, _jsxRuntime.Fragment), {
-                children: [
-                    (wrap || activeIndex !== 0) && /*#__PURE__*/ (0, _jsxRuntime.jsxs)((0, _anchorDefault.default), {
-                        className: `${prefix}-control-prev`,
-                        onClick: prev,
-                        children: [
-                            prevIcon,
-                            prevLabel && /*#__PURE__*/ (0, _jsxRuntime.jsx)("span", {
-                                className: "visually-hidden",
-                                children: prevLabel
-                            })
-                        ]
-                    }),
-                    (wrap || activeIndex !== numChildren - 1) && /*#__PURE__*/ (0, _jsxRuntime.jsxs)((0, _anchorDefault.default), {
-                        className: `${prefix}-control-next`,
-                        onClick: next,
-                        children: [
-                            nextIcon,
-                            nextLabel && /*#__PURE__*/ (0, _jsxRuntime.jsx)("span", {
-                                className: "visually-hidden",
-                                children: nextLabel
-                            })
-                        ]
-                    })
-                ]
-            })
-        ]
-    });
-});
-Carousel.displayName = "Carousel";
-exports.default = Object.assign(Carousel, {
-    Caption: (0, _carouselCaptionDefault.default),
-    Item: (0, _carouselItemDefault.default)
-});
-
-},{"@restart/hooks/useEventCallback":"7ONdq","@restart/hooks/useUpdateEffect":"bHP1w","@restart/hooks/useCommittedRef":"g5BYG","@restart/hooks/useTimeout":"63wsP","@restart/ui/Anchor":"cQOWi","classnames":"jocGM","react":"21dqq","uncontrollable":"b3yWY","./CarouselCaption":"dH56B","./CarouselItem":"9A3DI","./ElementChildren":"fdyAp","./ThemeProvider":"dVixI","./transitionEndListener":"68oh7","./triggerBrowserReflow":"eWjs5","./TransitionWrapper":"jKUqZ","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bHP1w":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-/**
- * Runs an effect only when the dependencies have changed, skipping the
- * initial "on mount" run. Caution, if the dependency list never changes,
- * the effect is **never run**
- *
- * ```ts
- *  const ref = useRef<HTMLInput>(null);
- *
- *  // focuses an element only if the focus changes, and not on mount
- *  useUpdateEffect(() => {
- *    const element = ref.current?.children[focusedIdx] as HTMLElement
- *
- *    element?.focus()
- *
- *  }, [focusedIndex])
- * ```
- * @param effect An effect to run on mount
- *
- * @category effects
- */ function useUpdateEffect(fn, deps) {
-    const isFirst = (0, _react.useRef)(true);
-    (0, _react.useEffect)(()=>{
-        if (isFirst.current) {
-            isFirst.current = false;
-            return;
-        }
-        return fn();
-    }, deps);
-}
-exports.default = useUpdateEffect;
-
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"63wsP":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "default", ()=>useTimeout);
-var _react = require("react");
-var _useMounted = require("./useMounted");
-var _useMountedDefault = parcelHelpers.interopDefault(_useMounted);
-var _useWillUnmount = require("./useWillUnmount");
-var _useWillUnmountDefault = parcelHelpers.interopDefault(_useWillUnmount);
-/*
- * Browsers including Internet Explorer, Chrome, Safari, and Firefox store the
- * delay as a 32-bit signed integer internally. This causes an integer overflow
- * when using delays larger than 2,147,483,647 ms (about 24.8 days),
- * resulting in the timeout being executed immediately.
- *
- * via: https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
- */ const MAX_DELAY_MS = 2 ** 31 - 1;
-function setChainedTimeout(handleRef, fn, timeoutAtMs) {
-    const delayMs = timeoutAtMs - Date.now();
-    handleRef.current = delayMs <= MAX_DELAY_MS ? setTimeout(fn, delayMs) : setTimeout(()=>setChainedTimeout(handleRef, fn, timeoutAtMs), MAX_DELAY_MS);
-}
-function useTimeout() {
-    const isMounted = (0, _useMountedDefault.default)();
-    // types are confused between node and web here IDK
-    const handleRef = (0, _react.useRef)();
-    (0, _useWillUnmountDefault.default)(()=>clearTimeout(handleRef.current));
-    return (0, _react.useMemo)(()=>{
-        const clear = ()=>clearTimeout(handleRef.current);
-        function set(fn, delayMs = 0) {
-            if (!isMounted()) return;
-            clear();
-            if (delayMs <= MAX_DELAY_MS) // For simplicity, if the timeout is short, just set a normal timeout.
-            handleRef.current = setTimeout(fn, delayMs);
-            else setChainedTimeout(handleRef, fn, Date.now() + delayMs);
-        }
-        return {
-            set,
-            clear,
-            handleRef
-        };
-    }, []);
-}
-
-},{"react":"21dqq","./useMounted":"iK6A1","./useWillUnmount":"2OOXI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2OOXI":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "default", ()=>useWillUnmount);
-var _useUpdatedRef = require("./useUpdatedRef");
-var _useUpdatedRefDefault = parcelHelpers.interopDefault(_useUpdatedRef);
-var _react = require("react");
-function useWillUnmount(fn) {
-    const onUnmount = (0, _useUpdatedRefDefault.default)(fn);
-    (0, _react.useEffect)(()=>()=>onUnmount.current(), []);
-}
-
-},{"./useUpdatedRef":"cfaLu","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cfaLu":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "default", ()=>useUpdatedRef);
-var _react = require("react");
-function useUpdatedRef(value) {
-    const valueRef = (0, _react.useRef)(value);
-    valueRef.current = value;
-    return valueRef;
-}
-
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dH56B":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _themeProvider = require("./ThemeProvider");
-var _jsxRuntime = require("react/jsx-runtime");
-"use client";
-const CarouselCaption = /*#__PURE__*/ _react.forwardRef(({ className, bsPrefix, as: Component = "div", ...props }, ref)=>{
-    bsPrefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, "carousel-caption");
-    return /*#__PURE__*/ (0, _jsxRuntime.jsx)(Component, {
-        ref: ref,
-        className: (0, _classnamesDefault.default)(className, bsPrefix),
-        ...props
-    });
-});
-CarouselCaption.displayName = "CarouselCaption";
-exports.default = CarouselCaption;
-
-},{"react":"21dqq","classnames":"jocGM","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9A3DI":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _react = require("react");
-var _themeProvider = require("./ThemeProvider");
-var _jsxRuntime = require("react/jsx-runtime");
-"use client";
-const CarouselItem = /*#__PURE__*/ _react.forwardRef(({ // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-as: Component = "div", bsPrefix, className, ...props }, ref)=>{
-    const finalClassName = (0, _classnamesDefault.default)(className, (0, _themeProvider.useBootstrapPrefix)(bsPrefix, "carousel-item"));
-    return /*#__PURE__*/ (0, _jsxRuntime.jsx)(Component, {
-        ref: ref,
-        ...props,
-        className: finalClassName
-    });
-});
-CarouselItem.displayName = "CarouselItem";
-exports.default = CarouselItem;
-
-},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fdyAp":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "map", ()=>map);
-parcelHelpers.export(exports, "forEach", ()=>forEach);
-parcelHelpers.export(exports, "hasChildOfType", ()=>hasChildOfType);
-var _react = require("react");
-/**
- * Iterates through children that are typically specified as `props.children`,
- * but only maps over children that are "valid elements".
- *
- * The mapFunction provided index will be normalised to the components mapped,
- * so an invalid component would not increase the index.
- *
- */ function map(children, func) {
-    let index = 0;
-    return _react.Children.map(children, (child)=>/*#__PURE__*/ _react.isValidElement(child) ? func(child, index++) : child);
-}
-/**
- * Iterates through children that are "valid elements".
- *
- * The provided forEachFunc(child, index) will be called for each
- * leaf child with the index reflecting the position relative to "valid components".
- */ function forEach(children, func) {
-    let index = 0;
-    _react.Children.forEach(children, (child)=>{
-        if (/*#__PURE__*/ _react.isValidElement(child)) func(child, index++);
-    });
-}
-/**
- * Finds whether a component's `children` prop includes a React element of the
- * specified type.
- */ function hasChildOfType(children, type) {
-    return _react.Children.toArray(children).some((child)=>/*#__PURE__*/ _react.isValidElement(child) && child.type === type);
-}
-
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2L2I6":[function(require,module,exports) {
+},{"react":"21dqq","classnames":"jocGM","./ThemeProvider":"dVixI","./divWithClassName":"eDg7t","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2L2I6":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "useCol", ()=>useCol);
@@ -39509,7 +39026,43 @@ const FormCheckLabel = /*#__PURE__*/ _react.forwardRef(({ bsPrefix, className, h
 FormCheckLabel.displayName = "FormCheckLabel";
 exports.default = FormCheckLabel;
 
-},{"classnames":"jocGM","react":"21dqq","./FormContext":"gjvSt","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iynMc":[function(require,module,exports) {
+},{"classnames":"jocGM","react":"21dqq","./FormContext":"gjvSt","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fdyAp":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "map", ()=>map);
+parcelHelpers.export(exports, "forEach", ()=>forEach);
+parcelHelpers.export(exports, "hasChildOfType", ()=>hasChildOfType);
+var _react = require("react");
+/**
+ * Iterates through children that are typically specified as `props.children`,
+ * but only maps over children that are "valid elements".
+ *
+ * The mapFunction provided index will be normalised to the components mapped,
+ * so an invalid component would not increase the index.
+ *
+ */ function map(children, func) {
+    let index = 0;
+    return _react.Children.map(children, (child)=>/*#__PURE__*/ _react.isValidElement(child) ? func(child, index++) : child);
+}
+/**
+ * Iterates through children that are "valid elements".
+ *
+ * The provided forEachFunc(child, index) will be called for each
+ * leaf child with the index reflecting the position relative to "valid components".
+ */ function forEach(children, func) {
+    let index = 0;
+    _react.Children.forEach(children, (child)=>{
+        if (/*#__PURE__*/ _react.isValidElement(child)) func(child, index++);
+    });
+}
+/**
+ * Finds whether a component's `children` prop includes a React element of the
+ * specified type.
+ */ function hasChildOfType(children, type) {
+    return _react.Children.toArray(children).some((child)=>/*#__PURE__*/ _react.isValidElement(child) && child.type === type);
+}
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iynMc":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -41074,7 +40627,30 @@ function contains(context, node) {
     if (context.compareDocumentPosition) return context === node || !!(context.compareDocumentPosition(node) & 16);
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5alMm":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2OOXI":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>useWillUnmount);
+var _useUpdatedRef = require("./useUpdatedRef");
+var _useUpdatedRefDefault = parcelHelpers.interopDefault(_useUpdatedRef);
+var _react = require("react");
+function useWillUnmount(fn) {
+    const onUnmount = (0, _useUpdatedRefDefault.default)(fn);
+    (0, _react.useEffect)(()=>()=>onUnmount.current(), []);
+}
+
+},{"./useUpdatedRef":"cfaLu","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cfaLu":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>useUpdatedRef);
+var _react = require("react");
+function useUpdatedRef(value) {
+    const valueRef = (0, _react.useRef)(value);
+    valueRef.current = value;
+    return valueRef;
+}
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5alMm":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "OPEN_DATA_ATTRIBUTE", ()=>OPEN_DATA_ATTRIBUTE);
@@ -41626,7 +41202,109 @@ const NavbarText = /*#__PURE__*/ _react.forwardRef(({ className, bsPrefix, as: C
 NavbarText.displayName = "NavbarText";
 exports.default = NavbarText;
 
-},{"react":"21dqq","classnames":"jocGM","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gjkeG":[function(require,module,exports) {
+},{"react":"21dqq","classnames":"jocGM","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eZkZ1":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _react = require("react");
+var _themeProvider = require("./ThemeProvider");
+var _createUtilityClasses = require("./createUtilityClasses");
+var _createUtilityClassesDefault = parcelHelpers.interopDefault(_createUtilityClasses);
+var _jsxRuntime = require("react/jsx-runtime");
+"use client";
+const Stack = /*#__PURE__*/ _react.forwardRef(({ as: Component = "div", bsPrefix, className, direction, gap, ...props }, ref)=>{
+    bsPrefix = (0, _themeProvider.useBootstrapPrefix)(bsPrefix, direction === "horizontal" ? "hstack" : "vstack");
+    const breakpoints = (0, _themeProvider.useBootstrapBreakpoints)();
+    const minBreakpoint = (0, _themeProvider.useBootstrapMinBreakpoint)();
+    return /*#__PURE__*/ (0, _jsxRuntime.jsx)(Component, {
+        ...props,
+        ref: ref,
+        className: (0, _classnamesDefault.default)(className, bsPrefix, ...(0, _createUtilityClassesDefault.default)({
+            gap
+        }, breakpoints, minBreakpoint))
+    });
+});
+Stack.displayName = "Stack";
+exports.default = Stack;
+
+},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","./createUtilityClasses":"kKxSO","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kKxSO":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "responsivePropType", ()=>responsivePropType);
+parcelHelpers.export(exports, "default", ()=>createUtilityClassName);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _themeProvider = require("./ThemeProvider");
+function responsivePropType(propType) {
+    return (0, _propTypesDefault.default).oneOfType([
+        propType,
+        (0, _propTypesDefault.default).shape({
+            xs: propType,
+            sm: propType,
+            md: propType,
+            lg: propType,
+            xl: propType,
+            xxl: propType
+        })
+    ]);
+}
+function createUtilityClassName(utilityValues, breakpoints = (0, _themeProvider.DEFAULT_BREAKPOINTS), minBreakpoint = (0, _themeProvider.DEFAULT_MIN_BREAKPOINT)) {
+    const classes = [];
+    Object.entries(utilityValues).forEach(([utilName, utilValue])=>{
+        if (utilValue != null) {
+            if (typeof utilValue === "object") breakpoints.forEach((brkPoint)=>{
+                const bpValue = utilValue[brkPoint];
+                if (bpValue != null) {
+                    const infix = brkPoint !== minBreakpoint ? `-${brkPoint}` : "";
+                    classes.push(`${utilName}${infix}-${bpValue}`);
+                }
+            });
+            else classes.push(`${utilName}-${utilValue}`);
+        }
+    });
+    return classes;
+}
+
+},{"prop-types":"7wKI2","./ThemeProvider":"dVixI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"xsVtF":[function(require,module,exports) {
+module.exports = require("7dca5c6582994b23").getBundleURL("byUka") + "NavLogo.439e2015.svg" + "?" + Date.now();
+
+},{"7dca5c6582994b23":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return "/";
+}
+function getBaseURL(url) {
+    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
+}
+// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error("Origin not found");
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}],"gjkeG":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$ac88 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -41643,11 +41321,12 @@ const AboutView = ()=>{
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
+                    className: "d-flex justify-content-center mt-4",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
                             className: "d-flex flex-column justify-content-center",
-                            xs: 12,
-                            lg: 6,
+                            xs: 11,
+                            lg: 5,
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                                     className: "mb-4",
@@ -41692,10 +41371,10 @@ const AboutView = ()=>{
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                            xs: 12,
-                            lg: 6,
+                            xs: 11,
+                            lg: 5,
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Image), {
-                                className: "about-picture mx-3",
+                                className: "about-picture",
                                 src: require("8e464922b7cf85c7"),
                                 rounded: true
                             }, void 0, false, {
@@ -41717,6 +41396,10 @@ const AboutView = ()=>{
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
                     className: "my-4",
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        style: {
+                            fontWeight: "bold"
+                        },
+                        className: "d-flex justify-content-center mt-5",
                         children: "Skills"
                     }, void 0, false, {
                         fileName: "src/components/about-view/about-view.jsx",
@@ -41729,10 +41412,11 @@ const AboutView = ()=>{
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
+                    className: "d-flex justify-content-center",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
                             xs: 12,
-                            lg: 4,
+                            lg: 3,
                             className: "d-flex flex-column align-items-lg-start align-items-center mb-5 mb-lg-0",
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
@@ -41793,7 +41477,7 @@ const AboutView = ()=>{
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
                             xs: 12,
-                            lg: 4,
+                            lg: 3,
                             className: "d-flex flex-column align-items-center mb-5 mb-lg-0",
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
@@ -41854,7 +41538,7 @@ const AboutView = ()=>{
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
                             xs: 12,
-                            lg: 4,
+                            lg: 3,
                             className: "d-flex flex-column align-items-lg-end align-items-center",
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
@@ -41932,42 +41616,7 @@ $RefreshReg$(_c, "AboutView");
 },{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-bootstrap":"3AD9A","8e464922b7cf85c7":"b2BSc"}],"b2BSc":[function(require,module,exports) {
 module.exports = require("e0a706ebd38b19d").getBundleURL("byUka") + "Acadia Picture.ca0dcc6a.jpg" + "?" + Date.now();
 
-},{"e0a706ebd38b19d":"lgJ39"}],"lgJ39":[function(require,module,exports) {
-"use strict";
-var bundleURL = {};
-function getBundleURLCached(id) {
-    var value = bundleURL[id];
-    if (!value) {
-        value = getBundleURL();
-        bundleURL[id] = value;
-    }
-    return value;
-}
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
-        if (matches) // The first two stack frames will be this function and getBundleURLCached.
-        // Use the 3rd one, which will be a runtime in the original bundle.
-        return getBaseURL(matches[2]);
-    }
-    return "/";
-}
-function getBaseURL(url) {
-    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
-}
-// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
-    if (!matches) throw new Error("Origin not found");
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
-
-},{}],"9mG3M":[function(require,module,exports) {
+},{"e0a706ebd38b19d":"lgJ39"}],"9mG3M":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$1d99 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -42544,70 +42193,147 @@ var _col = require("react-bootstrap/Col");
 var _colDefault = parcelHelpers.interopDefault(_col);
 var _image = require("react-bootstrap/Image");
 var _imageDefault = parcelHelpers.interopDefault(_image);
+var _reactRouterDom = require("react-router-dom");
 const IntroView = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
-            className: "d-flex",
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
-                className: "justify-content-center mt-5",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
-                        xs: 8,
-                        lg: 4,
-                        className: "mb-5 mb-lg-0",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _imageDefault.default), {
-                            alt: "A portrait of me, Sam Meyer",
-                            src: require("376ce15efb8f6d70"),
-                            roundedCircle: true,
-                            fluid: true
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
+                className: "d-flex mb-4 mt-lg-3",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
+                    className: "justify-content-center mt-5",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
+                            xs: 8,
+                            lg: 3,
+                            className: "mb-4 mb-lg-0 align-content-center",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _imageDefault.default), {
+                                alt: "A portrait of me, Sam Meyer",
+                                src: require("376ce15efb8f6d70"),
+                                roundedCircle: true,
+                                fluid: true
+                            }, void 0, false, {
+                                fileName: "src/components/intro-view/intro-view.jsx",
+                                lineNumber: 13,
+                                columnNumber: 11
+                            }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/intro-view/intro-view.jsx",
                             lineNumber: 12,
-                            columnNumber: 11
+                            columnNumber: 9
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
+                            xs: 10,
+                            lg: 7,
+                            className: "intro-container d-flex flex-column justify-content-center align-items-center align-items-lg-start p-5 ms-0 ms-lg-3",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                    className: "sizetest",
+                                    children: "Well, Hello"
+                                }, void 0, false, {
+                                    fileName: "src/components/intro-view/intro-view.jsx",
+                                    lineNumber: 16,
+                                    columnNumber: 11
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                    children: "My name is Sam Meyer. I am a Full-Stack Web Developer who was once an Industrial Engineer from Missouri. "
+                                }, void 0, false, {
+                                    fileName: "src/components/intro-view/intro-view.jsx",
+                                    lineNumber: 17,
+                                    columnNumber: 11
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/intro-view/intro-view.jsx",
+                            lineNumber: 15,
+                            columnNumber: 9
                         }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/components/intro-view/intro-view.jsx",
-                        lineNumber: 11,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
-                        xs: 12,
-                        lg: 8,
-                        className: "d-flex flex-column justify-content-center align-items-center align-items-lg-start ps-md-5",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "sizetest",
-                                children: "Well, Hello"
-                            }, void 0, false, {
-                                fileName: "src/components/intro-view/intro-view.jsx",
-                                lineNumber: 15,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                children: "My name is Sam Meyer. I am a Full-Stack Web Developer who was once an Industrial Engineer from Missouri. "
-                            }, void 0, false, {
-                                fileName: "src/components/intro-view/intro-view.jsx",
-                                lineNumber: 16,
-                                columnNumber: 11
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/intro-view/intro-view.jsx",
-                        lineNumber: 14,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/intro-view/intro-view.jsx",
+                    lineNumber: 11,
+                    columnNumber: 7
+                }, undefined)
+            }, void 0, false, {
                 fileName: "src/components/intro-view/intro-view.jsx",
                 lineNumber: 10,
-                columnNumber: 7
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
+                className: "mt-5",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
+                    className: "d-flex justify-content-around mt-5",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
+                            as: (0, _reactBootstrap.Nav).Link,
+                            href: "/portfolio",
+                            xs: 10,
+                            lg: 5,
+                            className: "d-flex intro-button align-items-center justify-content-around p-4 mb-5 mb-lg-0",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                    className: "mb-0 intro-button--link",
+                                    children: "See what I do for work"
+                                }, void 0, false, {
+                                    fileName: "src/components/intro-view/intro-view.jsx",
+                                    lineNumber: 25,
+                                    columnNumber: 11
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _imageDefault.default), {
+                                    className: "intro-icon ms-3",
+                                    src: require("2b4c3c1d926505e3")
+                                }, void 0, false, {
+                                    fileName: "src/components/intro-view/intro-view.jsx",
+                                    lineNumber: 26,
+                                    columnNumber: 11
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/intro-view/intro-view.jsx",
+                            lineNumber: 24,
+                            columnNumber: 9
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
+                            as: (0, _reactBootstrap.Nav).Link,
+                            href: "/about",
+                            xs: 10,
+                            lg: 5,
+                            className: "d-flex intro-button align-items-center justify-content-around p-4",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                    className: "mb-0 intro-button--link",
+                                    children: "See what I do for fun"
+                                }, void 0, false, {
+                                    fileName: "src/components/intro-view/intro-view.jsx",
+                                    lineNumber: 30,
+                                    columnNumber: 11
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _imageDefault.default), {
+                                    className: "intro-icon ms-3",
+                                    src: require("92fadf98d790d29d")
+                                }, void 0, false, {
+                                    fileName: "src/components/intro-view/intro-view.jsx",
+                                    lineNumber: 31,
+                                    columnNumber: 11
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/intro-view/intro-view.jsx",
+                            lineNumber: 29,
+                            columnNumber: 9
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/intro-view/intro-view.jsx",
+                    lineNumber: 23,
+                    columnNumber: 7
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/intro-view/intro-view.jsx",
+                lineNumber: 22,
+                columnNumber: 5
             }, undefined)
-        }, void 0, false, {
-            fileName: "src/components/intro-view/intro-view.jsx",
-            lineNumber: 9,
-            columnNumber: 5
-        }, undefined)
-    }, void 0, false);
+        ]
+    }, void 0, true);
 };
 _c = IntroView;
 var _c;
@@ -42618,10 +42344,16 @@ $RefreshReg$(_c, "IntroView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-bootstrap/Row":"cMC39","react-bootstrap/Col":"2L2I6","react-bootstrap/Image":"cyVPa","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","376ce15efb8f6d70":"11jvf","react-bootstrap":"3AD9A"}],"11jvf":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-bootstrap/Row":"cMC39","react-bootstrap/Col":"2L2I6","react-bootstrap/Image":"cyVPa","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","376ce15efb8f6d70":"11jvf","react-bootstrap":"3AD9A","2b4c3c1d926505e3":"aDeG2","92fadf98d790d29d":"eKSor","react-router-dom":"9xmpe"}],"11jvf":[function(require,module,exports) {
 module.exports = require("bbe977c3eaf1e04b").getBundleURL("byUka") + "sam-meyer-portrait.9bdfb3d0.jpg" + "?" + Date.now();
 
-},{"bbe977c3eaf1e04b":"lgJ39"}],"4Mh8i":[function(require,module,exports) {
+},{"bbe977c3eaf1e04b":"lgJ39"}],"aDeG2":[function(require,module,exports) {
+module.exports = require("d9ceb8f501e7e259").getBundleURL("byUka") + "keyboard-icon.d402982a.svg" + "?" + Date.now();
+
+},{"d9ceb8f501e7e259":"lgJ39"}],"eKSor":[function(require,module,exports) {
+module.exports = require("1e88c30c59f3b328").getBundleURL("byUka") + "hike-icon.3f457a21.svg" + "?" + Date.now();
+
+},{"1e88c30c59f3b328":"lgJ39"}],"4Mh8i":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$11cf = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -42636,557 +42368,144 @@ var _reactBootstrap = require("react-bootstrap");
 var _card = require("react-bootstrap/Card");
 var _cardDefault = parcelHelpers.interopDefault(_card);
 var _reactRouterDom = require("react-router-dom");
+var _portfolioPiece = require("../portfolio-piece/portfolio-piece");
 const PortfolioView = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
         className: "mb-5",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
             className: "d-flex justify-content-center",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                    className: "mb-5",
-                    xs: 12,
-                    lg: 10,
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Img, {
-                                variant: "top",
-                                src: require("bbc408b056daa087")
-                            }, void 0, false, {
-                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 11,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Body, {
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Title, {
-                                        className: "d-flex justify-content-center my-4",
-                                        as: "h1",
-                                        children: "Meyer's Meet App"
-                                    }, void 0, false, {
-                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 13,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Text, {
-                                        className: "mb-3 portfolio-main-font",
-                                        children: "Meyer's Meet App is a serverless, progressive web application which was built using React with a Test-Driven Development (TDD) Technique. It uses the Google Calendar API to fetch upcoming events. Users can filter events by city, and view the data for their search update in real time."
-                                    }, void 0, false, {
-                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 14,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
-                                            className: "d-flex justify-content-center my-3",
-                                            children: [
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                                                    xs: 12,
-                                                    md: 6,
-                                                    className: "d-flex justify-content-center justify-content-md-end mb-md-0 mb-3",
-                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                                        class: "btn btn-primary",
-                                                        href: "https://github.com/s-c-meyer/meet",
-                                                        role: "button",
-                                                        target: "_blank",
-                                                        children: "Review the code on Github"
-                                                    }, void 0, false, {
-                                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                        lineNumber: 21,
-                                                        columnNumber: 19
-                                                    }, undefined)
-                                                }, void 0, false, {
-                                                    fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                    lineNumber: 20,
-                                                    columnNumber: 17
-                                                }, undefined),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                                                    xs: 12,
-                                                    md: 6,
-                                                    className: "d-flex justify-content-center justify-content-md-start",
-                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                                        class: "btn btn-primary",
-                                                        href: "https://s-c-meyer.github.io/meet/",
-                                                        role: "button",
-                                                        target: "_blank",
-                                                        children: "View the live demo"
-                                                    }, void 0, false, {
-                                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                        lineNumber: 26,
-                                                        columnNumber: 19
-                                                    }, undefined)
-                                                }, void 0, false, {
-                                                    fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                    lineNumber: 25,
-                                                    columnNumber: 17
-                                                }, undefined)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                            lineNumber: 19,
-                                            columnNumber: 15
-                                        }, undefined)
-                                    }, void 0, false, {
-                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 18,
-                                        columnNumber: 15
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 12,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Footer, {
-                                children: "Built using React with Recharts Library, Google Calendar API, and Test-Driven Development Techniques"
-                            }, void 0, false, {
-                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 33,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                xs: 11,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioPiece.PortfolioPiece), {
+                        isCompleted: false,
+                        image: {
+                            src: require("7b79c3211e658700"),
+                            alt: "Computer and Phone screen showcasing the Manna Shelter Website"
+                        },
+                        title: "Manna Shelter Website",
+                        body: "Manna Shelter is a local homeless shelter that I found through Catchafire, a website designed to make skill-based connections between professional volunteers and non-profits. I am designing and developing a website for Manna Shelter using React with Vite. It will serve to increase awareness and visibility while also facilitating donations and recruiting volunteers."
+                    }, void 0, false, {
                         fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                        lineNumber: 10,
+                        lineNumber: 11,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioPiece.PortfolioPiece), {
+                        isCompleted: false,
+                        image: {
+                            src: require("cfe5c291a8eb9c9c"),
+                            alt: "A screenshot from Discord showing the working bot"
+                        },
+                        title: "Wordle Discord Bot",
+                        body: "A Discord Bot that takes user messages that contain the score from any of the NYT Games and creates a leaderboard from a database of those recorded scores. Built using MongoDB for the database and JavaScript. Currently works with Connections, but I intend to add other games.",
+                        githubLink: "https://github.com/s-c-meyer/DiscordBot"
+                    }, void 0, false, {
+                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
+                        lineNumber: 20,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioPiece.PortfolioPiece), {
+                        isCompleted: false,
+                        image: {
+                            src: require("51d8ce71045b2af6"),
+                            alt: "Computer Screen showcasing a Figma Mockup"
+                        },
+                        title: "Meyer's Matchups",
+                        body: "I love board games and card games. I don't love always needing a pen and paper on hand to keep score of said games. This app would make it easy to score both, and keep a database of the score of past games. I'm using this as a way to teach myself Figma as seen in the image.",
+                        githubLink: "https://github.com/s-c-meyer/meyers-matchup"
+                    }, void 0, false, {
+                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
+                        lineNumber: 30,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioPiece.PortfolioPiece), {
+                        isCompleted: true,
+                        image: {
+                            src: require("bbc408b056daa087"),
+                            alt: "Computer and Phone Screen showcasing the Meyer's Meet App"
+                        },
+                        title: "Meyer's Meet App",
+                        body: "Meyer's Meet App is a serverless, progressive web application which was built using React with a Test-Driven Development (TDD) Technique. It uses the Google Calendar API to fetch upcoming events. Users can filter events by city, and view the data for their search update in real time.",
+                        githubLink: "https://github.com/s-c-meyer/meet",
+                        demoLink: "https://s-c-meyer.github.io/meet/"
+                    }, void 0, false, {
+                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
+                        lineNumber: 40,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioPiece.PortfolioPiece), {
+                        isCompleted: true,
+                        image: {
+                            src: require("cf7dfb7727d4d1be"),
+                            alt: "Three phones displaying the Chat App"
+                        },
+                        title: "Meyer's Messages App",
+                        body: "Meyer's Messages is a chat app that was built using React Native and tested using an Android Emulator. The app provides users with a chat interface and options to share their location and/or images. Images may be shared either from the devices media library, or directly from the camera within the app.",
+                        githubLink: "https://github.com/s-c-meyer/chatDemo"
+                    }, void 0, false, {
+                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
+                        lineNumber: 51,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioPiece.PortfolioPiece), {
+                        isCompleted: true,
+                        image: {
+                            src: require("bdbf8a705f7e5a56"),
+                            alt: "Computer and Phone Screen showcasing the Meyer's Movies App built using React"
+                        },
+                        title: "Meyer's Movies (React)",
+                        body: "Meyer's Movies is a single page application that pulls data about movies from a database using a REST API that I built. User's can create a profile to save their favorite movies, and click to learn more about each movie in the database. The frontend was developed using the React framework.",
+                        githubLink: "https://github.com/s-c-meyer/myFlix-client",
+                        demoLink: "https://meyersmovies.netlify.app/",
+                        caseStudyLink: "/casestudy"
+                    }, void 0, false, {
+                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
+                        lineNumber: 61,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioPiece.PortfolioPiece), {
+                        isCompleted: true,
+                        image: {
+                            src: require("62cd09e8252fca3"),
+                            alt: "Computer and Phone Screen showcasing the Meyer's Movies App built using Angular"
+                        },
+                        title: "Meyer's Movies (Angular)",
+                        body: "Meyer's Movies is a single page application that pulls data about movies from a database using a REST API that I built. User's can create a profile to save their favorite movies, and can learn more through modals that show the movie's genre, director, or summary. The frontend was developed using the AngularJS framework.",
+                        githubLink: "https://github.com/s-c-meyer/myFlix-Angular-client"
+                    }, void 0, false, {
+                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
+                        lineNumber: 73,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioPiece.PortfolioPiece), {
+                        isCompleted: true,
+                        image: {
+                            src: require("f866a8286eb00959"),
+                            alt: "Computer and Phone Screen showcasing the Pokedex App"
+                        },
+                        title: "Pokedex App",
+                        body: "This app uses the PokeAPI to pull information about pokemon and display them to the user. The user can click on a pokemon to see additional information.",
+                        githubLink: "https://github.com/s-c-meyer/simple-js-app",
+                        demoLink: "https://s-c-meyer.github.io/simple-js-app/"
+                    }, void 0, false, {
+                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
+                        lineNumber: 83,
                         columnNumber: 11
                     }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                    lineNumber: 9,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                    className: "my-5",
-                    xs: 12,
-                    lg: 10,
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Img, {
-                                variant: "top",
-                                src: require("cf7dfb7727d4d1be")
-                            }, void 0, false, {
-                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 40,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Body, {
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Title, {
-                                        className: "d-flex justify-content-center my-4",
-                                        as: "h1",
-                                        children: "Meyer's Messages App"
-                                    }, void 0, false, {
-                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 42,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Text, {
-                                        className: "mb-3 portfolio-main-font",
-                                        children: "Meyer's Messages is a chat app that was built using React Native and tested using an Android Emulator. The app provides users with a chat interface and options to share their location and/or images. Images may be shared either from the devices media library, or directly from the camera within the app."
-                                    }, void 0, false, {
-                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 43,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
-                                            className: "d-flex justify-content-center my-3",
-                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                                                xs: 12,
-                                                md: 6,
-                                                className: "d-flex justify-content-center",
-                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                                    class: "btn btn-primary",
-                                                    href: "https://github.com/s-c-meyer/chatDemo",
-                                                    role: "button",
-                                                    target: "_blank",
-                                                    children: "Review the code on Github"
-                                                }, void 0, false, {
-                                                    fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                    lineNumber: 49,
-                                                    columnNumber: 19
-                                                }, undefined)
-                                            }, void 0, false, {
-                                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                lineNumber: 48,
-                                                columnNumber: 17
-                                            }, undefined)
-                                        }, void 0, false, {
-                                            fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                            lineNumber: 47,
-                                            columnNumber: 15
-                                        }, undefined)
-                                    }, void 0, false, {
-                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 46,
-                                        columnNumber: 15
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 41,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Footer, {
-                                children: "Built using Google Firestore Database with Firebase Authentication, Expo, React Native with Gifted Chat Library"
-                            }, void 0, false, {
-                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 56,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                        lineNumber: 39,
-                        columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                    lineNumber: 38,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                    className: "my-5",
-                    xs: 12,
-                    lg: 10,
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Img, {
-                                variant: "top",
-                                src: require("bdbf8a705f7e5a56")
-                            }, void 0, false, {
-                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 63,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Body, {
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Title, {
-                                        className: "d-flex justify-content-center my-4",
-                                        as: "h1",
-                                        children: "Meyer's Movies (React)"
-                                    }, void 0, false, {
-                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 65,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Text, {
-                                        className: "mb-3 portfolio-main-font",
-                                        children: "Meyer's Movies is a single page application that pulls data about movies from a database using a REST API that I built. User's can create a profile to save their favorite movies, and click to learn more about each movie in the database."
-                                    }, void 0, false, {
-                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 66,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
-                                            className: "d-flex justify-content-center my-3",
-                                            children: [
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                                                    xs: 12,
-                                                    md: 4,
-                                                    className: "d-flex justify-content-center justify-content-md-end mb-md-0 mb-3",
-                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                                        class: "btn btn-primary",
-                                                        href: "https://github.com/s-c-meyer/myFlix-client",
-                                                        role: "button",
-                                                        target: "_blank",
-                                                        children: "Review the code on Github"
-                                                    }, void 0, false, {
-                                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                        lineNumber: 72,
-                                                        columnNumber: 19
-                                                    }, undefined)
-                                                }, void 0, false, {
-                                                    fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                    lineNumber: 71,
-                                                    columnNumber: 17
-                                                }, undefined),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                                                    xs: 12,
-                                                    md: 4,
-                                                    className: "d-flex justify-content-center mb-md-0 mb-3",
-                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                                        class: "btn btn-primary",
-                                                        href: "https://meyersmovies.netlify.app/",
-                                                        role: "button",
-                                                        target: "_blank",
-                                                        children: "View the live demo"
-                                                    }, void 0, false, {
-                                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                        lineNumber: 77,
-                                                        columnNumber: 19
-                                                    }, undefined)
-                                                }, void 0, false, {
-                                                    fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                    lineNumber: 76,
-                                                    columnNumber: 17
-                                                }, undefined),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                                                    xs: 12,
-                                                    md: 4,
-                                                    className: "d-flex justify-content-center justify-content-md-start mb-md-0 mb-3",
-                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                                        class: "btn btn-primary",
-                                                        href: "/casestudy",
-                                                        role: "button",
-                                                        target: "_blank",
-                                                        children: "Meyer's Movies Case Study"
-                                                    }, void 0, false, {
-                                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                        lineNumber: 82,
-                                                        columnNumber: 19
-                                                    }, undefined)
-                                                }, void 0, false, {
-                                                    fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                    lineNumber: 81,
-                                                    columnNumber: 17
-                                                }, undefined)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                            lineNumber: 70,
-                                            columnNumber: 15
-                                        }, undefined)
-                                    }, void 0, false, {
-                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 69,
-                                        columnNumber: 15
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 64,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Footer, {
-                                children: "Built using the MERN stack (MongoDB, Express, React, Node.js), along with Parcel as the build tool"
-                            }, void 0, false, {
-                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 89,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                        lineNumber: 62,
-                        columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                    lineNumber: 61,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                    className: "my-5",
-                    xs: 12,
-                    lg: 10,
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Img, {
-                                variant: "top",
-                                src: require("62cd09e8252fca3")
-                            }, void 0, false, {
-                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 96,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Body, {
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Title, {
-                                        className: "d-flex justify-content-center my-4",
-                                        as: "h1",
-                                        children: "Meyer's Movies (Angular)"
-                                    }, void 0, false, {
-                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 98,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Text, {
-                                        className: "mb-3 portfolio-main-font",
-                                        children: "Meyer's Messages is a chat app that was built using React Native and tested using an Android Emulator. The app provides users with a chat interface and options to share their location and/or images. Images may be shared either from the devices media library, or directly from the camera within the app."
-                                    }, void 0, false, {
-                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 99,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
-                                            className: "d-flex justify-content-center my-3",
-                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                                                xs: 12,
-                                                md: 6,
-                                                className: "d-flex justify-content-center",
-                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                                    class: "btn btn-primary",
-                                                    href: "https://github.com/s-c-meyer/myFlix-Angular-client",
-                                                    role: "button",
-                                                    target: "_blank",
-                                                    children: "Review the code on Github"
-                                                }, void 0, false, {
-                                                    fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                    lineNumber: 105,
-                                                    columnNumber: 19
-                                                }, undefined)
-                                            }, void 0, false, {
-                                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                lineNumber: 104,
-                                                columnNumber: 17
-                                            }, undefined)
-                                        }, void 0, false, {
-                                            fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                            lineNumber: 103,
-                                            columnNumber: 15
-                                        }, undefined)
-                                    }, void 0, false, {
-                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 102,
-                                        columnNumber: 15
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 97,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Footer, {
-                                children: "Built using the MEAN stack (MongoDB, Express, Angular, Node.js)"
-                            }, void 0, false, {
-                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 112,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                        lineNumber: 95,
-                        columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                    lineNumber: 94,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                    className: "my-5",
-                    xs: 12,
-                    lg: 10,
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Img, {
-                                variant: "top",
-                                src: require("f866a8286eb00959")
-                            }, void 0, false, {
-                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 119,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Body, {
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Title, {
-                                        className: "d-flex justify-content-center my-4",
-                                        as: "h1",
-                                        children: "Pokedex App"
-                                    }, void 0, false, {
-                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 121,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Text, {
-                                        className: "mb-3 portfolio-main-font",
-                                        children: "This app uses the PokeAPI to pull information about pokemon and display them to the user. The user can click on a pokemon to see additional information."
-                                    }, void 0, false, {
-                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 122,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
-                                            className: "d-flex justify-content-center my-3",
-                                            children: [
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                                                    xs: 12,
-                                                    md: 6,
-                                                    className: "d-flex justify-content-center justify-content-md-end mb-md-0 mb-3",
-                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                                        class: "btn btn-primary",
-                                                        href: "https://github.com/s-c-meyer/simple-js-app",
-                                                        role: "button",
-                                                        target: "_blank",
-                                                        children: "Review the code on Github"
-                                                    }, void 0, false, {
-                                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                        lineNumber: 128,
-                                                        columnNumber: 19
-                                                    }, undefined)
-                                                }, void 0, false, {
-                                                    fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                    lineNumber: 127,
-                                                    columnNumber: 17
-                                                }, undefined),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                                                    xs: 12,
-                                                    md: 6,
-                                                    className: "d-flex justify-content-center justify-content-md-start",
-                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                                        class: "btn btn-primary",
-                                                        href: "https://s-c-meyer.github.io/simple-js-app/",
-                                                        role: "button",
-                                                        target: "_blank",
-                                                        children: "View the live demo"
-                                                    }, void 0, false, {
-                                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                        lineNumber: 133,
-                                                        columnNumber: 19
-                                                    }, undefined)
-                                                }, void 0, false, {
-                                                    fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                                    lineNumber: 132,
-                                                    columnNumber: 17
-                                                }, undefined)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                            lineNumber: 126,
-                                            columnNumber: 15
-                                        }, undefined)
-                                    }, void 0, false, {
-                                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                        lineNumber: 125,
-                                        columnNumber: 15
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 120,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Footer, {
-                                children: "Built using HTML, CSS, Javascript, Bootstrap, and external API's (PokeAPI)"
-                            }, void 0, false, {
-                                fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                                lineNumber: 140,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                        lineNumber: 118,
-                        columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/portfolio-view/portfolio-view.jsx",
-                    lineNumber: 117,
-                    columnNumber: 9
-                }, undefined)
-            ]
-        }, void 0, true, {
+                ]
+            }, void 0, true, {
+                fileName: "src/components/portfolio-view/portfolio-view.jsx",
+                lineNumber: 10,
+                columnNumber: 9
+            }, undefined)
+        }, void 0, false, {
             fileName: "src/components/portfolio-view/portfolio-view.jsx",
-            lineNumber: 8,
+            lineNumber: 9,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/portfolio-view/portfolio-view.jsx",
-        lineNumber: 7,
+        lineNumber: 8,
         columnNumber: 5
     }, undefined);
 };
@@ -43199,7 +42518,7 @@ $RefreshReg$(_c, "PortfolioView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-bootstrap/Card":"lAynp","react-bootstrap":"3AD9A","cf7dfb7727d4d1be":"c4idO","bbc408b056daa087":"dlUuF","bdbf8a705f7e5a56":"6OvIM","f866a8286eb00959":"4H65A","62cd09e8252fca3":"4OSUt","react-router-dom":"9xmpe"}],"c4idO":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-bootstrap/Card":"lAynp","react-bootstrap":"3AD9A","cf7dfb7727d4d1be":"c4idO","bbc408b056daa087":"dlUuF","bdbf8a705f7e5a56":"6OvIM","f866a8286eb00959":"4H65A","62cd09e8252fca3":"4OSUt","react-router-dom":"9xmpe","../portfolio-piece/portfolio-piece":"6a7sj","51d8ce71045b2af6":"iSbdZ","7b79c3211e658700":"iYHgY","cfe5c291a8eb9c9c":"d7Ckx"}],"c4idO":[function(require,module,exports) {
 module.exports = require("6b8ecd64b819e68b").getBundleURL("byUka") + "chatAppThreePhones.94a24ba3.png" + "?" + Date.now();
 
 },{"6b8ecd64b819e68b":"lgJ39"}],"dlUuF":[function(require,module,exports) {
@@ -43214,7 +42533,201 @@ module.exports = require("fdb2f1b93e57830d").getBundleURL("byUka") + "PokedexApp
 },{"fdb2f1b93e57830d":"lgJ39"}],"4OSUt":[function(require,module,exports) {
 module.exports = require("9cb532e9345c458e").getBundleURL("byUka") + "MeyersMoviesAngular.7bb87820.png" + "?" + Date.now();
 
-},{"9cb532e9345c458e":"lgJ39"}],"66Mev":[function(require,module,exports) {
+},{"9cb532e9345c458e":"lgJ39"}],"6a7sj":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$298a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$298a.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "PortfolioPiece", ()=>PortfolioPiece);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactBootstrap = require("react-bootstrap");
+var _react = require("react");
+const PortfolioPiece = ({ isCompleted, image, title, body, githubLink, demoLink, caseStudyLink, tools })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
+            className: "mb-5",
+            fluid: true,
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: isCompleted ? "badge-completed" : "badge-inprogress",
+                    children: isCompleted ? "COMPLETED" : "IN PROGRESS"
+                }, void 0, false, {
+                    fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
+                    lineNumber: 18,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
+                    className: "portfolio-container px-2 py-5 px-xl-5",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                            className: "d-flex align-items-center",
+                            xs: 12,
+                            xl: 8,
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                className: "portfolio-img",
+                                src: image.src,
+                                alt: image.alt
+                            }, void 0, false, {
+                                fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
+                                lineNumber: 23,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
+                            lineNumber: 22,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                            xs: 12,
+                            xl: 4,
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Stack), {
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                        className: "d-flex justify-content-center mt-4 mt-xl-0",
+                                        children: title
+                                    }, void 0, false, {
+                                        fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
+                                        lineNumber: 27,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Stack), {
+                                        gap: 2,
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {}, void 0, false, {
+                                                fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
+                                                lineNumber: 29,
+                                                columnNumber: 17
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "portfolio-text--main p-4",
+                                                children: body
+                                            }, void 0, false, {
+                                                fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
+                                                lineNumber: 30,
+                                                columnNumber: 17
+                                            }, undefined),
+                                            githubLink && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                                class: "portfolio-btn",
+                                                href: githubLink,
+                                                role: "button",
+                                                target: "_blank",
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                        className: "portfolio-btn-text--hidden",
+                                                        children: "<> "
+                                                    }, void 0, false, {
+                                                        fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
+                                                        lineNumber: 31,
+                                                        columnNumber: 105
+                                                    }, undefined),
+                                                    "Review the code on GitHub",
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                        className: "portfolio-btn-text--hidden",
+                                                        children: " </>"
+                                                    }, void 0, false, {
+                                                        fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
+                                                        lineNumber: 31,
+                                                        columnNumber: 191
+                                                    }, undefined)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
+                                                lineNumber: 31,
+                                                columnNumber: 32
+                                            }, undefined),
+                                            demoLink && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                                class: "portfolio-btn",
+                                                href: demoLink,
+                                                role: "button",
+                                                target: "_blank",
+                                                children: "View the live demo"
+                                            }, void 0, false, {
+                                                fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
+                                                lineNumber: 32,
+                                                columnNumber: 30
+                                            }, undefined),
+                                            caseStudyLink && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                                class: "portfolio-btn",
+                                                href: caseStudyLink,
+                                                role: "button",
+                                                target: "_blank",
+                                                children: "View the Case Study"
+                                            }, void 0, false, {
+                                                fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
+                                                lineNumber: 33,
+                                                columnNumber: 35
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
+                                        lineNumber: 28,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
+                                lineNumber: 26,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
+                            lineNumber: 25,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
+                    lineNumber: 21,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
+                    className: "d-flex justify-content-center",
+                    xs: 12,
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                        className: "portfolio-container-bottom d-flex justify-content-center",
+                        xs: 12,
+                        xl: 7
+                    }, void 0, false, {
+                        fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
+                        lineNumber: 39,
+                        columnNumber: 11
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
+                    lineNumber: 38,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/portfolio-piece/portfolio-piece.jsx",
+            lineNumber: 17,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false);
+};
+_c = PortfolioPiece;
+var _c;
+$RefreshReg$(_c, "PortfolioPiece");
+
+  $parcel$ReactRefreshHelpers$298a.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-bootstrap":"3AD9A","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq"}],"iSbdZ":[function(require,module,exports) {
+module.exports = require("33c74c1f16b87f8a").getBundleURL("byUka") + "MeyersMatchupsPortfolioPiece.bfca54c9.svg" + "?" + Date.now();
+
+},{"33c74c1f16b87f8a":"lgJ39"}],"iYHgY":[function(require,module,exports) {
+module.exports = require("27904259f3a8d2cd").getBundleURL("byUka") + "MannaShelterPortfolioPiece.105348ac.svg" + "?" + Date.now();
+
+},{"27904259f3a8d2cd":"lgJ39"}],"d7Ckx":[function(require,module,exports) {
+module.exports = require("5a2cc3109c11c757").getBundleURL("byUka") + "WordleBotPortfolioPiece.c165d958.svg" + "?" + Date.now();
+
+},{"5a2cc3109c11c757":"lgJ39"}],"66Mev":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$6d0c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -43228,84 +42741,407 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _reactRouterDom = require("react-router-dom");
 var _reactBootstrap = require("react-bootstrap");
 const StickyFooter = ()=>{
+    function scrollToTop() {
+        document.body.scrollTop = 0; //for Safari
+        document.documentElement.scrollTop = 0; //for all other browsers
+    }
+    const d = new Date();
+    const currentYear = d.getFullYear();
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Navbar), {
-            className: "sticky-footer",
-            fixed: "bottom",
-            bg: "light",
-            variant: "light",
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
-                className: "d-flex flex-row justify-content-center align-items-center",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        xs: 12,
-                        className: "mb-0 me-3",
-                        children: "Find me at any of these links: "
-                    }, void 0, false, {
-                        fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                        lineNumber: 10,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                        href: "https://github.com/s-c-meyer",
-                        target: "_blank",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            className: "footer-image",
-                            src: require("c777a79b0619b754"),
-                            alt: "Github icon"
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
+            fluid: true,
+            className: "footer-container",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
+                    className: "d-flex justify-content-center",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                            xs: 12,
+                            lg: 3,
+                            className: "mb-5 mb-lg-0 mt-5 px-5",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Stack), {
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            className: "footer-text-title",
+                                            children: "Current Projects"
+                                        }, void 0, false, {
+                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                            lineNumber: 21,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {
+                                            className: "footer-text"
+                                        }, void 0, false, {
+                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                            lineNumber: 22,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                    lineNumber: 20,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Stack), {
+                                    gap: 2,
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                        className: "footer-text",
+                                        href: "/portfolio",
+                                        children: "Cathafire Volunteer Website"
+                                    }, void 0, false, {
+                                        fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                        lineNumber: 25,
+                                        columnNumber: 15
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                    lineNumber: 24,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                            lineNumber: 19,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                            xs: 12,
+                            lg: 3,
+                            className: "mb-5 mb-lg-0 mt-5 mx-0 mx-lg-4 px-5",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Stack), {
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            className: "footer-text-title",
+                                            children: "Navigate to"
+                                        }, void 0, false, {
+                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                            lineNumber: 30,
+                                            columnNumber: 13
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {
+                                            className: "footer-text"
+                                        }, void 0, false, {
+                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                            lineNumber: 31,
+                                            columnNumber: 13
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                    lineNumber: 29,
+                                    columnNumber: 11
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Stack), {
+                                    gap: 2,
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                            className: "footer-text",
+                                            href: "/",
+                                            children: "\u2302 Home"
+                                        }, void 0, false, {
+                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                            lineNumber: 34,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                            className: "footer-text",
+                                            href: "/about",
+                                            children: "\uD83D\uDEC8 About"
+                                        }, void 0, false, {
+                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                            lineNumber: 35,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                            className: "footer-text",
+                                            href: "/contact",
+                                            children: "\uD83D\uDD85 Contact"
+                                        }, void 0, false, {
+                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                            lineNumber: 36,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                            className: "footer-text",
+                                            href: "/portfolio",
+                                            children: "\u270E My Work"
+                                        }, void 0, false, {
+                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                            lineNumber: 37,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                            className: "footer-text",
+                                            href: "/casestudy",
+                                            children: "\uD83D\uDDB3 Case Study"
+                                        }, void 0, false, {
+                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                            lineNumber: 38,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                    lineNumber: 33,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                            lineNumber: 28,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                            xs: 12,
+                            lg: 3,
+                            className: "mb-5 mb-lg-0 mt-5 px-5",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Stack), {
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            className: "footer-text-title",
+                                            children: "Find me here!"
+                                        }, void 0, false, {
+                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                            lineNumber: 43,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {
+                                            className: "footer-text"
+                                        }, void 0, false, {
+                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                            lineNumber: 44,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                    lineNumber: 42,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Stack), {
+                                    gap: 3,
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                            className: "footer-text",
+                                            href: "https://www.linkedin.com/in/meyersamuelc",
+                                            target: "_blank",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                                    className: "footer-icon",
+                                                    viewBox: "0 0 56.693 56.693",
+                                                    xmlSpace: "preserve",
+                                                    xmlns: "http://www.w3.org/2000/svg",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                            d: "M30.071 27.101v-.077a2.031 2.031 0 0 1-.05.077h.05z",
+                                                            fill: "#87b4a9",
+                                                            className: "fill-000000"
+                                                        }, void 0, false, {
+                                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                                            lineNumber: 48,
+                                                            columnNumber: 218
+                                                        }, undefined),
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                            d: "M49.265 4.667H7.145c-2.016 0-3.651 1.596-3.651 3.563v42.613c0 1.966 1.635 3.562 3.651 3.562h42.12c2.019 0 3.654-1.597 3.654-3.562V8.23c0-1.968-1.636-3.563-3.654-3.563zm-30.79 41.637H11.01V23.845h7.465v22.459zm-3.732-25.527h-.05c-2.504 0-4.124-1.725-4.124-3.88 0-2.203 1.67-3.88 4.223-3.88 2.554 0 4.125 1.677 4.175 3.88 0 2.155-1.622 3.88-4.224 3.88zm30.651 25.527h-7.465V34.286c0-3.018-1.08-5.078-3.781-5.078-2.062 0-3.29 1.389-3.831 2.731-.197.479-.245 1.149-.245 1.821v12.543h-7.465s.098-20.354 0-22.459h7.465v3.179c.992-1.53 2.766-3.709 6.729-3.709 4.911 0 8.594 3.211 8.594 10.11v12.88z",
+                                                            fill: "#87b4a9",
+                                                            className: "fill-000000"
+                                                        }, void 0, false, {
+                                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                                            lineNumber: 48,
+                                                            columnNumber: 326
+                                                        }, undefined)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                                    lineNumber: 48,
+                                                    columnNumber: 106
+                                                }, undefined),
+                                                " ",
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                    className: "ps-2",
+                                                    children: "LinkedIn"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                                    lineNumber: 48,
+                                                    columnNumber: 981
+                                                }, undefined)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                            lineNumber: 48,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                            className: "footer-text",
+                                            href: "https://github.com/s-c-meyer",
+                                            target: "_blank",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                                    className: "footer-icon",
+                                                    viewBox: "-1163 1657.697 56.693 56.693",
+                                                    xmlSpace: "preserve",
+                                                    xmlns: "http://www.w3.org/2000/svg",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                            "clip-rule": "evenodd",
+                                                            d: "M-1134.66 1662.916c-13.6 0-24.63 11.027-24.63 24.63 0 10.882 7.057 20.115 16.844 23.371 1.23.228 1.683-.534 1.683-1.184 0-.587-.023-2.528-.034-4.586-6.852 1.49-8.298-2.906-8.298-2.906-1.12-2.847-2.734-3.604-2.734-3.604-2.235-1.529.168-1.497.168-1.497 2.473.173 3.776 2.538 3.776 2.538 2.196 3.765 5.761 2.677 7.167 2.047.221-1.591.86-2.678 1.564-3.293-5.47-.623-11.222-2.735-11.222-12.172 0-2.69.962-4.886 2.538-6.611-.256-.62-1.099-3.126.239-6.519 0 0 2.068-.661 6.774 2.525 1.965-.545 4.072-.82 6.165-.829 2.093.01 4.202.284 6.17.83 4.701-3.187 6.767-2.526 6.767-2.526 1.34 3.393.497 5.898.241 6.519 1.58 1.725 2.535 3.922 2.535 6.61 0 9.46-5.762 11.544-11.246 12.153.883.765 1.67 2.264 1.67 4.561 0 3.296-.028 5.948-.028 6.76 0 .655.443 1.423 1.691 1.181 9.782-3.26 16.83-12.49 16.83-23.368 0-13.603-11.027-24.63-24.63-24.63z",
+                                                            "fill-rule": "evenodd",
+                                                            fill: "#87b4a9",
+                                                            className: "fill-000000"
+                                                        }, void 0, false, {
+                                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                                            lineNumber: 49,
+                                                            columnNumber: 217
+                                                        }, undefined),
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                            d: "M-1149.961 1698.28c-.054.122-.247.159-.422.075-.18-.08-.28-.248-.221-.37.053-.126.245-.161.424-.077.179.08.28.249.219.371zM-1148.963 1699.392c-.118.109-.348.058-.504-.114-.16-.172-.19-.401-.071-.512.12-.108.343-.057.505.114.16.174.192.402.07.512zM-1147.992 1700.81c-.151.106-.398.007-.55-.212-.152-.219-.152-.482.003-.587.152-.105.396-.01.55.207.15.223.15.485-.003.592zM-1146.662 1702.181c-.135.15-.423.109-.633-.094-.215-.199-.275-.48-.14-.63.137-.149.426-.107.638.095.214.198.279.482.135.63zM-1144.826 1702.977c-.06.193-.337.28-.616.198-.279-.084-.46-.31-.405-.505.058-.194.337-.285.617-.198.279.084.461.309.404.505zM-1142.81 1703.124c.006.203-.23.372-.523.375-.295.007-.533-.157-.536-.357 0-.205.23-.372.525-.377.293-.006.533.158.533.36zM-1140.935 1702.805c.035.198-.169.402-.46.456-.285.053-.55-.07-.586-.267-.036-.203.171-.406.457-.459.291-.05.552.069.589.27zm0 0",
+                                                            fill: "#87b4a9",
+                                                            className: "fill-000000"
+                                                        }, void 0, false, {
+                                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                                            lineNumber: 49,
+                                                            columnNumber: 1142
+                                                        }, undefined)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                                    lineNumber: 49,
+                                                    columnNumber: 94
+                                                }, undefined),
+                                                " ",
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                    className: "ps-2",
+                                                    children: "GitHub"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                                    lineNumber: 49,
+                                                    columnNumber: 2074
+                                                }, undefined)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                            lineNumber: 49,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                            className: "footer-text",
+                                            href: "https://www.facebook.com/sam.c.meyer/",
+                                            target: "_blank",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                                    className: "footer-icon",
+                                                    viewBox: "0 0 56.693 56.693",
+                                                    xmlSpace: "preserve",
+                                                    xmlns: "http://www.w3.org/2000/svg",
+                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                        d: "M28.347 5.157c-13.6 0-24.625 11.027-24.625 24.625 0 13.6 11.025 24.623 24.625 24.623s24.625-11.023 24.625-24.623c0-13.598-11.026-24.625-24.625-24.625zm6.517 24.522H30.6v15.207h-6.32V29.679h-3.006V24.31h3.006v-3.479c0-2.49 1.182-6.377 6.379-6.377l4.68.018v5.215h-3.398c-.555 0-1.34.277-1.34 1.461v3.163h4.818l-.555 5.368z",
+                                                        fill: "#87b4a9",
+                                                        className: "fill-000000"
+                                                    }, void 0, false, {
+                                                        fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                                        lineNumber: 50,
+                                                        columnNumber: 215
+                                                    }, undefined)
+                                                }, void 0, false, {
+                                                    fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                                    lineNumber: 50,
+                                                    columnNumber: 103
+                                                }, undefined),
+                                                " ",
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                    className: "ps-2",
+                                                    children: "Facebook"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                                    lineNumber: 50,
+                                                    columnNumber: 599
+                                                }, undefined)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                            lineNumber: 50,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                    lineNumber: 46,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                            lineNumber: 41,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                    lineNumber: 18,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                            xs: 12,
+                            lg: 4,
+                            className: "d-flex justify-content-center mb-4 mt-2",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                onClick: scrollToTop,
+                                className: "to-top-button",
+                                children: "Jump to the top \u21A5"
+                            }, void 0, false, {
+                                fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                lineNumber: 56,
+                                columnNumber: 13
+                            }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                            lineNumber: 11,
-                            columnNumber: 66
-                        }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                        lineNumber: 11,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                        href: "https://www.facebook.com/sam.c.meyer/",
-                        target: "_blank",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            className: "footer-image",
-                            src: require("c56ab9b7f51b3a3d"),
-                            alt: "Facebook icon"
+                            lineNumber: 55,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                            xs: 12,
+                            lg: 4
                         }, void 0, false, {
                             fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                            lineNumber: 12,
-                            columnNumber: 75
-                        }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                        lineNumber: 12,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                        href: "https://www.linkedin.com/in/samuel-christopher-meyer/",
-                        target: "_blank",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            className: "footer-image",
-                            src: require("e6964c123e9207bd"),
-                            alt: "LinkedIn icon"
+                            lineNumber: 58,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                            xs: 12,
+                            lg: 4,
+                            className: "d-flex justify-content-center align-items-end mb-4",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                className: "footer-text--no-shadow",
+                                children: [
+                                    "\xa9 ",
+                                    currentYear,
+                                    " samuelmeyer.dev"
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                                lineNumber: 60,
+                                columnNumber: 13
+                            }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                            lineNumber: 13,
-                            columnNumber: 91
+                            lineNumber: 59,
+                            columnNumber: 11
                         }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                        lineNumber: 13,
-                        columnNumber: 11
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/sticky-footer/sticky-footer.jsx",
-                lineNumber: 9,
-                columnNumber: 9
-            }, undefined)
-        }, void 0, false, {
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/sticky-footer/sticky-footer.jsx",
+                    lineNumber: 54,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
             fileName: "src/components/sticky-footer/sticky-footer.jsx",
-            lineNumber: 8,
+            lineNumber: 17,
             columnNumber: 7
         }, undefined)
     }, void 0, false);
@@ -43319,16 +43155,7 @@ $RefreshReg$(_c, "StickyFooter");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-bootstrap":"3AD9A","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe","c777a79b0619b754":"83hpS","c56ab9b7f51b3a3d":"85T1X","e6964c123e9207bd":"czT1L"}],"83hpS":[function(require,module,exports) {
-module.exports = require("1e6b1201b5cc5df2").getBundleURL("byUka") + "github_icon.24d9e1ba.svg" + "?" + Date.now();
-
-},{"1e6b1201b5cc5df2":"lgJ39"}],"85T1X":[function(require,module,exports) {
-module.exports = require("69d6229000a13cc0").getBundleURL("byUka") + "fb_icon.5a8a1fd0.svg" + "?" + Date.now();
-
-},{"69d6229000a13cc0":"lgJ39"}],"czT1L":[function(require,module,exports) {
-module.exports = require("82882a3d06439afc").getBundleURL("byUka") + "linkedin_icon.809f6d26.svg" + "?" + Date.now();
-
-},{"82882a3d06439afc":"lgJ39"}],"cJaiP":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-bootstrap":"3AD9A","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}],"cJaiP":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$8337 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -43345,6 +43172,7 @@ const CaseStudyView = ()=>{
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Container), {
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
+                    className: "d-flex justify-content-center pb-0 pb-lg-5",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
                             className: "d-flex flex-column align-items-center",
@@ -43368,7 +43196,7 @@ const CaseStudyView = ()=>{
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
                             className: "d-flex flex-column justify-content-center mb-5 mb-lg-0",
                             xs: 12,
-                            lg: 5,
+                            lg: 4,
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                                     children: "Overview and Purpose"
@@ -43408,7 +43236,7 @@ const CaseStudyView = ()=>{
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
                             className: "d-flex flex-column justify-content-center mb-5 mb-lg-0",
                             xs: 12,
-                            lg: 7,
+                            lg: 6,
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Image), {
                                 variant: "top",
                                 src: require("b0ac6752e2de5a7f")
@@ -43429,12 +43257,12 @@ const CaseStudyView = ()=>{
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
-                    className: "py-5",
+                    className: "py-5 d-flex justify-content-center",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
                             className: "d-flex flex-column justify-content-center mb-5 mb-lg-0",
                             xs: 12,
-                            lg: 7,
+                            lg: 6,
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Image), {
                                 variant: "top",
                                 src: require("1216a848205653ab")
@@ -43449,9 +43277,9 @@ const CaseStudyView = ()=>{
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                            className: "d-flex flex-column justify-content-center",
+                            className: "d-flex flex-column justify-content-center ps-0 ps-lg-4",
                             xs: 12,
-                            lg: 5,
+                            lg: 4,
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                                     children: "Tools, Skills, and Methodologies"
@@ -43480,67 +43308,74 @@ const CaseStudyView = ()=>{
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
-                    className: "pt-5",
+                    className: "d-flex justify-content-center pt-5",
                     children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                            className: "mb-5 justify-content-center",
-                            style: {
-                                fontWeight: "bold"
-                            },
-                            children: "My Approach"
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                            className: "d-flex flex-column align-items-center mb-5",
+                            xs: 12,
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                style: {
+                                    fontWeight: "bold"
+                                },
+                                children: "My Approach"
+                            }, void 0, false, {
+                                fileName: "src/components/case-study-view/case-study-view.jsx",
+                                lineNumber: 32,
+                                columnNumber: 13
+                            }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/case-study-view/case-study-view.jsx",
                             lineNumber: 31,
-                            columnNumber: 11
+                            columnNumber: 9
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
                             className: "d-flex flex-column justify-content-center",
                             xs: 12,
-                            lg: 6,
+                            lg: 5,
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                                     children: "Learning React Components"
                                 }, void 0, false, {
                                     fileName: "src/components/case-study-view/case-study-view.jsx",
-                                    lineNumber: 33,
+                                    lineNumber: 35,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                     children: "Since I had the REST API already built, I simply needed to build the frontend. I determined React would be a good choice because I would need to implement multiple interface views, and using the React Framework would make it easier to scale this project up in the future. I started out by using Parcel to build a very basic version of the application while I was learning how React Components worked together. "
                                 }, void 0, false, {
                                     fileName: "src/components/case-study-view/case-study-view.jsx",
-                                    lineNumber: 34,
+                                    lineNumber: 36,
                                     columnNumber: 13
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/case-study-view/case-study-view.jsx",
-                            lineNumber: 32,
+                            lineNumber: 34,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
                             className: "d-flex flex-column justify-content-center",
                             xs: 12,
-                            lg: 6,
+                            lg: 5,
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                                     children: "React Hooks / Connecting to Database"
                                 }, void 0, false, {
                                     fileName: "src/components/case-study-view/case-study-view.jsx",
-                                    lineNumber: 37,
+                                    lineNumber: 39,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                    children: "After creating a few components using mock data, I connected them to my database using a REST API and React Hooks. I then created forms for my application for user login and signup. I added authentication to these forms using Passport.js middleware for Node.js"
+                                    children: "After creating a few components using mock data, I connected them to my database using a REST API and React Hooks. I then created forms for my application for user login and signup. I added authentication to these forms using Passport.js middleware for Node.js. A test of the API can be seen below for posting a favorite movie to the User's favorite movie list. Note the authorization token being used."
                                 }, void 0, false, {
                                     fileName: "src/components/case-study-view/case-study-view.jsx",
-                                    lineNumber: 38,
+                                    lineNumber: 40,
                                     columnNumber: 13
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/case-study-view/case-study-view.jsx",
-                            lineNumber: 36,
+                            lineNumber: 38,
                             columnNumber: 11
                         }, undefined)
                     ]
@@ -43550,12 +43385,12 @@ const CaseStudyView = ()=>{
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
-                    className: "mt-3 pb-5",
+                    className: "d-flex justify-content-center mt-3 pb-5",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
                             className: "d-flex flex-column justify-content-center",
                             xs: 12,
-                            lg: 5,
+                            lg: 4,
                             style: {
                                 position: "relative"
                             },
@@ -43564,176 +43399,57 @@ const CaseStudyView = ()=>{
                                     children: "React Bootstrap & React Router"
                                 }, void 0, false, {
                                     fileName: "src/components/case-study-view/case-study-view.jsx",
-                                    lineNumber: 43,
+                                    lineNumber: 45,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                     children: "After I had created a working application, or a Minimum Viable Product, I moved on to styling the app with React Bootstrap. I revamped the application using React Bootstrap\u2019s Form, Card, and Button Elements. After this I also added routing to my application using React Router. This was a challenge because I had to change a few things in many places, and if I missed one the application did not work as intended. I solved this by going through each React component one-by-one until I found the issue and resolved it. This problem solving helped me learn React Router more thoroughly. "
                                 }, void 0, false, {
                                     fileName: "src/components/case-study-view/case-study-view.jsx",
-                                    lineNumber: 44,
+                                    lineNumber: 46,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                                     children: "Search Feature with React Redux"
                                 }, void 0, false, {
                                     fileName: "src/components/case-study-view/case-study-view.jsx",
-                                    lineNumber: 45,
+                                    lineNumber: 47,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                     children: "After this was complete I added one more feature to my application: the ability to search for specific movies using React Redux. This added another React library to my repertoire and added a useful feature to my application. Finally, I deployed my application to Netlify using Parcel as the build tool. "
                                 }, void 0, false, {
                                     fileName: "src/components/case-study-view/case-study-view.jsx",
-                                    lineNumber: 46,
+                                    lineNumber: 48,
                                     columnNumber: 13
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/case-study-view/case-study-view.jsx",
-                            lineNumber: 42,
+                            lineNumber: 44,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
                             className: "d-flex flex-column justify-content-center",
                             xs: 12,
-                            lg: 7,
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Carousel), {
-                                "data-bs-theme": "dark",
-                                className: "carousel",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Carousel).Item, {
-                                        children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Image), {
-                                                className: "w-100",
-                                                src: require("482c78b1dad09d8f")
-                                            }, void 0, false, {
-                                                fileName: "src/components/case-study-view/case-study-view.jsx",
-                                                lineNumber: 51,
-                                                columnNumber: 17
-                                            }, undefined),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Carousel).Caption, {
-                                                className: "carousel-label mt-5",
-                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                                    className: "carousel-label",
-                                                    children: "Learning React Components"
-                                                }, void 0, false, {
-                                                    fileName: "src/components/case-study-view/case-study-view.jsx",
-                                                    lineNumber: 53,
-                                                    columnNumber: 19
-                                                }, undefined)
-                                            }, void 0, false, {
-                                                fileName: "src/components/case-study-view/case-study-view.jsx",
-                                                lineNumber: 52,
-                                                columnNumber: 17
-                                            }, undefined)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "src/components/case-study-view/case-study-view.jsx",
-                                        lineNumber: 50,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Carousel).Item, {
-                                        children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Image), {
-                                                src: require("b6ebd4f8a69c6b6c")
-                                            }, void 0, false, {
-                                                fileName: "src/components/case-study-view/case-study-view.jsx",
-                                                lineNumber: 56,
-                                                columnNumber: 17
-                                            }, undefined),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Carousel).Caption, {
-                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                                    children: "React Hooks / Connecting to Database"
-                                                }, void 0, false, {
-                                                    fileName: "src/components/case-study-view/case-study-view.jsx",
-                                                    lineNumber: 58,
-                                                    columnNumber: 19
-                                                }, undefined)
-                                            }, void 0, false, {
-                                                fileName: "src/components/case-study-view/case-study-view.jsx",
-                                                lineNumber: 57,
-                                                columnNumber: 17
-                                            }, undefined)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "src/components/case-study-view/case-study-view.jsx",
-                                        lineNumber: 55,
-                                        columnNumber: 31
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Carousel).Item, {
-                                        children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Image), {
-                                                className: "w-100",
-                                                src: require("d5a31454e311567f")
-                                            }, void 0, false, {
-                                                fileName: "src/components/case-study-view/case-study-view.jsx",
-                                                lineNumber: 62,
-                                                columnNumber: 17
-                                            }, undefined),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Carousel).Caption, {
-                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                                    children: "React Bootstrap & React Router"
-                                                }, void 0, false, {
-                                                    fileName: "src/components/case-study-view/case-study-view.jsx",
-                                                    lineNumber: 64,
-                                                    columnNumber: 19
-                                                }, undefined)
-                                            }, void 0, false, {
-                                                fileName: "src/components/case-study-view/case-study-view.jsx",
-                                                lineNumber: 63,
-                                                columnNumber: 17
-                                            }, undefined)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "src/components/case-study-view/case-study-view.jsx",
-                                        lineNumber: 61,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Carousel).Item, {
-                                        children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Image), {
-                                                className: "w-100",
-                                                src: require("17fa668cd217ebb2")
-                                            }, void 0, false, {
-                                                fileName: "src/components/case-study-view/case-study-view.jsx",
-                                                lineNumber: 68,
-                                                columnNumber: 17
-                                            }, undefined),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Carousel).Caption, {
-                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                                    children: "Search Feature with React Redux"
-                                                }, void 0, false, {
-                                                    fileName: "src/components/case-study-view/case-study-view.jsx",
-                                                    lineNumber: 70,
-                                                    columnNumber: 19
-                                                }, undefined)
-                                            }, void 0, false, {
-                                                fileName: "src/components/case-study-view/case-study-view.jsx",
-                                                lineNumber: 69,
-                                                columnNumber: 17
-                                            }, undefined)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "src/components/case-study-view/case-study-view.jsx",
-                                        lineNumber: 67,
-                                        columnNumber: 15
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
+                            lg: 6,
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                src: require("5d848fc2db61fc7d"),
+                                alt: "API Call on Postman to post a user's favorite movie"
+                            }, void 0, false, {
                                 fileName: "src/components/case-study-view/case-study-view.jsx",
-                                lineNumber: 49,
+                                lineNumber: 51,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/case-study-view/case-study-view.jsx",
-                            lineNumber: 48,
+                            lineNumber: 50,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/case-study-view/case-study-view.jsx",
-                    lineNumber: 41,
+                    lineNumber: 43,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
@@ -43750,32 +43466,32 @@ const CaseStudyView = ()=>{
                                 children: "Challenges and Looking Forward"
                             }, void 0, false, {
                                 fileName: "src/components/case-study-view/case-study-view.jsx",
-                                lineNumber: 78,
+                                lineNumber: 56,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                 children: "Some of the biggest obstacles from this project came when I had to take my working application and refactor it to utilize a different React library. For example, when implementing React Bootstrap and React Router it took me a while to understand how to add these to my existing application."
                             }, void 0, false, {
                                 fileName: "src/components/case-study-view/case-study-view.jsx",
-                                lineNumber: 79,
+                                lineNumber: 57,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                 children: "After my final submission for this project I went back though and updated the look of the individual movie view to build even further on the minimum requirements for this project. In future iterations I would like to add a \u201CSimilar Movies\u201D section to each individual movie view. I would also like to add the ability to add a movie to the database from the application itself. These movies would be visible to every user, not just the user who uploaded them."
                             }, void 0, false, {
                                 fileName: "src/components/case-study-view/case-study-view.jsx",
-                                lineNumber: 80,
+                                lineNumber: 58,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/case-study-view/case-study-view.jsx",
-                        lineNumber: 77,
+                        lineNumber: 55,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/case-study-view/case-study-view.jsx",
-                    lineNumber: 76,
+                    lineNumber: 54,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
@@ -43786,19 +43502,37 @@ const CaseStudyView = ()=>{
                             md: 6,
                             className: "d-flex justify-content-center justify-content-lg-end mb-md-0 mb-4",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                class: "btn btn-primary",
+                                class: "portfolio-btn px-4",
                                 href: "https://github.com/s-c-meyer/myFlix-client",
                                 role: "button",
                                 target: "_blank",
-                                children: "Review the code on Github"
-                            }, void 0, false, {
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        className: "portfolio-btn-text--hidden",
+                                        children: "<> "
+                                    }, void 0, false, {
+                                        fileName: "src/components/case-study-view/case-study-view.jsx",
+                                        lineNumber: 64,
+                                        columnNumber: 21
+                                    }, undefined),
+                                    "Review the code on GitHub",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        className: "portfolio-btn-text--hidden",
+                                        children: " </>"
+                                    }, void 0, false, {
+                                        fileName: "src/components/case-study-view/case-study-view.jsx",
+                                        lineNumber: 64,
+                                        columnNumber: 107
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
                                 fileName: "src/components/case-study-view/case-study-view.jsx",
-                                lineNumber: 85,
+                                lineNumber: 63,
                                 columnNumber: 19
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/case-study-view/case-study-view.jsx",
-                            lineNumber: 84,
+                            lineNumber: 62,
                             columnNumber: 17
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
@@ -43806,25 +43540,25 @@ const CaseStudyView = ()=>{
                             md: 6,
                             className: "d-flex justify-content-center justify-content-lg-start",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                class: "btn btn-primary",
+                                class: "portfolio-btn px-5",
                                 href: "https://meyersmovies.netlify.app/",
                                 role: "button",
                                 target: "_blank",
                                 children: "View the live demo"
                             }, void 0, false, {
                                 fileName: "src/components/case-study-view/case-study-view.jsx",
-                                lineNumber: 90,
+                                lineNumber: 68,
                                 columnNumber: 19
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/case-study-view/case-study-view.jsx",
-                            lineNumber: 89,
+                            lineNumber: 67,
                             columnNumber: 17
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/case-study-view/case-study-view.jsx",
-                    lineNumber: 83,
+                    lineNumber: 61,
                     columnNumber: 9
                 }, undefined)
             ]
@@ -43844,21 +43578,12 @@ $RefreshReg$(_c, "CaseStudyView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-bootstrap":"3AD9A","b0ac6752e2de5a7f":"6OvIM","1216a848205653ab":"c6y3Q","482c78b1dad09d8f":"ajQc2","b6ebd4f8a69c6b6c":"lkX6J","d5a31454e311567f":"j9XNb","17fa668cd217ebb2":"dfg1w"}],"c6y3Q":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-bootstrap":"3AD9A","b0ac6752e2de5a7f":"6OvIM","1216a848205653ab":"c6y3Q","5d848fc2db61fc7d":"dWfkf"}],"c6y3Q":[function(require,module,exports) {
 module.exports = require("a0a67a9416a3d9ef").getBundleURL("byUka") + "MyFlixArchDiagram.51d3e660.png" + "?" + Date.now();
 
-},{"a0a67a9416a3d9ef":"lgJ39"}],"ajQc2":[function(require,module,exports) {
-module.exports = require("7ee7918a2facb8e7").getBundleURL("byUka") + "LearningReactComponentsThumbnail.79420336.png" + "?" + Date.now();
+},{"a0a67a9416a3d9ef":"lgJ39"}],"dWfkf":[function(require,module,exports) {
+module.exports = require("36a22cb3070992de").getBundleURL("byUka") + "myFlixPostmanExample.063558bc.png" + "?" + Date.now();
 
-},{"7ee7918a2facb8e7":"lgJ39"}],"lkX6J":[function(require,module,exports) {
-module.exports = require("5a75d4316917140c").getBundleURL("byUka") + "ConnectingToDatabaseThumbnail.2dde061c.png" + "?" + Date.now();
-
-},{"5a75d4316917140c":"lgJ39"}],"j9XNb":[function(require,module,exports) {
-module.exports = require("933e9e45c1945e1b").getBundleURL("byUka") + "ReactRouter.ed22e950.png" + "?" + Date.now();
-
-},{"933e9e45c1945e1b":"lgJ39"}],"dfg1w":[function(require,module,exports) {
-module.exports = require("990d880d2814b914").getBundleURL("byUka") + "ReactRedux.1cc1a1ac.png" + "?" + Date.now();
-
-},{"990d880d2814b914":"lgJ39"}],"lJZlQ":[function() {},{}]},["d8m58","1xC6H","d8Dch"], "d8Dch", "parcelRequire4e47")
+},{"36a22cb3070992de":"lgJ39"}],"lJZlQ":[function() {},{}]},["d8m58","1xC6H","d8Dch"], "d8Dch", "parcelRequire4e47")
 
 //# sourceMappingURL=index.b4b6dfad.js.map

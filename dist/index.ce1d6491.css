@@ -1,5 +1,17 @@
-.sticky-footer {
-  margin-top: -200px;
+.root-container {
+  color: #323232;
+  background-color: #b4ddcf;
+}
+
+.navbar-container {
+  background-color: #003c38;
+  outline: 20px solid #003c38;
+  margin-top: 15px;
+}
+
+.footer-container {
+  background-color: #00655e;
+  outline: 20px solid #00655e;
 }
 
 .footer-image {
@@ -8,8 +20,67 @@
   margin-right: 1rem;
 }
 
+.footer-text {
+  color: #87b4a9;
+  text-decoration: none;
+  transition: text-shadow .3s ease-in-out !important;
+}
+
+.footer-text:hover {
+  text-shadow: 0 0 1.5rem #b4ddcf;
+}
+
+.footer-text--no-shadow {
+  color: #87b4a9;
+  text-decoration: none;
+}
+
+.footer-text-title {
+  text-transform: uppercase;
+  color: #87b4a9;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.footer-icon {
+  width: 3rem;
+}
+
+.to-top-button {
+  color: #87b4a9;
+  background: none;
+  border-style: solid;
+  border-color: #87b4a9;
+  border-radius: 5rem;
+  padding: .4rem;
+  transition: all .3s ease-in-out !important;
+}
+
+.to-top-button:hover {
+  color: #00655e;
+  background-color: #87b4a9;
+}
+
 .main-container {
   margin-bottom: 7rem;
+}
+
+.intro-container, .intro-button {
+  background-color: #87b4a9 !important;
+  border-radius: 4rem !important;
+}
+
+.intro-button--link {
+  text-shadow: none;
+  color: #323232 !important;
+}
+
+.intro-button--link:hover {
+  text-shadow: none;
+}
+
+.intro-icon {
+  max-height: 4rem;
 }
 
 .contact-email {
@@ -17,8 +88,83 @@
   text-decoration: none;
 }
 
+.portfolio-badge, .badge-completed, .badge-inprogress {
+  text-wrap: nowrap;
+  border-radius: 3rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem;
+  font-weight: bold;
+  position: relative;
+  top: 1.5rem;
+  left: 1rem;
+}
+
+.badge-inprogress {
+  background-color: #e7e76a;
+}
+
+.badge-completed {
+  background-color: #adff2f;
+}
+
 .portfolio-main-font {
   font-size: large;
+}
+
+.portfolio-container {
+  background: #87b4a9;
+  border-radius: 5rem;
+}
+
+.portfolio-container-bottom {
+  background: #87b4a9;
+  border-radius: 0 0 5rem 5rem;
+}
+
+.portfolio-text--framework {
+  background-color: #b4ddcf;
+  border-radius: 3rem;
+  margin: 1rem;
+  max-width: -moz-fit-content !important;
+  max-width: fit-content !important;
+}
+
+.portfolio-img {
+  width: 100%;
+}
+
+.portfolio-text--main {
+  background-color: #b4ddcf;
+  border-radius: 2rem;
+}
+
+.portfolio-skill {
+  color: #87b4a9;
+  background-color: #003c38;
+}
+
+.portfolio-btn {
+  color: #323232;
+  text-align: center;
+  background: #96e9ff;
+  border-style: solid;
+  border-color: #323232;
+  border-radius: .5rem;
+  margin-top: 1rem;
+  padding: .4rem;
+  text-decoration: none;
+  transition: all .3s ease-in-out !important;
+}
+
+.portfolio-btn:hover {
+  color: #96e9ff;
+  background-color: #323232;
+}
+
+.portfolio-btn-text--hidden {
+  color: #96e9ff;
+  font-weight: bold;
 }
 
 .progress-bar-icon {
@@ -30,8 +176,9 @@
 }
 
 .carousel {
+  background-color: #87b4a9;
   width: 100%;
-  height: 500px;
+  height: 30rem;
   overflow: visible;
 }
 
@@ -49,6 +196,38 @@
   .sizetest {
     font-size: 40px;
   }
+}
+
+@media screen and (width <= 1200px) {
+  .portfolio-container {
+    border-radius: 3rem 3rem 0 0;
+  }
+
+  .portfolio-container-bottom {
+    border-radius: 0 0 3rem 3rem;
+  }
+}
+
+.nav-link {
+  color: #87b4a9 !important;
+  transition: text-shadow .3s ease-in-out !important;
+}
+
+.nav-link:hover {
+  text-shadow: 0 0 1.5rem #96e9ff;
+}
+
+.active {
+  text-decoration-color: #000;
+  text-decoration: underline !important;
+}
+
+.intro-button {
+  transition: box-shadow .3s ease-in-out !important;
+}
+
+.intro-button:hover {
+  box-shadow: 0 0 10px 10px #5a8b81 !important;
 }
 
 :root, [data-bs-theme="light"] {
